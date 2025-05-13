@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/components';
+
+:root {
+	--white: #ffffff;
+	--black: #000000;
+	--primary: #178f65;
+	--presence: #20a271;
+	--secondary: #20a271;
+	--link_color: #284cdc;
+	--system_nav: #178f65;
+	--selected_item: #0e674d;
+	--notifications: #20a271;
+	--neutral-bg-color: #f7f7f7;
+}
+
+.active-sidebar {
+	--tw-bg-opacity: 1;
+	background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}

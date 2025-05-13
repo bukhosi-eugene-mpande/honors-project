@@ -1,1 +1,1 @@
-# honors-project
+# Honors Project
