@@ -1,3 +1,8 @@
+
+Approval and evaluation after answer generation
+
+next time presentation of the pipeline
+
 # Mohlers Dataset Rubric
 
 ### **Section 1: Fundamentals**  
