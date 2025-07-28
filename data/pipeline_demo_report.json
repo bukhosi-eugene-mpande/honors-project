@@ -1,0 +1,706 @@
+{
+  "pipeline_id": "48dc203b-6534-47a8-a70c-ac27ec4272dd",
+  "timestamp": "2025-07-28T23:25:22.781986",
+  "summary": {
+    "total_assessments": 18,
+    "average_score": 1.913207671957672,
+    "score_std": 0.5491387976422388,
+    "topics_covered": 3,
+    "sentiment_distribution": {
+      "NEUTRAL": 17,
+      "NEGATIVE": 1
+    }
+  },
+  "detailed_results": {
+    "classes_objects": [
+      {
+        "type": "perfect",
+        "answer": "A class definition includes data members (attributes) and member functions (methods). It serves as a...",
+        "expected_score": 5,
+        "actual_score": 2.916468253968254,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 5,
+              "total": 5,
+              "score": 1.0
+            },
+            "Constructor Knowledge": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            },
+            "Access Specifiers": {
+              "matches": 5,
+              "total": 5,
+              "score": 1.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 10.5,
+            "lexical_diversity": 0.7936507936507936,
+            "complexity_score": 0.6593253968253968
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.35714285714285715,
+            "concept_overlap": 5
+          }
+        }
+      },
+      {
+        "type": "partial_missing_class_definition_understanding",
+        "answer": "A constructor is called when an object is created. There are public and private members in a class.",
+        "expected_score": 3,
+        "actual_score": 1.8565079365079367,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Constructor Knowledge": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            },
+            "Access Specifiers": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 6.0,
+            "lexical_diversity": 0.9444444444444444,
+            "complexity_score": 0.6222222222222222
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.21428571428571427,
+            "concept_overlap": 3
+          }
+        }
+      },
+      {
+        "type": "partial_missing_constructor_knowledge",
+        "answer": "A class has data members and functions. There are public and private members in a class.",
+        "expected_score": 3,
+        "actual_score": 1.7651190476190475,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Constructor Knowledge": {
+              "matches": 0,
+              "total": 4,
+              "score": 0.0
+            },
+            "Access Specifiers": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 5.333333333333333,
+            "lexical_diversity": 0.875,
+            "complexity_score": 0.5708333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.21428571428571427,
+            "concept_overlap": 3
+          }
+        }
+      },
+      {
+        "type": "partial_missing_access_specifiers",
+        "answer": "A class has data members and functions. A constructor is called when an object is created.",
+        "expected_score": 4,
+        "actual_score": 1.7336904761904763,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Constructor Knowledge": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            },
+            "Access Specifiers": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 5.333333333333333,
+            "lexical_diversity": 0.875,
+            "complexity_score": 0.5708333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.14285714285714285,
+            "concept_overlap": 2
+          }
+        }
+      },
+      {
+        "type": "weak",
+        "answer": "A class is like a template for objects. It can have functions and data.",
+        "expected_score": 1.5,
+        "actual_score": 1.3480952380952382,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Constructor Knowledge": {
+              "matches": 0,
+              "total": 4,
+              "score": 0.0
+            },
+            "Access Specifiers": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 4.666666666666667,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6166666666666667
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "incorrect",
+        "answer": "A class is the same as a function. You can only have one constructor and it must be public.",
+        "expected_score": 0,
+        "actual_score": 1.7411904761904762,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Class Definition Understanding": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Constructor Knowledge": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            },
+            "Access Specifiers": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 6.333333333333333,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6583333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.14285714285714285,
+            "concept_overlap": 2
+          }
+        }
+      }
+    ],
+    "pointers_memory": [
+      {
+        "type": "perfect",
+        "answer": "A pointer is a variable that stores the memory address of another variable. It is declared using the...",
+        "expected_score": 5,
+        "actual_score": 2.9657142857142853,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 5,
+              "total": 5,
+              "score": 1.0
+            },
+            "Dereferencing": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Memory Management": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 14.0,
+            "lexical_diversity": 0.6714285714285714,
+            "complexity_score": 0.6857142857142857
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.5,
+            "concept_overlap": 7
+          }
+        }
+      },
+      {
+        "type": "partial_missing_pointer_declaration",
+        "answer": "You use * to get the value from a pointer. Memory can be allocated and freed.",
+        "expected_score": 3,
+        "actual_score": 1.9961904761904765,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Dereferencing": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Memory Management": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 5.333333333333333,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6333333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.14285714285714285,
+            "concept_overlap": 2
+          }
+        }
+      },
+      {
+        "type": "partial_missing_dereferencing",
+        "answer": "A pointer stores an address. Memory can be allocated and freed.",
+        "expected_score": 3,
+        "actual_score": 1.563095238095238,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Dereferencing": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            },
+            "Memory Management": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 3.6666666666666665,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.5916666666666667
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "partial_missing_memory_management",
+        "answer": "A pointer stores an address. You use * to get the value from a pointer.",
+        "expected_score": 4,
+        "actual_score": 2.1392857142857142,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 3,
+              "total": 5,
+              "score": 0.6
+            },
+            "Dereferencing": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Memory Management": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 5.0,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.625
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.21428571428571427,
+            "concept_overlap": 3
+          }
+        }
+      },
+      {
+        "type": "weak",
+        "answer": "A pointer points to something in memory. You can use it to access data.",
+        "expected_score": 1.5,
+        "actual_score": 1.3123809523809526,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Dereferencing": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            },
+            "Memory Management": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 4.666666666666667,
+            "lexical_diversity": 0.9285714285714286,
+            "complexity_score": 0.580952380952381
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "incorrect",
+        "answer": "A pointer is just another variable type like int. You don't need to worry about memory management.",
+        "expected_score": 0,
+        "actual_score": 1.3730952380952384,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Pointer Declaration": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Dereferencing": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            },
+            "Memory Management": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEGATIVE",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 5.666666666666667,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6416666666666666
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      }
+    ],
+    "functions_scope": [
+      {
+        "type": "perfect",
+        "answer": "A function definition includes the return type, function name, parameter list, and function body. It...",
+        "expected_score": 5,
+        "actual_score": 3.2502380952380956,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 4,
+              "total": 5,
+              "score": 0.8
+            },
+            "Variable Scope": {
+              "matches": 4,
+              "total": 5,
+              "score": 0.8
+            },
+            "Function Overloading": {
+              "matches": 2,
+              "total": 4,
+              "score": 0.5
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 11.666666666666666,
+            "lexical_diversity": 0.8142857142857143,
+            "complexity_score": 0.6988095238095238
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.5714285714285714,
+            "concept_overlap": 8
+          }
+        }
+      },
+      {
+        "type": "partial_missing_function_definition",
+        "answer": "Variables have different scopes. Functions can have the same name.",
+        "expected_score": 3,
+        "actual_score": 1.6133333333333333,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Variable Scope": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Function Overloading": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 3.3333333333333335,
+            "lexical_diversity": 0.9,
+            "complexity_score": 0.5333333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.0,
+            "concept_overlap": 0
+          }
+        }
+      },
+      {
+        "type": "partial_missing_variable_scope",
+        "answer": "A function has a name and parameters. Functions can have the same name.",
+        "expected_score": 3,
+        "actual_score": 1.599761904761905,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Variable Scope": {
+              "matches": 0,
+              "total": 5,
+              "score": 0.0
+            },
+            "Function Overloading": {
+              "matches": 1,
+              "total": 4,
+              "score": 0.25
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 4.333333333333333,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6083333333333333
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "partial_missing_function_overloading",
+        "answer": "A function has a name and parameters. Variables have different scopes.",
+        "expected_score": 4,
+        "actual_score": 1.8030952380952383,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Variable Scope": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Function Overloading": {
+              "matches": 0,
+              "total": 4,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 3.6666666666666665,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.5916666666666667
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "weak",
+        "answer": "Functions are blocks of code that do something. Variables can be local or global.",
+        "expected_score": 1.5,
+        "actual_score": 1.8280952380952382,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Variable Scope": {
+              "matches": 3,
+              "total": 5,
+              "score": 0.6
+            },
+            "Function Overloading": {
+              "matches": 0,
+              "total": 4,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 4.666666666666667,
+            "lexical_diversity": 1.0,
+            "complexity_score": 0.6166666666666667
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      },
+      {
+        "type": "incorrect",
+        "answer": "Functions are only for mathematical calculations. All variables should be global for easy access.",
+        "expected_score": 0,
+        "actual_score": 1.6323809523809525,
+        "nlp_analysis": {
+          "keyword_matches": {
+            "Function Definition": {
+              "matches": 1,
+              "total": 5,
+              "score": 0.2
+            },
+            "Variable Scope": {
+              "matches": 2,
+              "total": 5,
+              "score": 0.4
+            },
+            "Function Overloading": {
+              "matches": 0,
+              "total": 4,
+              "score": 0.0
+            }
+          },
+          "sentiment": {
+            "sentiment": "NEUTRAL",
+            "score": 0.5
+          },
+          "complexity": {
+            "avg_sentence_length": 4.666666666666667,
+            "lexical_diversity": 0.9285714285714286,
+            "complexity_score": 0.580952380952381
+          },
+          "semantic_similarity": {
+            "similarity_score": 0.07142857142857142,
+            "concept_overlap": 1
+          }
+        }
+      }
+    ]
+  }
+}
