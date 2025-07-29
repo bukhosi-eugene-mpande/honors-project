@@ -346,8 +346,7 @@ class LocalRubricAssessmentPipeline:
         sentiment_score = sentiment.get("score", 0.5)
         complexity_score = complexity.get("complexity_score", 0.5)
         semantic_score = semantic_similarity.get("similarity_score", 0)
-        
-        # Weighted scoring
+ 
         final_score = (
             keyword_score * 0.4 +
             sentiment_score * 0.2 +
@@ -484,7 +483,6 @@ class LocalRubricAssessmentPipeline:
     def _create_demo_visualizations(self, assessment_results, all_scores, all_sentiments):
         """Create visualizations for the demo"""
         
-        # 1. Score Distribution
         plt.figure(figsize=(15, 10))
         
         plt.subplot(2, 2, 1)
@@ -496,13 +494,11 @@ class LocalRubricAssessmentPipeline:
                    label=f'Mean: {np.mean(all_scores):.2f}')
         plt.legend()
         
-        # 2. Sentiment Analysis
         plt.subplot(2, 2, 2)
         sentiment_counts = pd.Series(all_sentiments).value_counts()
         plt.pie(sentiment_counts.values, labels=sentiment_counts.index, autopct='%1.1f%%')
         plt.title('Sentiment Distribution')
         
-        # 3. Topic Performance
         plt.subplot(2, 2, 3)
         topic_avg_scores = []
         topic_names = []
@@ -517,12 +513,10 @@ class LocalRubricAssessmentPipeline:
         plt.ylabel('Average Score')
         plt.xticks(rotation=45)
         
-        # Add value labels on bars
         for bar, score in zip(bars, topic_avg_scores):
             plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1,
                     f'{score:.2f}', ha='center', va='bottom')
         
-        # 4. Answer Type Performance
         plt.subplot(2, 2, 4)
         answer_types = []
         type_scores = []
@@ -543,8 +537,7 @@ class LocalRubricAssessmentPipeline:
         plt.tight_layout()
         plt.savefig('demo_score_distribution.png', dpi=300, bbox_inches='tight')
         plt.show()
-        
-        # Create additional visualizations
+
         self._create_sentiment_analysis_plot(all_sentiments)
         self._create_topic_performance_plot(assessment_results)
     
@@ -608,12 +601,10 @@ def main():
     """Main function to run the local pipeline demo"""
     print("🎓 Rubric Assessment Pipeline - Local Demo")
     print("=" * 60)
-    
-    # Initialize and run pipeline
+
     pipeline = LocalRubricAssessmentPipeline()
     results = pipeline.run_pipeline_demo()
     
-    # Display summary
     print("\n Final Summary:")
     print(f"Pipeline ID: {results['pipeline_id']}")
     print(f"Total Assessments: {results['summary']['total_assessments']}")

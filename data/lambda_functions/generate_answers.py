@@ -3,7 +3,7 @@
 Lambda Function: Generate Answer Variations
 ==========================================
 
-This Lambda function generates multiple answer variations based on rubrics.
+This Lambda function generates multiple answer variations using AWS Bedrock LLM.
 """
 
 import json
@@ -13,11 +13,13 @@ from datetime import datetime
 import random
 
 def lambda_handler(event, context):
-    """Generate answer variations based on rubrics"""
+    """Generate answer variations using LLM"""
     
     s3 = boto3.client('s3')
+    bedrock = boto3.client('bedrock-runtime')
     
     bucket_name = os.environ.get('ASSESSMENT_BUCKET', 'rubric-assessment-bucket')
+    model_id = os.environ.get('BEDROCK_MODEL_ID', 'anthropic.claude-3-sonnet-20240229-v1:0')
     
     pipeline_id = event.get('body', {}).get('pipeline_id')
     rubrics = event.get('body', {}).get('rubrics', {})
@@ -48,30 +50,32 @@ def lambda_handler(event, context):
             topic_answers = {}
             
             for question in questions:
-                variations = generate_answer_variations(question, rubric)
+                variations = generate_answer_variations_with_llm(question, rubric, bedrock, model_id)
                 topic_answers[question] = variations
             
             generated_answers[topic_key] = topic_answers
         
+        # Store generated answers in S3
         s3.put_object(
             Bucket=bucket_name,
             Key=f'pipelines/{pipeline_id}/generated_answers/answers.json',
-            Body=json.dumps(generated_answers)
+            Body=json.dumps(generated_answers, indent=2)
         )
         
+        # Update pipeline metadata
         metadata_key = f'pipelines/{pipeline_id}/metadata.json'
         metadata_response = s3.get_object(Bucket=bucket_name, Key=metadata_key)
         metadata = json.loads(metadata_response['Body'].read())
         
-        metadata['steps_completed'].append('load_rubrics')
-        metadata['current_step'] = 'generate_answer_variations'
-        metadata['answers_generated'] = len(generated_answers)
+        metadata['steps_completed'].append('generate_answer_variations')
+        metadata['current_step'] = 'nlp_assessment'
+        metadata['answers_generated'] = sum(len(topic_answers) for topic_answers in generated_answers.values())
         metadata['updated_at'] = datetime.now().isoformat()
         
         s3.put_object(
             Bucket=bucket_name,
             Key=metadata_key,
-            Body=json.dumps(metadata)
+            Body=json.dumps(metadata, indent=2)
         )
         
         return {
@@ -79,7 +83,7 @@ def lambda_handler(event, context):
             'body': {
                 'pipeline_id': pipeline_id,
                 'status': 'answers_generated',
-                'message': f'Generated answer variations for {len(generated_answers)} topics',
+                'message': f'Generated answer variations for {len(generated_answers)} topics using LLM',
                 'next_step': 'nlp_assessment',
                 'generated_answers': generated_answers,
                 'metadata': metadata
@@ -91,37 +95,41 @@ def lambda_handler(event, context):
             'statusCode': 500,
             'body': {
                 'error': str(e),
-                'message': 'Failed to generate answer variations'
+                'message': 'Failed to generate answer variations with LLM'
             }
         }
 
-def generate_answer_variations(question: str, rubric: dict) -> list:
-    """Generate multiple answer variations based on rubric criteria"""
+def generate_answer_variations_with_llm(question: str, rubric: dict, bedrock_client, model_id: str) -> list:
+    """Generate multiple answer variations using LLM based on rubric criteria"""
     variations = []
     
-    perfect_answer = generate_perfect_answer(question, rubric)
+    # Generate perfect answer
+    perfect_answer = generate_perfect_answer_with_llm(question, rubric, bedrock_client, model_id)
     variations.append({
         'type': 'perfect',
         'answer': perfect_answer,
         'expected_score': rubric['max_score']
     })
     
+    # Generate partial answers (missing specific criteria)
     for i, criterion in enumerate(rubric['criteria']):
-        partial_answer = generate_partial_answer(question, rubric, exclude_criteria=[i])
+        partial_answer = generate_partial_answer_with_llm(question, rubric, [i], bedrock_client, model_id)
         variations.append({
             'type': f'partial_missing_{criterion["criterion"].lower().replace(" ", "_")}',
             'answer': partial_answer,
             'expected_score': rubric['max_score'] - criterion['points']
         })
-        
-    weak_answer = generate_weak_answer(question, rubric)
+    
+    # Generate weak answer
+    weak_answer = generate_weak_answer_with_llm(question, rubric, bedrock_client, model_id)
     variations.append({
         'type': 'weak',
         'answer': weak_answer,
         'expected_score': rubric['max_score'] * 0.3
     })
     
-    incorrect_answer = generate_incorrect_answer(question, rubric)
+    # Generate incorrect answer
+    incorrect_answer = generate_incorrect_answer_with_llm(question, rubric, bedrock_client, model_id)
     variations.append({
         'type': 'incorrect',
         'answer': incorrect_answer,
@@ -130,43 +138,180 @@ def generate_answer_variations(question: str, rubric: dict) -> list:
     
     return variations
 
-def generate_perfect_answer(question: str, rubric: dict) -> str:
-    """Generate a perfect answer that meets all rubric criteria"""
-    answer_parts = []
+def generate_perfect_answer_with_llm(question: str, rubric: dict, bedrock_client, model_id: str) -> str:
+    """Generate a perfect answer using LLM that meets all rubric criteria"""
     
-    for criterion in rubric['criteria']:
-        if "Classes & Objects" in rubric['topic']:
-            if "constructor" in criterion['criterion'].lower():
-                answer_parts.append("A constructor is a special member function that is automatically called when an object is created. It initializes the object's data members and can be overloaded with different parameters.")
-            elif "class definition" in criterion['criterion'].lower():
-                answer_parts.append("A class definition includes data members (attributes) and member functions (methods). It serves as a blueprint for creating objects.")
-            elif "access specifiers" in criterion['criterion'].lower():
-                answer_parts.append("Access specifiers like public, private, and protected control the visibility and accessibility of class members.")
-        
-        elif "Pointers & Memory" in rubric['topic']:
-            if "pointer declaration" in criterion['criterion'].lower():
-                answer_parts.append("A pointer is a variable that stores the memory address of another variable. It is declared using the * operator and can be initialized with the address of another variable using the & operator.")
-            elif "dereferencing" in criterion['criterion'].lower():
-                answer_parts.append("Dereferencing a pointer means accessing the value stored at the memory address it points to, done using the * operator.")
-            elif "memory management" in criterion['criterion'].lower():
-                answer_parts.append("Memory management involves allocating and deallocating memory dynamically using operators like new and delete in C++.")
-        
-        elif "Functions & Scope" in rubric['topic']:
-            if "function definition" in criterion['criterion'].lower():
-                answer_parts.append("A function definition includes the return type, function name, parameter list, and function body. It specifies what the function does when called.")
-            elif "variable scope" in criterion['criterion'].lower():
-                answer_parts.append("Variable scope determines where a variable can be accessed. Local variables are declared inside functions and have limited scope, while global variables are accessible throughout the program.")
-            elif "function overloading" in criterion['criterion'].lower():
-                answer_parts.append("Function overloading allows multiple functions with the same name but different parameter lists, enabling different behaviors based on the arguments passed.")
+    criteria_text = "\n".join([
+        f"- {criterion['criterion']}: {criterion['description']} (Keywords: {', '.join(criterion['keywords'])})"
+        for criterion in rubric['criteria']
+    ])
     
-    return " ".join(answer_parts)
+    prompt = f"""You are an expert programming instructor. Generate a comprehensive answer to the following question that demonstrates complete understanding of all the specified criteria.
 
-def generate_partial_answer(question: str, rubric: dict, exclude_criteria: list) -> str:
-    """Generate a partial answer that meets some but not all criteria"""
+Question: {question}
+
+Topic: {rubric['topic']}
+
+Your answer must address ALL of the following criteria:
+{criteria_text}
+
+Requirements:
+1. Address each criterion thoroughly and accurately
+2. Use appropriate technical terminology
+3. Provide clear explanations with examples where relevant
+4. Ensure the answer is comprehensive and demonstrates deep understanding
+5. Write in a clear, educational tone suitable for a programming student
+
+Generate a detailed answer that would receive full marks (5/5 points) for this question:"""
+
+    try:
+        response = call_bedrock_llm(prompt, bedrock_client, model_id)
+        return response.strip()
+    except Exception as e:
+        # Fallback to template-based generation
+        return generate_perfect_answer_fallback(question, rubric)
+
+def generate_partial_answer_with_llm(question: str, rubric: dict, exclude_criteria_indices: list, bedrock_client, model_id: str) -> str:
+    """Generate a partial answer using LLM that meets some but not all criteria"""
+    
+    included_criteria = []
+    excluded_criteria = []
+    
+    for i, criterion in enumerate(rubric['criteria']):
+        if i not in exclude_criteria_indices:
+            included_criteria.append(f"- {criterion['criterion']}: {criterion['description']}")
+        else:
+            excluded_criteria.append(f"- {criterion['criterion']}: {criterion['description']}")
+    
+    included_text = "\n".join(included_criteria)
+    excluded_text = "\n".join(excluded_criteria)
+    
+    prompt = f"""You are an expert programming instructor. Generate a partial answer to the following question that demonstrates understanding of some but not all criteria.
+
+Question: {question}
+
+Topic: {rubric['topic']}
+
+Your answer should address these criteria (include these):
+{included_text}
+
+Your answer should NOT address these criteria (omit these):
+{excluded_text}
+
+Requirements:
+1. Address the included criteria adequately but not comprehensively
+2. Completely avoid mentioning or explaining the excluded criteria
+3. Use basic technical terminology
+4. Provide simple explanations without deep detail
+5. Write in a straightforward tone that shows partial understanding
+
+Generate a partial answer that would receive partial marks for this question:"""
+
+    try:
+        response = call_bedrock_llm(prompt, bedrock_client, model_id)
+        return response.strip()
+    except Exception as e:
+        # Fallback to template-based generation
+        return generate_partial_answer_fallback(question, rubric, exclude_criteria_indices)
+
+def generate_weak_answer_with_llm(question: str, rubric: dict, bedrock_client, model_id: str) -> str:
+    """Generate a weak answer using LLM with minimal understanding"""
+    
+    prompt = f"""You are an expert programming instructor. Generate a weak answer to the following question that demonstrates minimal understanding.
+
+Question: {question}
+
+Topic: {rubric['topic']}
+
+Requirements:
+1. Show very basic understanding of the topic
+2. Use simple, non-technical language
+3. Provide vague or incomplete explanations
+4. Avoid detailed technical concepts
+5. Write as if the student has only a surface-level grasp of the material
+6. Keep the answer short and lacking depth
+
+Generate a weak answer that would receive low marks (around 30% of total points) for this question:"""
+
+    try:
+        response = call_bedrock_llm(prompt, bedrock_client, model_id)
+        return response.strip()
+    except Exception as e:
+        # Fallback to template-based generation
+        return generate_weak_answer_fallback(question, rubric)
+
+def generate_incorrect_answer_with_llm(question: str, rubric: dict, bedrock_client, model_id: str) -> str:
+    """Generate an incorrect answer using LLM with wrong concepts"""
+    
+    prompt = f"""You are an expert programming instructor. Generate an incorrect answer to the following question that demonstrates misunderstanding of the concepts.
+
+Question: {question}
+
+Topic: {rubric['topic']}
+
+Requirements:
+1. Include fundamental misconceptions about the topic
+2. Mix up related but different concepts
+3. Use incorrect technical terminology
+4. Provide explanations that sound plausible but are wrong
+5. Write as if the student has learned the concepts incorrectly
+6. Make the answer seem confident but factually incorrect
+
+Generate an incorrect answer that would receive zero marks for this question:"""
+
+    try:
+        response = call_bedrock_llm(prompt, bedrock_client, model_id)
+        return response.strip()
+    except Exception as e:
+        # Fallback to template-based generation
+        return generate_incorrect_answer_fallback(question, rubric)
+
+def call_bedrock_llm(prompt: str, bedrock_client, model_id: str) -> str:
+    """Call AWS Bedrock LLM with the given prompt"""
+    
+    if 'claude' in model_id.lower():
+        # Claude model format
+        body = {
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": 1000,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
+        }
+    else:
+        # Default format for other models
+        body = {
+            "prompt": prompt,
+            "max_tokens": 1000,
+            "temperature": 0.7
+        }
+    
+    try:
+        response = bedrock_client.invoke_model(
+            modelId=model_id,
+            body=json.dumps(body)
+        )
+        
+        response_body = json.loads(response['body'].read())
+        
+        if 'claude' in model_id.lower():
+            return response_body['content'][0]['text']
+        else:
+            return response_body.get('completion', response_body.get('generated_text', ''))
+            
+    except Exception as e:
+        raise Exception(f"LLM call failed: {str(e)}")
+
+
+def generate_partial_answer_fallback(question: str, rubric: dict, exclude_criteria_indices: list) -> str:
+    """Fallback partial answer generation"""
     answer_parts = []
     
     for i, criterion in enumerate(rubric['criteria']):
-        if i not in exclude_criteria:
+        if i not in exclude_criteria_indices:
             if "Classes & Objects" in rubric['topic']:
                 if "constructor" in criterion['criterion'].lower():
                     answer_parts.append("A constructor is called when an object is created.")
@@ -193,8 +338,8 @@ def generate_partial_answer(question: str, rubric: dict, exclude_criteria: list)
     
     return " ".join(answer_parts) if answer_parts else "I don't know much about this topic."
 
-def generate_weak_answer(question: str, rubric: dict) -> str:
-    """Generate a weak answer with minimal understanding"""
+def generate_weak_answer_fallback(question: str, rubric: dict) -> str:
+    """Fallback weak answer generation"""
     if "Classes & Objects" in rubric['topic']:
         return "A class is like a template for objects. It can have functions and data."
     elif "Pointers & Memory" in rubric['topic']:
@@ -204,8 +349,8 @@ def generate_weak_answer(question: str, rubric: dict) -> str:
     else:
         return "This is related to programming concepts."
 
-def generate_incorrect_answer(question: str, rubric: dict) -> str:
-    """Generate an incorrect answer with wrong concepts"""
+def generate_incorrect_answer_fallback(question: str, rubric: dict) -> str:
+    """Fallback incorrect answer generation"""
     if "Classes & Objects" in rubric['topic']:
         return "A class is the same as a function. You can only have one constructor and it must be public."
     elif "Pointers & Memory" in rubric['topic']:

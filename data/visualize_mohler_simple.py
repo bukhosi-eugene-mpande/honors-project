@@ -64,7 +64,6 @@ def create_comprehensive_analysis(df):
                 label=f'Mean: {df["score_avg"].mean():.2f}')
     ax1.legend()
     
-    # 2. Evaluator agreement scatter plot
     ax2 = fig.add_subplot(gs[0, 2:])
     ax2.scatter(df['score_me'], df['score_other'], alpha=0.6, color='green')
     ax2.plot([0, 5], [0, 5], 'r--', alpha=0.8, label='Perfect Agreement')
@@ -73,7 +72,6 @@ def create_comprehensive_analysis(df):
     ax2.set_ylabel('Score (Evaluator 2)')
     ax2.legend()
     
-    # 3. Topic performance bar chart
     ax3 = fig.add_subplot(gs[1, :])
     topic_scores = df.groupby('topic_name')['score_avg'].mean().sort_values(ascending=True)
     bars = ax3.barh(range(len(topic_scores)), topic_scores.values, color='lightcoral')
@@ -82,26 +80,22 @@ def create_comprehensive_analysis(df):
     ax3.set_title('Average Score by Topic', fontweight='bold')
     ax3.set_xlabel('Average Score')
     
-    # Add value labels on bars
     for i, bar in enumerate(bars):
         width = bar.get_width()
         ax3.text(width + 0.05, bar.get_y() + bar.get_height()/2, 
                 f'{width:.2f}', ha='left', va='center', fontsize=8)
     
-    # 4. Score vs answer length
     ax4 = fig.add_subplot(gs[2, :2])
     df['answer_length'] = df['student_answer'].str.len()
     ax4.scatter(df['answer_length'], df['score_avg'], alpha=0.6, color='orange')
     ax4.set_title('Score vs Answer Length', fontweight='bold')
     ax4.set_xlabel('Answer Length (characters)')
     ax4.set_ylabel('Average Score')
-    
-    # Add trend line
+
     z = np.polyfit(df['answer_length'], df['score_avg'], 1)
     p = np.poly1d(z)
     ax4.plot(df['answer_length'], p(df['answer_length']), "r--", alpha=0.8)
     
-    # 5. Score difference distribution
     ax5 = fig.add_subplot(gs[2, 2:])
     df['score_diff'] = abs(df['score_me'] - df['score_other'])
     ax5.hist(df['score_diff'], bins=6, alpha=0.7, color='gold', edgecolor='black')
@@ -109,9 +103,8 @@ def create_comprehensive_analysis(df):
     ax5.set_xlabel('Absolute Score Difference')
     ax5.set_ylabel('Frequency')
     
-    # 6. Question difficulty analysis
     ax6 = fig.add_subplot(gs[3, :])
-    # Get easiest and hardest questions
+
     easiest = df.nlargest(5, 'score_avg')[['id', 'score_avg']]
     hardest = df.nsmallest(5, 'score_avg')[['id', 'score_avg']]
     
@@ -127,7 +120,6 @@ def create_comprehensive_analysis(df):
     ax6.set_xticks(x_pos)
     ax6.set_xticklabels(labels, rotation=45)
     
-    # Add legend
     from matplotlib.patches import Patch
     legend_elements = [Patch(facecolor='lightgreen', label='Easiest'),
                       Patch(facecolor='lightcoral', label='Hardest')]
@@ -142,13 +134,11 @@ def create_detailed_topic_analysis(df):
     fig, axes = plt.subplots(2, 2, figsize=(16, 12))
     fig.suptitle('Detailed Topic Analysis', fontsize=16, fontweight='bold')
     
-    # 1. Questions per topic
     topic_counts = df['topic_name'].value_counts()
     axes[0, 0].pie(topic_counts.values, labels=topic_counts.index, autopct='%1.1f%%', 
                    startangle=90, textprops={'fontsize': 8})
     axes[0, 0].set_title('Distribution of Questions by Topic')
     
-    # 2. Score statistics by topic
     topic_stats = df.groupby('topic_name').agg({
         'score_avg': ['mean', 'std', 'count']
     }).round(2)
@@ -162,7 +152,6 @@ def create_detailed_topic_analysis(df):
     axes[0, 1].set_title('Mean Score by Topic (with Standard Deviation)')
     axes[0, 1].set_ylabel('Average Score')
     
-    # 3. Score range by topic
     topic_ranges = df.groupby('topic_name')['score_avg'].agg(['min', 'max'])
     topic_ranges['range'] = topic_ranges['max'] - topic_ranges['min']
     
@@ -172,7 +161,6 @@ def create_detailed_topic_analysis(df):
     axes[1, 0].set_title('Score Range by Topic')
     axes[1, 0].set_ylabel('Score Range (Max - Min)')
     
-    # 4. Box plot of scores by topic
     df.boxplot(column='score_avg', by='topic_name', ax=axes[1, 1], rot=45)
     axes[1, 1].set_title('Score Distribution by Topic')
     axes[1, 1].set_xlabel('Topic')
@@ -188,12 +176,12 @@ def print_summary_statistics(df):
     print("MOHLER DATASET SUMMARY STATISTICS")
     print("="*80)
     
-    print(f"\n📊 Dataset Overview:")
+    print(f"\n Dataset Overview:")
     print(f"   Total questions: {len(df)}")
     print(f"   Total topics: {df['topic'].nunique()}")
     print(f"   Question range: {df['id'].min()} to {df['id'].max()}")
     
-    print(f"\n📈 Score Statistics:")
+    print(f"\n Score Statistics:")
     print(f"   Average score: {df['score_avg'].mean():.2f}")
     print(f"   Score standard deviation: {df['score_avg'].std():.2f}")
     print(f"   Score range: {df['score_avg'].min():.1f} - {df['score_avg'].max():.1f}")
@@ -227,26 +215,22 @@ def main():
     """Main function to run the analysis"""
     print("🚀 Loading and analyzing Mohler dataset...")
     
-    # Load data
     df = load_and_clean_data('mohler_dataset_edited.csv')
     
-    # Add derived columns
     df['score_diff'] = abs(df['score_me'] - df['score_other'])
     df['answer_length'] = df['student_answer'].str.len()
     df['word_count'] = df['student_answer'].str.split().str.len()
-    
-    # Create visualizations
-    print("📊 Creating comprehensive analysis dashboard...")
+
+    print("Creating comprehensive analysis dashboard...")
     create_comprehensive_analysis(df)
     
-    print("📈 Creating detailed topic analysis...")
+    print("Creating detailed topic analysis...")
     create_detailed_topic_analysis(df)
-    
-    # Print summary statistics
+
     print_summary_statistics(df)
     
     print("\n" + "="*80)
-    print("✅ VISUALIZATION COMPLETE!")
+    print("VISUALIZATION COMPLETE!")
     print("="*80)
     print("Generated files:")
     print("   📄 mohler_analysis_dashboard.png")
