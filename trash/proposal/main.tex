@@ -1,0 +1,323 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{mdframed}
+\usepackage{url}
+\usepackage{pgfgantt}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lscape} 
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\BlackBox}{\rule{1.5ex}{1.5ex}}
+
+\definecolor{blue}{rgb}{0,0,0.8}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset
+{
+   basicstyle=\ttfamily\footnotesize,
+   language=C++,
+   numbers=right,
+   numberstyle=\color{gray},
+   showtabs=true,
+   breaklines=true,
+   breakatwhitespace=true,
+   captionpos=bottom,
+   keywordstyle=\color{blue},
+   commentstyle=\color{dkgreen},
+   stringstyle=\color{mauve},
+   frame=single
+}
+
+\mdfsetup
+{
+   skipabove=\topskip,
+   skipbelow=\topskip,
+   leftmargin=2em,
+   rightmargin=2em
+}
+
+\title
+{
+   \includegraphics[width=12cm]{up_logo.png} \\
+   \vspace{2cm}
+   \textbf{COS700 Research Proposal} \\ \vspace{0.5cm}
+   Rubric based model answer generation and evaluation for short
+answer questions \\ \vspace{0.5cm}
+   \textbf{Student number:} u21573558 \\ \vspace{0.5cm}
+   \textbf{Supervisor(s)}: \\ Linda Marshall \\ Cobus Redelinghuys 
+}
+
+\begin{document}
+\author{u21573558}
+\linespread{1.25}
+\maketitle
+
+\newpage
+\begin{abstract}
+Automated grading of short-answer questions has emerged as a critical area of research, particularly within the educational context, where large volumes of assessments must be evaluated both efficiently and accurately. This study investigates the integration of reasoning models and hybrid Natural Language Processing (NLP) techniques, specifically Sentence-BERT (S-BERT) and Self-Organising Maps (SOM), to enhance the accuracy and reliability of automated grading systems. By focusing on the generation of rubric-based model answers and evaluating student responses against structured rubrics defined by subject matter experts, this research seeks to address a key limitation of existing systems: the labour-intensive process of manually crafting model answers for marking. Through this investigation, the study aims to improve the overall grading accuracy, scalability, and adaptability of automated assessment systems, thus supporting their application in specialised academic domains.
+\end{abstract}
+
+\noindent \textbf{Keywords:} Education, Assessment, Natural Language Processing, Self-Organising Maps
+
+\section{Introduction}
+
+The increasing need to create automated systems to grade short answer questions is driven by the demand to streamline the educational assessment processes, particularly as educational content delivery and assessments move to digital platforms.~\cite{burrows2015eras}. Natural Language Processing (NLP)-based short-answer grading systems have emerged as valuable tools in managing the large volumes of student responses that require timely and consistent evaluation~\cite{burrows2015eras}.\newline\newline
+Despite notable progress using NLP techniques such as latent semantic analysis and keyword-based matching, these methods face persistent limitations—most notably, their difficulty in addressing lexical variability and semantic ambiguity in student responses~\cite{perez2005effects}. In response to these limitations, domain models have been introduced to improve the semantic interpretation of answers~\cite{perez2005effects,gliozzo2004unsupervised}. These, soft clustering techniques have proven effective, clusters in domain models represent semantic domains that help contextualise and differentiate student responses~\cite{gliozzo2004unsupervised}.\newline\newline
+This study investigates the potential of enhancing automated short-answer grading by integrating reasoning models and hybrid NLP techniques. Reasoning models, such as those employing chain-of-thought prompting, are machine learning systems designed to emulate human-like logical reasoning and inference by processing extensive datasets~\cite{wei2023chainofthoughtpromptingelicitsreasoning}. The research specifically explores how these models can be leveraged to generate rubric-based model answers that align closely with expert-defined grading criteria. These model answers serve as reference points for evaluating student responses in a more objective and consistent manner.\newline\newline
+Additionally, the incorporation of Self-Organising Maps (SOMs)—a type of artificial neural network used in unsupervised learning for clustering tasks—enables the grouping of similar student responses~\cite{kohonen1990self}. With this clustering mechanism the aim is to not only enhance grading precision but also facilitate the provision of more targeted and constructive feedback to learners.\newline\newline
+The remainder of this proposal is structured as follows: first, the problem statement will be articulated, with particular emphasis on identifying a gap in the existing body of literature. This will be followed by the formulation of a central research question that guides the study. Subsequently, a comprehensive literature review will be presented, examining, the early works, current advancements and challenges in the field of automated short-answer grading. The final two sections will outline the proposed research methodology and provide a detailed plan for the execution of the project.
+
+\section{Problem Statement}
+
+Automated short-answer grading systems commonly function by measuring the semantic similarity between student responses and a predefined set of teacher-provided model answers or pre-graded student answer~\cite{burrows2015eras,mitchell2003computerised}. While this methodology has shown promise in specific applications—such as the system developed by Mitchell for the Medical Progress Test at the University of Dundee~\cite{mitchell2003computerised}—a critical limitation remains. These systems typically require a collection of pre-scored and often moderated sample answers to serve as grading references. Although Mitchell notes that moderated responses could be reused in the future and that the system effectively reduced the marking burden for lecturers, the need for initial moderation and answer creation still represents a significant constraint~\cite{mitchell2003computerised}.\newline\newline
+
+This challenge is further exemplified by the development of systems such as ACTA (Analysis of Clinical Text for Assessment) and the Intelligent Assessment Technologies platform. Both systems demonstrated high levels of accuracy—exceeding 90\%—yet their success was underpinned by labour-intensive processes involving the manual creation and refinement of model answers~\cite{clauser2024automated, mitchell2003computerised}. These findings highlight a broader issue in the field: the substantial time and effort required to construct and calibrate accurate grading models.
+
+\subsection{Identified Gap}
+Given this limitation, there is a clear need for an automated grading system that utilises a rubric-based approach to generate model answers, ensuring that responses are evaluated according to expert-defined criteria. This system would not only match student responses to these generated answers but also evaluate them for correctness based on a structured rubric. The goal is to enhance the accuracy of grading while addressing the limitations associated with semantic similarity-based models, particularly in specialised academic fields.
+
+\subsection{Research Questions}
+The central question driving this research is:
+\begin{quote}
+    \textit{Can reasoning models and hybrid NLP techniques improve the accuracy of automated short-answer grading systems?}
+\end{quote}
+
+To address this overarching question, several sub-questions will be explored:
+\begin{quote}
+    \textit{How effectively can reasoning models generate rubric-based model answers for short-answer grading?}
+\end{quote}
+\begin{quote}
+    \textit{What impact does rubric-based model answer generation have on grading accuracy?}
+\end{quote}
+\begin{quote}
+    \textit{What factors influence the effectiveness of reasoning models and hybrid NLP techniques in this context?}
+\end{quote}
+\begin{quote}
+    \textit{How effectively can Self-Organizing Maps cluster responses to improve grading accuracy?}
+\end{quote}
+
+\section{Literature Study}
+\subsection{Early Research in Automatic Grading}
+
+Early research in automatic grading laid the conceptual and technical foundations for using computers to evaluate student writing and problem-solving in ways that extended beyond multiple-choice tests. One of the pioneers in the use of automated grading systems for assessment was Ellis B. Page who, in 1966, proposed and tested Project Essay Grade (PEG), a system that used measurable surface features of student essays, such as sentence length and word complexity, to predict holistic quality\footnote{overall quality} scores that were likely to be assigned by human graders \cite{page1966imminence}. The system used multiple regression analysis\footnote{This is a statistical tool for the investigating of relationships between different variables \cite{sykes1993introduction}} to “simulate human judges” this meant one or variables were used to predict the score \cite{page1966imminence}. Page’s system achieved correlations of up to 0.71 with human graders, this was adjusted down to 0.65 to account for shrinkage meaning the model accuracy was initially slightly inaccurate, however even with the adjusted correlation this showed early promise in replicating subjective judgements through statistical modelling\cite{page1966imminence}. The PEG system marked a radical departure from traditional assessment methods, suggesting that computer-based scoring could be not only reliable but also scalable, potentially freeing educators to focus more on instruction and feedback\cite{page1966imminence}.\newline\newline
+
+Building on the early promise shown by Page, Martinez, Michael E and Bennett (1992) considered it appropriate to review the field of automated grading, which by then had expanded beyond the essays first tested by Page, to encompass more complex constructed-response tasks across disciplines such as mathematics, computer science, architecture, and natural language processing. Their review examined systems capable of assessing open-ended responses using approaches such as pattern recognition, rule-based logic, and expert systems. One system of particular relevance to this proposal, because to it being one of the first attempts of to automate short answer grading is the Free Response Scoring Tool (FRST), a pattern-matching \footnote{This involves comparing two patterns in order to decide whether they match\cite{hak2009pattern}} program designed to grade answers to open-ended verbal questions. FRST was tested on 186 responses, each approximately 12 to 15 words in length, and demonstrated a strong correlation of 92\% with human graders\cite{martinez1992review}. However, a notable limitation of the system was its binary grading mechanism, it could only determine whether a response was correct or incorrect, without accounting for partial accuracy or understanding \cite{martinez1992review}. While the systems discussed in the review—such as GIDE \cite{martinez1992review}, an expert system for algebra problem-solving, as well as MicroPROUST \cite{martinez1992review} and the APCS Practice System\cite{martinez1992review}, which analysed student code were not directly relevant to the focus of this proposal, they highlighted an important aspect of automated grading, the feasibility of scoring complex, process-oriented tasks with reasonable accuracy. Nonetheless, these systems also underscored key challenges that were universally shared across most automated grading systems, these include the labor-intensive creation of domain-specific knowledge bases and the difficulty of accommodating diverse or unanticipated student responses\cite{martinez1992review}.\newline\newline
+
+Collectively, these early efforts established a foundational blueprint for automated grading, integrating domain expertise with rule-based and statistical models to generate reliable assessments. These pioneering studies laid the groundwork for subsequent advancements in educational assessment technologies, particularly the incorporation of NLP in modern automated grading systems.
+
+\subsection{Uses of NLP in Automated Short Answer Grading}
+NLP is a field of artificial intelligence that enables computers to understand, interpret, and generate human language \cite{jurafskyspeech} and as the demand for more nuanced and scalable assessment tools grew, researchers began exploring how NLP techniques could be applied to automatically grade short-answer free-text responses. These responses, unlike essays, required systems to detect specific content-based ideas rather than holistic writing quality.\newline \newline
+
+One of the most sophisticated early NLP systems for short-answer grading was C-rater, developed by Leacock and Chodorow in 2003. Rather than relying exclusively on keywords or string matching, C-rater employed a detailed analysis of predicate argument structures, morphological normalisation, synonym substitution, and pronominal reference to recognise paraphrases of correct answers \cite{leacock2003c}. C-rater was tested on two large-scale assessments,the National Assessment for Educational Progress (NAEP) and Indiana’s statewide English exam, C-rater achieved an average of 84\% agreement with human raters \cite{leacock2003c}.  Despite its strengths, the system struggled with creative student responses, which included uncommon phrases used by students and another limitation was the system reliance on model answers provided by human graders, limiting its adaptability to open-ended or opinion-based questions\cite{leacock2003c}. Furthermore, it could misinterpret answers when students included correct concepts but in incorrect contexts, revealing the challenges of partial understanding detection\cite{leacock2003c}.\newline \newline
+
+Following C-rater’s advancements, further progress in automated short-answer grading was demonstrated by Tom Mitchell et al, who in 2003 collaborated on the development of a marking engine developed by Intelligent Assessment Technologies that was used to grade short-answer questions in Dundee University’s medical progress tests \cite{mitchell2003computerised}. Their system relied on syntactic-semantic templates derived from marking guidelines and refined through a process of computer-assisted moderation\cite{mitchell2003computerised}. This allowed human assessors to review, adjust, and improve the mark schemes based on actual student responses \cite{mitchell2003computerised}. The system achieved 99.4\% agreement with moderated human scores and outperformed human-only marking in terms of consistency \cite{mitchell2003computerised}. However, its success depended heavily on prior moderation and careful template construction, underscoring the labour-intensive set-up phase required to deploy NLP-based grading systems at scale\cite{mitchell2003computerised}. \newline \newline
+
+An additional noteworthy contribution to the use of natural language processing in the domain of automated short-answer grading came from Pulman and Sukkarieh who 2005 laid the groundwork by combining rule-based information extraction with statistical machine learning to score GCSE science short answers\cite{pulman2005automatic}. Their system could recognise varied linguistic constructions using hand-crafted patterns and a shallow parser, achieving up to 93\% agreement with human markers using manually designed templates\cite{pulman2005automatic}. While machine learning models like Naive Bayes and decision trees showed promise, especially when trained on annotated student responses, they lacked the explainability and accuracy of the rule-based approach\cite{pulman2005automatic}. Ultimately, the researchers proposed a hybrid model that combined the transparency of pattern-matching with the adaptability of machine learning, acknowledging that neither method alone could fully meet the demands of classroom or exam environments\cite{pulman2005automatic}.\newline \newline
+
+These early systems demonstrated that NLP could enable accurate, large-scale assessment of short, content-based answers.This marked an important step beyond the statistical surface analysis used in essay grading. However, they also revealed the limitations of early NLP tools, including a reliance on hand crafted models, difficulty handling novel phrasing, and the need for human oversight during set-up and moderation. While the technologies were not yet fully autonomous, they marked a crucial transition toward more sophisticated, meaning based assessment methods.\newline \newline
+
+\subsection{Text Mining and Deep Learning Approaches for Automated Short Answer Grading}
+As the field of automated assessment continued to evolve, text mining emerged as a powerful tool for grading short-answer responses. By using various semantic analysis techniques, text mining systems can evaluate the content of student answers, provide rapid feedback, and improve grading efficiency. Early studies on text mining for short-answer grading showed promising results, demonstrating that these methods can not only replicate human judgment but also offer scalable solutions for large-scale assessments.\newline\newline
+
+One of the key studies in this area was "\textit{Text-to-text semantic similarity for automatic short answer grading}", conducted by Michael Mohler and Rada Mihalcea in 2009, they explored the use of semantic similarity for automated short-answer grading\cite{mohler2009text}. The study compared various similarity measures, such as Latent Semantic Analysis (LSA) and Explicit Semantic Analysis (ESA), for evaluating student answers\cite{mohler2009text}. The authors found that ESA performed particularly well, showing the best results when trained on domain-specific corpora, such as science-related datasets\cite{mohler2009text}. Their experiments indicated a Pearson correlation of 0.92 between automated and human scores, showcasing the potential of semantic similarity measures to approximate human grading\cite{mohler2009text}.\newline\newline
+
+In the context of deep learning approaches, the paper "\textit{On Deep Learning Approaches to Automated Assessment: Strategies for Short Answer Grading}", the paper highlighted the significant improvements that deep learning models, particularly transformers like BERT, have brought to automated grading\cite{ahmed2022deep}. By utilising pre-trained models on domain-specific datasets, the accuracy of grading using deep learning had been enhanced, especially when compared to earlier machine learning methods\cite{ahmed2022deep}. BERT-based models, when fine-tuned, achieved Pearson correlation values of 0.95 on short-answer assessments, surpassing traditional approaches\cite{ahmed2022deep}. However, the authors acknowledged that domain generalisation remains a challenge, as models trained on specific subjects often struggle with new, unseen topics\cite{ahmed2022deep}.\newline\newline
+
+Another notable development in the domain of deep learning learning approaches was the clustering approach introduced in the article "\textit{Automatic short answer grading and feedback using text mining methods}", the approach used used text mining to group similar student responses together\cite{suzen2020automatic}. This approach not only allows for automated grading but also enables efficient feedback generation. The study demonstrated that by clustering answers into semantic groups, the system could assign the same grade to similar responses while offering targeted feedback\cite{suzen2020automatic}. This was particularly beneficial for identifying common student misconceptions and providing individualised comments based on answer patterns\cite{suzen2020automatic}. This method proved to be especially effective in large-scale assessments, where grading accuracy and feedback speed are crucial\cite{suzen2020automatic}.\newline\newline
+
+Despite these advances, challenges remain. While text mining and deep learning have significantly improved grading efficiency and accuracy, these systems are still highly dependent on the quality of model answers and the corpus used for training. Additionally, the human calibration of grading models continues to play an essential role, especially for cases where answers deviate from expected phrasing or include novel responses. Overall, text mining methods, including semantic similarity measures, deep learning models, and clustering techniques, have proven to be effective tools for automated short-answer grading. While these methods offer impressive results in terms of grading accuracy and feedback generation, further improvements are needed in domain adaptation and response generalisation.\newline\newline
+
+\subsection{Recent Advancements in Automated Short-Answer Scoring}
+In recent years automated short-answer grading has undergone significant advancements, with similarity-based systems becoming a critical component of modern educational assessment tools. One prominent approach explored by the paper "\textit{Automated Scoring of Short-Answer Questions: A Progress Report}" uses a large language model to assess short-answer questions by comparing student responses to a training set of previously human-scored answers. This system uses embedding-based similarity measures, specifically cosine similarity, to match student responses with the most appropriate model answer\cite{clauser2024automated}. In their study, over 35,000 responses from a high-stakes medical exam were analysed, achieving an impressive 0.97 to 0.99 agreement with human scores, using the Analysis of Clinical Text for Assessment system(ACTA)\cite{clauser2024automated}. The ACTA system fine tuned S-Bert model using expert graded answers and model answers provided for by the expert and the fine tuning a similarity based approach to grading. The underlying grading mechanism was powered by Sentence-BERT (S-BERT), a modified version of the pre-trained BERT architecture. S-BERT employs siamese and triplet network structures to generate semantically meaningful sentence embeddings, enabling efficient comparison of textual responses through cosine similarity\cite{reimers2019sentencebertsentenceembeddingsusing}.\newline\newline
+
+In contrast, the study by Kaya and Cicekli (2024) introduces a hybrid model that combines BERT with parallel convolutional neural network (CNN) layers and multi-head attention mechanisms, reflecting the increasing sophistication of automated grading systems\cite{kaya2024hybrid}. This approach leverages the semantic understanding capabilities of transformer-based models while simultaneously capturing both local and global textual features, which is an advancement over traditional grading techniques\cite{kaya2024hybrid}. By modelling nuanced relationships between words, the hybrid system demonstrates improved grading accuracy, particularly in handling complex and multi-part student responses that require deeper semantic comprehension\cite{kaya2024hybrid}. The model achieved a correlation of 0.747 with Mohler’s dataset, along with 76\% accuracy in three-way classification tasks (Beetle dataset) and over 80\% in two-way classification tasks using the SciEntsBank and Beetle datasets\cite{kaya2024hybrid}. While these results may appear less impressive compared to the high agreement levels reported in ACTA studies (with correlations reaching 0.97 and 0.99), it is important to note that the models in Kaya and Cicekli’s study were not fine-tuned using expert-curated datasets, and relied on pre-trained BERT models without the benefit of domain-specific enhancements\cite{kaya2024hybrid}.\newline\newline
+
+\section{Research Methodology}
+
+\subsection{Overview of the Approach}
+A review of the literature reveals that the performance of automated grading systems is strongly influenced by the quality and representativeness of the training datasets, emphasizing the necessity of high-quality, domain-specific data for producing reliable and valid assessment results. This insight has informed the methodology of the present study, which focuses on evaluating the effectiveness of automated short-answer grading using advanced hybrid Natural Language Processing (NLP) techniques. The objective is to develop a system capable of assessing student responses based solely on a predefined rubric. The proposed model adopts a hybrid architecture, integrating Sentence-BERT (S-BERT), parallel Convolutional Neural Networks (CNN), multi-head attention mechanisms,and self-organizing maps for data clustering. The system’s performance will be evaluated using benchmark datasets and standard evaluation metrics to determine its accuracy.
+
+\subsection{Data Set}
+This study will leverage three prominent datasets: Mohler's dataset, SRA SciEntsBank, and SRA Beetle. Collectively, these datasets provide over 13,000 responses that will be analysed and graded within the scope of the study. The datasets have been widely used in previous research, including the "\textit{Hybrid Approach for Automated Short Answer Grading}" paper, which has been discussed in the literature review. This provides a valuable benchmark for comparison and the use of these datasets ensures that the study’s results are built on solid ground, with a substantial corpus of data and historical performance metrics available for validation.
+\subsection{Evaluation Metrics}
+To assess the effectiveness and accuracy of the automated grading system, the study will employ several evaluation metrics commonly used in NLP and automated grading research:
+ \begin{itemize}
+     \item \textit{\textbf{Accuracy}}: To measure the overall performance in terms of correctly graded responses\cite{kaya2024hybrid}
+     \item \textit{\textbf{Macro F1 Score}}: This metric will be used to evaluate the balance between precision and recall across all classes, without regard to the class distribution\cite{kaya2024hybrid}
+     \item \textit{\textbf{Weighted F1 Score}}: This will account for imbalances in the class distribution by giving different weights to each class based on their occurrence\cite{kaya2024hybrid}.
+     \item \textit{\textbf{Pearson Correlation}}: To measure the degree of linear relationship between human-grader scores and the automated system’s scores, providing insights into how closely the system’s grading aligns with expert evaluations\cite{kaya2024hybrid}.
+     \item \textit{\textbf{Root Mean Square Error (RMSE)}}: This metric will help assess the prediction error in continuous scoring, where a lower RMSE indicates better model performance\cite{kaya2024hybrid}.
+ \end{itemize}
+
+\subsection{System Development Flow}
+The core of the methodology involves the design and implementation of an automated grading system, structured around the following flow:
+ \begin{itemize}
+     \item \textit{\textbf{Rubric Provision}}: A detailed rubric for the short-answer questions will be provided to the system. This rubric will guide the grading process, ensuring that the system focuses on the critical aspects of the student responses as dictated by the grading criteria.
+     \item \textit{\textbf{Reasoning Model (Deepseek R1)}}: The system will employ Deepseek R1, a reasoning model, to generate possible answers to the questions based on the rubric. This step enables the system to establish a baseline for what constitutes a correct or partial answer.
+     \item \textit{\textbf{Hybrid Grading Model}}: The primary grading process will be conducted using a hybrid approach that integrates S-BERT (Sentence-BERT), parallel CNN layers, and multi-head attention mechanisms. This hybrid model is designed to effectively capture both local syntactic patterns and global semantic relationships in student responses, allowing for nuanced evaluation of answers ranging from simple factual responses to more complex, open-ended ones.
+     \item \textit{\textbf{Clustering of Responses}}:  After the responses are graded, self-organizing maps (SOMs) will be employed to cluster the data into meaningful groups. This will allow the study to categorize responses based on their similarities and better understand the performance of the system across different types of answers.
+ \end{itemize}
+
+ \begin{tikzpicture}[
+    node distance=1.5cm,
+    stage/.style={
+        rectangle, 
+        rounded corners, 
+        draw=blue!50, 
+        fill=blue!10,
+        text width=3.5cm,
+        minimum height=1.2cm,
+        align=center
+    },
+    component/.style={
+        rectangle,
+        draw=blue!30,
+        fill=blue!5,
+        text width=2.8cm,
+        minimum height=1cm,
+        align=center
+    },
+    arrow/.style={
+        -Stealth,
+        thick,
+        blue!50
+    }
+]
+
+% Nodes
+\node (rubric) [stage] {Rubric Provision\\ \footnotesize(Detailed grading criteria)};
+\node (reasoning) [stage, below=of rubric] {Reasoning Model\\ \footnotesize(Deepseek R1)\\ \footnotesize Generate baseline answers};
+\node (hybrid) [stage, below=of reasoning] {Hybrid Grading Model\\ \footnotesize(S-BERT + CNN + Attention)};
+\node (clustering) [stage, below=of hybrid] {Response Clustering\\ \footnotesize(Self-Organizing Maps)};
+
+% Components inside Hybrid Model
+\node (sbert) [component, left=1cm of hybrid] {Sentence-BERT\\ \scriptsize(Semantic Encoding)};
+\node (cnn) [component, above=0.3cm of sbert] {Parallel CNN\\ \scriptsize(Syntactic Patterns)};
+\node (attention) [component, below=0.3cm of sbert] {Multi-head Attention\\ \scriptsize(Context Relations)};
+
+% Arrows
+\draw [arrow] (rubric) -- (reasoning);
+\draw [arrow] (reasoning) -- (hybrid);
+\draw [arrow] (hybrid) -- (clustering);
+
+% Hybrid model connections
+\draw [arrow] (cnn) -- (hybrid);
+\draw [arrow] (sbert) -- (hybrid);
+\draw [arrow] (attention) -- (hybrid);
+
+% Annotation
+\node [right=0.5cm of hybrid, text width=3cm, align=left] {\scriptsize\textit{Combines:}\\ 
+\scriptsize$\bullet$ Local features\\ 
+\scriptsize$\bullet$ Global context\\ 
+\scriptsize$\bullet$ Semantic relationships};
+
+\end{tikzpicture}
+
+\subsection{Epistemological Stance}
+ The study adopts a positivist epistemological stance, which seeks to objectively measure and compare the grading accuracy of different NLP techniques. By applying these techniques to student responses, the study will collect quantitative data that reflects the effectiveness of the grading system. The positivist approach ensures that the results are grounded in observable and measurable outcomes, with a focus on objectivity and reliability in the analysis
+\section{Planning}
+The project will be divided into four main phases, each with specific objectives and outcomes. The project timeline is discussed below :
+
+\subsection{Project Phases}
+
+\subsubsection{Phase 1: Research and Development (February to June)}
+The first phase will focus on the research and development of NLP techniques as well as the implementation of the Automated Short Answer Grading (ASAG) System. Key activities in this phase include:
+\begin{itemize}
+    \item Investigating and selecting appropriate NLP techniques.
+    \item Implementation of model answer generation and automated grading functionality.
+    \item Deployment of the system.
+\end{itemize}
+
+\subsubsection{Phase 2: Testing and Fine-Tuning (June to July)}
+The second phase will involve testing the ASAG system using sample datasets. Activities include:
+\begin{itemize}
+    \item Compiling and preparing sample datasets.
+    \item Evaluating grading accuracy.
+    \item Fine-tuning the system.
+\end{itemize}
+
+\subsubsection{Phase 3: Critical Analysis and Evaluation (July to August)}
+The third phase will focus on analysing the real-world efficacy of the ASAG system and comparing it to sample data performance. Key activities include:
+\begin{itemize}
+    \item Conducting critical performance analysis.
+    \item Identifying limitations and areas for improvement.
+    \item Documenting findings.
+\end{itemize}
+
+\subsubsection{Phase 4: Supervisor Reviews (August to September)}
+The final phase will focus on supervisor reviews and final adjustments based on feedback. Key activities include:
+\begin{itemize}
+    \item Receiving and reviewing feedback from supervisors.
+    \item Addressing feedback and making necessary improvements to the system.
+    \item Finalizing the documentation and preparing for project submission.
+\end{itemize}
+
+\subsection{Project Milestones}
+\begin{itemize}
+    \item Completion of Class Connect application development (June).
+    \item Completion of testing and fine-tuning with sample data (July).
+    \item Critical analysis (August).
+    \item Supervisor reviews and final adjustments (September).
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{ % Resize the Gantt chart to fit the page width
+\begin{ganttchart}[
+    x unit=1.2mm,
+    y unit chart=0.6cm,
+    vgrid={*{6}{draw=none}, dotted},
+    time slot format=isodate,
+    title/.append style={shape=rectangle, fill=black!10},
+    title label font=\bfseries,
+    bar/.append style={fill=blue!50, rounded corners=2pt},
+    bar height=0.5,
+    group left shift=0,
+    group right shift=0,
+    group peaks tip position=0,
+    group/.append style={draw=black, fill=blue!30},
+    milestone/.append style={fill=orange, rounded corners=2pt},
+    link/.style={->, thick}
+]{2025-02-01}{2025-10-15}
+\gantttitlecalendar{year, month=name} \\
+
+% Phase 1: Research and Development
+\ganttbar{Investigating and selecting NLP techniques}{2025-02-01}{2025-06-30} \\
+\ganttbar{Implementing model answer grading functionality}{2025-03-01}{2025-06-30} \\
+\ganttbar{Deployment of the system}{2025-05-01}{2025-06-30} \\
+
+% Phase 2: Testing and Fine-Tuning
+\ganttbar{Compiling and preparing datasets}{2025-06-01}{2025-06-30} \\
+\ganttbar{Evaluating grading accuracy}{2025-07-01}{2025-07-31} \\
+\ganttbar{Fine-tuning the system}{2025-06-15}{2025-07-31} \\
+
+% Phase 3: Analysis and Evaluation
+\ganttbar{Critical performance analysis}{2025-08-01}{2025-08-31} \\
+\ganttbar{Identifying limitations}{2025-08-01}{2025-08-31} \\
+\ganttbar{Documenting findings}{2025-08-15}{2025-08-31} \\
+
+% Phase 4: Supervisor Reviews
+\ganttbar{Supervisor reviews and adjustments}{2025-08-15}{2025-09-30} \\
+\end{ganttchart}
+}
+\caption{Project Gantt Chart}
+\label{fig:gantt}
+\end{figure}
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+\end{document}
