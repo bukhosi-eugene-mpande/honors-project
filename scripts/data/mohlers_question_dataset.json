@@ -1,0 +1,1635 @@
+[
+  {
+    "id": 1,
+    "question": "What is the role of a prototype program in problem solving?",
+    "desired_answer": "To simulate the behaviour of portions of the desired software product.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Explains that a prototype helps test and explore possible solutions early."
+      },
+      {
+        "point": 2,
+        "criterion": "Explains that it allows errors, flaws, or gaps to be identified quickly."
+      },
+      {
+        "point": 1,
+        "criterion": "Notes that it enables refinement or improvement of the solution/approach"
+      }
+    ],
+    "llm_answers": [
+      "A prototype program aids in testing and exploring potential solutions early, allowing for swift identification of errors, flaws, or gaps, and facilitating refinement or enhancement of the solution or approach.",
+      "A prototype helps identify errors, flaws, or gaps quickly, enabling refinement or improvement of the solution/approach and allowing for early testing and exploration of possible solutions.",
+      "A prototype program aids in testing and exploring potential solutions early, allowing for the swift identification of errors, flaws, or gaps, and subsequently enabling the refinement or enhancement of the solution or approach."
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What stages in the software life cycle are influenced by the testing stage?",
+    "desired_answer": "The testing stage can influence both the coding stage (phase 5) and the solution refinement stage (phase 7)",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Notes that the testing stage can influence the coding stage."
+      },
+      {
+        "point": 2.5,
+        "criterion": "Notes that the testing stage can influence the solution refinement stage."
+      }
+    ],
+    "llm_answers": [
+      "The testing stage can affect the coding stage and the solution refinement stage. It may prompt revisiting the coding to fix bugs and enhance the solution refinement to improve the overall product.",
+      "The testing stage can affect the coding stage by identifying bugs that need fixing and can influence the solution refinement stage by highlighting areas needing improvement.",
+      "The testing stage can influence the solution refinement stage and also the coding stage, allowing for adjustments and improvements in the software development process."
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What are the main advantages associated with object-oriented programming?",
+    "desired_answer": "Abstraction and reusability.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention of one of the following advantages: modularity, reusability, encapsulation, inheritance, polymorphism."
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention of one of the following advantages: modularity, reusability, encapsulation, inheritance, polymorphism."
+      }
+    ],
+    "llm_answers": [
+      "Object-oriented programming offers modularity and reusability through encapsulation and inheritance, enabling polymorphism for efficient code management.",
+      "Object-oriented programming offers modularity and encapsulation, allowing for better organization and data protection. It also provides reusability and inheritance, facilitating code reuse and hierarchical class structures.",
+      "Object-oriented programming offers modularity and reusability, allowing code to be organized into reusable components. Encapsulation and inheritance enhance maintainability and code reuse, while polymorphism enables flexibility in code design."
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Where do C++ programs begin to execute?",
+    "desired_answer": "At the main function.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that the main function is the entry point of the program or implenments a main function in c++."
+      }
+    ],
+    "llm_answers": [
+      "Execution of C++ programs starts at the main function, which serves as the entry point. The main function is implemented in C++.",
+      "Execution of C++ programs starts at the main function, which is the designated entry point of the program.",
+      "C++ programs initiate execution at the main function, which serves as the program's entry point."
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is a variable?",
+    "desired_answer": "A location in memory that can store a value.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mentions that a variable is a location in memory"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mentions that a variable can store a value"
+      }
+    ],
+    "llm_answers": [
+      "A variable is a memory location designated to hold a value, serving as a container for data within a program.",
+      "A variable is a memory location that can hold a value.",
+      "A variable is a memory location that can store a value. It is a place in memory where a value can be stored."
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Where are variables declared in a C++ program?",
+    "desired_answer": "Variables can be declared anywhere in a program. They can be declared inside a function (local variables) or outside the functions (global variables)",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mentions that local variables are declared inside a function"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mentions that global variables are declared outside the functions"
+      }
+    ],
+    "llm_answers": [
+      "Global variables in a C++ program are declared outside the functions, while local variables are declared inside a function.",
+      "Global variables in a C++ program are declared outside functions, while local variables are declared within a function.",
+      "In C++, global variables are declared outside any function, while local variables are declared within a function."
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What is the main difference between a while and a do...while statement?",
+    "desired_answer": "The block inside a do...while statement will execute at least once.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that the block inside a do...while statement will execute at least once"
+      }
+    ],
+    "llm_answers": [
+      "A while statement checks the condition before executing the block, whereas a do...while statement executes the block first and then checks the condition, ensuring the block runs at least once.",
+      "The primary distinction is that a do...while statement ensures the block executes at least once, unlike a while statement.",
+      "The primary difference is that the block inside a do...while statement runs at least once, unlike a while statement which may not execute at all."
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What is typically included in a class definition?",
+    "desired_answer": "Data members (attributes) and member functions.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mentions that data members are declared inside the class"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mentions that member functions are declared inside the class"
+      }
+    ],
+    "llm_answers": [
+      "A class definition includes data members, which are attributes, and member functions, which are methods, all declared within the class.",
+      "A class definition includes data members and member functions. Data members are declared within the class, and member functions are also declared within the class.",
+      "A class definition includes data members and member functions. Data members are declared within the class, and member functions are also declared within the class."
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What is the difference between a data member and a local variable inside a member function?",
+    "desired_answer": "Data members can be accessed from any member functions inside the class defintion. Local variables can only be accessed inside the member function that defines them.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that data members can be accessed from any member functions inside the class defintion"
+      },
+      {
+        "point": 5,
+        "criterion": "Mentions that local variables can only be accessed inside the member function that defines them"
+      }
+    ],
+    "llm_answers": [
+      "Data members are accessible from all member functions within the class definition, while local variables are confined to the member function where they are declared.",
+      "Local variables are confined to the member function where they are declared, whereas data members are accessible from all member functions within the class.",
+      "Local variables within a member function are accessible only within that function. Conversely, data members are accessible from any member function within the class."
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What is the difference between a constructor and a function?",
+    "desired_answer": "A constructor is called whenever an object is created, whereas a function needs to be called explicitely. Constructors do not have return type, but functions have to indicate a return type.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mentions that a constructor is called whenever an object is created"
+      },
+      {
+        "point": 0.5,
+        "criterion": "Mentions that constructors do not have return type"
+      },
+      {
+        "point": 2,
+        "criterion": "Mentions that a function needs to be called explicitely"
+      },
+      {
+        "point": 0.5,
+        "criterion": "Mentions that functions have to indicate a return type"
+      }
+    ],
+    "llm_answers": [
+      "Functions need to be explicitly called and must indicate a return type, while constructors, which are invoked when an object is created, do not have a return type. Constructors are called automatically during object instantiation, unlike functions.",
+      "A constructor is called whenever an object is created, while a function needs to be explicitly called. Unlike functions, constructors do not have a return type, whereas functions must indicate a return type.",
+      "A constructor is invoked automatically when an object is instantiated, and it lacks a return type. Conversely, a function must be explicitly called and requires a specified return type."
+    ]
+  },
+  {
+    "id": 11,
+    "question": "When does C++ create a default constructor?",
+    "desired_answer": "If no constructor is provided, the compiler provides one by default. If a constructor is defined for a class, the compiler does not create a default constructor.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that the compiler provides a default constructor if no constructor is provided"
+      }
+    ],
+    "llm_answers": [
+      "If no constructor is defined, the compiler automatically provides a default constructor. A user-defined constructor prevents the compiler from generating a default one.",
+      "The compiler provides a default constructor if no constructor is defined for a class. If any constructor is specified, the default constructor is not created.",
+      "If no constructor is defined, the compiler automatically provides a default constructor. If any constructor is specified, the compiler does not generate a default one."
+    ]
+  },
+  {
+    "id": 12,
+    "question": "How many constructors can be created for a class?",
+    "desired_answer": "Unlimited number.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that there is no limit to the number of constructors that can be created for a class"
+      }
+    ],
+    "llm_answers": [
+      "There is no restriction on the number of constructors that can be created for a class.",
+      "There is no limit to the number of constructors that can be created for a class.",
+      "There is no limit to the number of constructors that can be created for a class, allowing for various initialization options."
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What is the difference between a function prototype and a function definition?",
+    "desired_answer": "A function prototype includes the function signature, i.e., the name of the function, the return type, and the parameters' type. The function definition includes the actual body of the function.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mentions that a function prototype includes the function signature"
+      },
+      {
+        "point": 0.5,
+        "criterion": "Mentions that a function prototype includes the parameters' type"
+      },
+      {
+        "point": 0.5,
+        "criterion": "Mentions that a function prototype includes the return type."
+      },
+      {
+        "point": 0.5,
+        "criterion": "Mentions that a function prototype includes the name of the function"
+      },
+      {
+        "point": 1.5,
+        "criterion": "Mentions that a function definition includes the actual body of the function"
+      }
+    ],
+    "llm_answers": [
+      "A function prototype includes the function name, return type, and parameters' type, while the function definition includes the actual body of the function. The function signature, which is part of the prototype, specifies the function's name, return type, and parameters' types.",
+      "A function prototype specifies the function signature, including the return type, function name, and parameter types. Conversely, a function definition contains the actual code body of the function.",
+      "A function prototype specifies the function's name, return type, and parameter types without the body. A function definition includes the actual code that executes when the function is called."
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What is the role of a header-file?",
+    "desired_answer": "To store a class interface, including data members and member function prototypes.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mentions that a header-file includes a class interface"
+      },
+      {
+        "point": 2,
+        "criterion": "Mentions that a header-file includes data members"
+      },
+      {
+        "point": 2,
+        "criterion": "Mentions that a header-file includes member function prototypes"
+      }
+    ],
+    "llm_answers": [
+      "A header-file contains the class interface, including data members and member function prototypes.",
+      "A header-file contains the class interface, which includes data members and member function prototypes.",
+      "A header-file includes member function prototypes, a class interface, and data members. It stores the class interface and member function prototypes, while data members are declared within the class."
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What does a function signature include?",
+    "desired_answer": "The name of the function and the types of the parameters.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mentions that a function signature includes the name of the function"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mentions that a function signature includes the types of the parameters"
+      }
+    ],
+    "llm_answers": [
+      "A function signature comprises the function's name and the types of its parameters.",
+      "A function signature comprises the function's name and the types of its parameters.",
+      "A function signature includes the types of the parameters and the name of the function."
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What is the scope of global variables?",
+    "desired_answer": "File scope.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that global variables have file scope"
+      }
+    ],
+    "llm_answers": [
+      "Global variables have file scope, meaning they are accessible throughout the entire file in which they are declared.\n\nGlobal variables possess file scope, making them available across the whole file where they are defined.",
+      "Global variables possess file scope, meaning they are accessible throughout the entire file in which they are declared, regardless of the function or block.",
+      "Global variables have file scope, meaning they are accessible throughout the entire file in which they are declared."
+    ]
+  },
+  {
+    "id": 17,
+    "question": "How does the compiler handle inline functions?",
+    "desired_answer": "It makes a copy of the function code in every place where a function call is made.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mentions that the compiler makes a copy of the function code."
+      },
+      {
+        "point": 3,
+        "criterion": "Mentions that the copy of the function code is inserted in every place where a function call is made"
+      }
+    ],
+    "llm_answers": [
+      "The compiler replicates the function code at each call site for inline functions, effectively substituting the function call with the actual code. This process involves creating a duplicate of the function code.",
+      "The compiler duplicates the inline function's code and places it at each location where the function is invoked.",
+      "The compiler duplicates the inline function's code and places it at each point of invocation."
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What is the main advantage associated with function arguments that are passed by reference?",
+    "desired_answer": "It avoids making copies of large data structures when calling functions.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mentions that it avoids making copies of large data structures when calling functions"
+      }
+    ],
+    "llm_answers": [
+      "Passing arguments by reference prevents the creation of duplicate data structures when invoking functions, conserving memory and enhancing efficiency.",
+      "Passing function arguments by reference prevents the creation of large data structure copies during function calls.",
+      "When calling functions, passing by reference avoids making copies of large data structures, which is its main advantage."
+    ]
+  },
+  {
+    "id": 19,
+    "question": "How are overloaded functions differentiated by the compiler?",
+    "desired_answer": "Based on the function signature. When an overloaded function is called, the compiler will find the function whose signature is closest to the given function call.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mentions that overloaded functions are differentiated by the function signature"
+      },
+      {
+        "point": 4,
+        "criterion": "Mentions that the compiler will find the function whose signature is closest to the given function call"
+      }
+    ],
+    "llm_answers": [
+      "The compiler differentiates overloaded functions based on the function signature, selecting the one closest to the given function call. It identifies the correct function by matching the function signature.",
+      "The compiler differentiates overloaded functions based on the function signature, selecting the one that most closely matches the given function call.",
+      "Overloaded functions are distinguished by their signatures. The compiler identifies the function that matches the call's signature most closely."
+    ]
+  },
+  {
+    "id": 20,
+    "question": "When defining a recursive function, what are possible causes for infinite recursion?",
+    "desired_answer": "If the recursion step is defined incorrectly, or if the base case is not included.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mentions that the recursion step is defined incorrectly"
+      },
+      {
+        "point": 3,
+        "criterion": "Mentions that the base case is not included"
+      }
+    ],
+    "llm_answers": [
+      "If the base case is not included, or if the recursion step is defined incorrectly, infinite recursion can occur.",
+      "Infinite recursion can occur if the base case is missing or if the recursion step is incorrectly defined. \n\nA recursive function may loop indefinitely if it lacks a base case or if the recursive call is not properly formulated.",
+      "An incorrect recursion step or absence of a base case can lead to endless recursion."
+    ]
+  },
+  {
+    "id": 21,
+    "question": "What are the similarities between iteration and recursion?",
+    "desired_answer": "They both involve repetition; they both have termination tests; they can both occur infinitely.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mentions that they both involve repetition"
+      },
+      {
+        "point": 2,
+        "criterion": "Mentions that they both have termination tests"
+      },
+      {
+        "point": 2,
+        "criterion": "Mentions that they both can occur infinitely"
+      }
+    ],
+    "llm_answers": [
+      "Both iteration and recursion involve repetition and have termination tests; they can both occur infinitely.",
+      "Both iteration and recursion involve repetition, include termination tests, and can potentially lead to infinite loops.",
+      "Both iteration and recursion involve repetition, have termination tests, and can potentially occur infinitely."
+    ]
+  },
+  {
+    "id": 22,
+    "question": "What are the two different ways of specifying the length of an array?",
+    "desired_answer": "In the array declaration, or by using an initializer list.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that the length of an array can be specified in the array declaration"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that the length of an array can be specified by using an initializer list"
+      }
+    ],
+    "llm_answers": [
+      "The length of an array can be defined during its declaration or by employing an initializer list. When declaring an array, you can specify the size directly; alternatively, an initializer list can determine the array's length based on the number of elements provided.",
+      "The length of an array can be specified during the array declaration or by using an initializer list.",
+      "The length of an array can be defined during declaration or by employing an initializer list."
+    ]
+  },
+  {
+    "id": 23,
+    "question": "What is the main difference between strings declared using the type string versus strings declared using an array of characters?",
+    "desired_answer": "The strings declared using an array of characters have a null element added at the end of the array.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the strings declared using an array of characters have a null element added at the end of the array"
+      }
+    ],
+    "llm_answers": [
+      "Strings declared using an array of characters have a null element added at the end of the array, unlike strings declared using the type string.",
+      "Strings declared using an array of characters have a null element added at the end of the array, whereas strings declared using the type string do not.",
+      "Strings declared as type string are managed by the language, while strings declared as an array of characters require manual null-termination at the end."
+    ]
+  },
+  {
+    "id": 24,
+    "question": "How are arrays passed to functions?",
+    "desired_answer": "by reference.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that arrays are passed to functions by reference"
+      }
+    ],
+    "llm_answers": [
+      "Arrays are passed to functions by reference, meaning the function receives the memory address of the array's first element.",
+      "Arrays are handed over to functions by reference, meaning changes within the function affect the original array.",
+      "Arrays are passed to functions by reference, meaning the function receives the memory address of the array, allowing it to modify the original array."
+    ]
+  },
+  {
+    "id": 25,
+    "question": "What is the difference between an array declared as static, and one that is not?",
+    "desired_answer": "The arrays declared as static live throughout the life of the program; that is, they are initialized only once, when the function that declares the array it is first called.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the arrays declared as static live throughout the life of the program"
+      },
+      {
+        "point": 3,
+        "criterion": "Mention that the arrays declared as static are initialized only once, when the function that declares the array it is first called."
+      }
+    ],
+    "llm_answers": [
+      "Arrays declared as static are initialized only once, when the function that declares the array is first called, and they live throughout the life of the program.",
+      "Static arrays persist for the entire duration of the program and are initialized only upon the first call of the function that declares them, unlike non-static arrays which are reinitialized each time the function is called.",
+      "Static arrays persist for the entire program duration and are initialized only once when the function is first invoked. Non-static arrays are reinitialized each time the function is called."
+    ]
+  },
+  {
+    "id": 26,
+    "question": "How many dimensions need to be specified when passing a multi-dimensional array as an argument to a function?",
+    "desired_answer": "All the dimensions, except the first one.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that all the dimensions, except the first one, need to be specified"
+      }
+    ],
+    "llm_answers": [
+      "When passing a multi-dimensional array to a function, only the dimensions after the first need to be specified.",
+      "When passing a multi-dimensional array to a function, all dimensions except the first must be specified.",
+      "When passing a multi-dimensional array as an argument to a function, except for the first dimension, all other dimensions need to be specified."
+    ]
+  },
+  {
+    "id": 27,
+    "question": "In one sentence, what is the main idea implemented by insertion sort?",
+    "desired_answer": "Taking one array element at a time, from left to right, it inserts it in the right position among the already sorted elements on its left.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mention that the main idea implemented by insertion sort is to take one array element at a time, from left to right."
+      },
+      {
+        "point": 4,
+        "criterion": "Mention that the main idea implemented by insertion sort is to insert the element in the right position among the already sorted elements on its left"
+      }
+    ],
+    "llm_answers": [
+      "Insertion sort takes one array element at a time from left to right, inserting it in the correct position among the already sorted elements on its left.",
+      "Insertion sort sequentially takes each element from the array, placing it correctly within the sorted portion to its left.",
+      "Insertion sort sequentially places each element in its correct position within the already sorted portion of the array, ensuring the left side remains sorted."
+    ]
+  },
+  {
+    "id": 28,
+    "question": "In one sentence, what is the main idea implemented by selection sort?",
+    "desired_answer": "Taking one array element at a time, from left to right, it identifies the minimum from the remaining elements and swaps it with the current element.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mention that the main idea implemented by insertion sort is to take one array element at a time, from left to right."
+      },
+      {
+        "point": 4,
+        "criterion": "Mention that the main idea implemented by selection sort is to identify the minimum from the remaining elements and swap it with the current element."
+      }
+    ],
+    "llm_answers": [
+      "Selection sort repeatedly identifies the smallest element from the unsorted portion of the array and exchanges it with the element in the current position.",
+      "Selection sort works by repeatedly finding the minimum element from the unsorted part of the array and swapping it with the current element.",
+      "Selection sort identifies the minimum from the remaining elements and swaps it with the current element, taking one array element at a time, from left to right."
+    ]
+  },
+  {
+    "id": 29,
+    "question": "What is the number of operations for insertion sort under a best-case scenario, and what is the best-case scenario?",
+    "desired_answer": "N (the length of the array) operations achieved for a sorted array.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the number of operations for insertion sort under a best-case scenario is N (the length of the array)."
+      }
+    ],
+    "llm_answers": [
+      "The number of operations for insertion sort in a best-case scenario is N, where N is the array's length, achieved when the array is already sorted.",
+      "The number of operations for insertion sort under a best-case scenario is N, where N is the array's length. The best-case scenario is when the array is already sorted.",
+      "The best-case scenario for insertion sort involves N operations, where N is the array's length, occurring when the array is already sorted."
+    ]
+  },
+  {
+    "id": 30,
+    "question": "What is the base case for a recursive implementation of merge sort?",
+    "desired_answer": "When the size of the array to be sorted is 1 (or 2)",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the base case is 1 (or 2)"
+      }
+    ],
+    "llm_answers": [
+      "The base case for a recursive merge sort is when the array size is 1 (or 2).",
+      "The base case for a recursive merge sort is when the array size is 1 (or 2). \n\nThe base case for a recursive merge sort occurs when the array to be sorted has 1 (or 2) elements.",
+      "The base case for a recursive merge sort is when the array size is 1 (or 2). \n\nThe base case for a recursive merge sort occurs when the array is of size 1 (or 2)."
+    ]
+  },
+  {
+    "id": 31,
+    "question": "What is a pointer?",
+    "desired_answer": "A variable that contains the address in memory of another variable.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a pointer is a variable that contains the address in memory of another variable"
+      }
+    ],
+    "llm_answers": [
+      "A pointer is a type of variable that stores the memory address of another variable, allowing indirect access to the data stored at that address.",
+      "A pointer is a variable that stores the memory address of another variable.",
+      "A pointer is a variable that stores the memory address of another variable."
+    ]
+  },
+  {
+    "id": 32,
+    "question": "What does the address (&) operator return?",
+    "desired_answer": "The memory address of its operand.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the address (&) operator returns the memory address of its operand"
+      }
+    ],
+    "llm_answers": [
+      "The address (&) operator provides the memory location of its operand.",
+      "The address (&) operator returns the memory location of its operand.",
+      "The address (&) operator returns the memory address of its operand."
+    ]
+  },
+  {
+    "id": 33,
+    "question": "What does the star (*) operator return?",
+    "desired_answer": "An alias (synonym) for the name of the object that its operand points to in memory. It is the dereferencing operator.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the operator returns an alias / synonym of the object that its operand points to in memory"
+      }
+    ],
+    "llm_answers": [
+      "The star (*) operator returns an alias for the object that its operand points to in memory, acting as the dereferencing operator.",
+      "The star (*) operator returns an alias for the object that its operand points to in memory, acting as the dereferencing operator.",
+      "The star (*) operator returns an alias for the object located at the memory address its operand points to, effectively dereferencing the pointer."
+    ]
+  },
+  {
+    "id": 34,
+    "question": "How can an array be addressed in pointer/offset notation?",
+    "desired_answer": "By initializing a pointer to point to the first element of the array, and then incrementing this pointer with the index of the array element.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 4,
+        "criterion": "Mention that an array can be addressed in pointer/offset notation by initializing a pointer"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the pointer is incremented with the index of the array element"
+      }
+    ],
+    "llm_answers": [
+      "By setting a pointer to the array's first element and then adjusting the pointer by the array element's index.",
+      "An array can be accessed via pointer/offset notation by setting a pointer to the first element and then advancing the pointer by the array index.",
+      "By initializing a pointer to the first element of the array and incrementing it with the index of the desired element."
+    ]
+  },
+  {
+    "id": 35,
+    "question": "What does the sizeof operator return?",
+    "desired_answer": "The size in bytes of its operand.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the sizeof operator returns the size in bytes of its operand"
+      }
+    ],
+    "llm_answers": [
+      "The sizeof operator returns the size in bytes of its operand.",
+      "The sizeof operator provides the size in bytes of its operand.",
+      "The sizeof operator provides the size in bytes of its operand."
+    ]
+  },
+  {
+    "id": 36,
+    "question": "What are the different ways to pass a pointer to a function?",
+    "desired_answer": "There are four ways: nonconstant pointer to constant data, nonconstant pointer to nonconstant data, constant pointer to constant data, constant pointer to nonconstant data.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1.25,
+        "criterion": "Mention that pointers can be passed in as nonconstant pointer to constant data"
+      },
+      {
+        "point": 1.25,
+        "criterion": "Mention that pointers can be passed in as nonconstant pointer to nonconstant data"
+      },
+      {
+        "point": 1.25,
+        "criterion": "Mention that pointers can be passed in as constant pointer to constant data"
+      },
+      {
+        "point": 1.25,
+        "criterion": "Mention that pointers can be passed in as constant pointer to nonconstant data"
+      }
+    ],
+    "llm_answers": [
+      "Pointers can be passed as nonconstant to constant data, nonconstant to nonconstant data, constant to constant data, and constant to nonconstant data.",
+      "Pointers can be passed as nonconstant to constant data, nonconstant to nonconstant data, constant to constant data, and constant to nonconstant data.",
+      "Four ways to pass a pointer to a function include: nonconstant pointer to constant data, nonconstant pointer to nonconstant data, constant pointer to constant data, and constant pointer to nonconstant data."
+    ]
+  },
+  {
+    "id": 37,
+    "question": "What is a function pointer?",
+    "desired_answer": "The address of the location in memory where the function code resides.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a function pointer is the address of the location in memory where the function code resides"
+      }
+    ],
+    "llm_answers": [
+      "A function pointer is the memory address where the function's code is stored.",
+      "A function pointer is essentially the memory address where the function's code is stored, enabling the function to be called indirectly.",
+      "A function pointer is a variable that stores the memory address where the function's code is located."
+    ]
+  },
+  {
+    "id": 38,
+    "question": "What is a linked list?",
+    "desired_answer": "A collection of elements that can be allocated dynamically.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that it is a collection of elements"
+      },
+      {
+        "point": 3,
+        "criterion": "Mention that the elements can be allocated dynamically"
+      }
+    ],
+    "llm_answers": [
+      "A collection of elements that can be allocated dynamically.",
+      "A linked list is a collection of elements where each element is allocated dynamically, allowing for efficient insertion and deletion.",
+      "A dynamic collection of elements where each element points to the next."
+    ]
+  },
+  {
+    "id": 39,
+    "question": "What is the main advantage of linked lists over arrays?",
+    "desired_answer": "The linked lists can be of variable length.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that their variable length is an advantage"
+      }
+    ],
+    "llm_answers": [
+      "Their variable length allows for efficient insertion and deletion of elements without needing to resize the structure.",
+      "Linked lists offer the key advantage of variable length, allowing for efficient insertions and deletions without the need for resizing or shifting elements, unlike arrays.",
+      "Their variable length is a key advantage of linked lists over arrays, allowing for efficient insertions and deletions without the need to resize the entire structure."
+    ]
+  },
+  {
+    "id": 40,
+    "question": "What is the main advantage of arrays over linked lists?",
+    "desired_answer": "The elements in an array can be accessed directly (as opposed to linked lists, which require iterative traversal).",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention of direct access to elements with out iterative traversal"
+      }
+    ],
+    "llm_answers": [
+      "Arrays allow immediate access to elements via index, unlike linked lists which require sequential traversal.",
+      "Arrays allow direct access to elements without the need for iterative traversal, unlike linked lists. This direct access provides faster retrieval of elements.",
+      "Arrays allow direct access to elements without iterative traversal, unlike linked lists, which require traversal to access elements."
+    ]
+  },
+  {
+    "id": 41,
+    "question": "How are linked lists passed as arguments to a function?",
+    "desired_answer": "By reference.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that linked lists are passed as arguments to a function by reference"
+      }
+    ],
+    "llm_answers": [
+      "Linked lists are passed to functions by reference, allowing the function to modify the original list directly. This method ensures any changes made within the function affect the list outside its scope.",
+      "Linked lists are passed to functions by reference.",
+      "Linked lists are passed to functions by reference, allowing modifications to affect the original list."
+    ]
+  },
+  {
+    "id": 42,
+    "question": "What is the difference between a circular linked list and a basic linked list?",
+    "desired_answer": "The last element in a circular linked list points to the head of the list.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the last element in a circular linked list points to the head of the list"
+      }
+    ],
+    "llm_answers": [
+      "A circular linked list differs from a basic linked list in that its last element points to the head of the list, creating a loop.",
+      "A circular linked list's final node links back to the head, unlike a basic linked list where the last node's next pointer is null.",
+      "A circular linked list differs from a basic linked list as its final node points back to the head, creating a loop."
+    ]
+  },
+  {
+    "id": 43,
+    "question": "What is the main advantage of a doubly-linked list over a basic linked list?",
+    "desired_answer": "All the deletion and insertion operations can be performed in constant time, including those operations performed before a given location in the list or at the end of the list.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that deletion operations can be performed in constant time"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that insertion operations can be performed in constant time"
+      }
+    ],
+    "llm_answers": [
+      "Doubly-linked lists allow for constant-time deletion and insertion operations, unlike basic linked lists. This advantage applies to operations at any position, including the end of the list.",
+      "Doubly-linked lists allow for constant-time deletion and insertion operations, including those at the beginning or end of the list, unlike basic linked lists.",
+      "Doubly-linked lists allow for constant-time insertions and deletions, unlike basic linked lists which require traversal for deletions. This efficiency stems from the ability to traverse both forward and backward in the list."
+    ]
+  },
+  {
+    "id": 44,
+    "question": "What is the main disadvantage of a doubly-linked list over a basic linked list?",
+    "desired_answer": "Extra space required to store the back pointers.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the extra space required to store the back pointers is a disadvantage"
+      }
+    ],
+    "llm_answers": [
+      "The primary drawback of a doubly-linked list compared to a basic linked list is the additional memory needed to store the back pointers, which increases the overall space complexity.",
+      "The primary drawback of a doubly-linked list compared to a basic linked list is the additional memory needed to store the back pointers.",
+      "The primary drawback of a doubly-linked list compared to a basic linked list is the additional memory needed to store the backward pointers."
+    ]
+  },
+  {
+    "id": 45,
+    "question": "What is a stack?",
+    "desired_answer": "A data structure that can store elements, which has the property that the last item added will be the first to be removed (or last-in-first-out)",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mention that it is a data structure"
+      },
+      {
+        "point": 4,
+        "criterion": "Mention that it has the property that the last item added will be the first to be removed"
+      }
+    ],
+    "llm_answers": [
+      "A stack is a data structure that stores elements, ensuring the last item added is the first to be removed, following a last-in-first-out principle.",
+      "A stack is a data structure where elements are stored, and the last item added is the first to be removed, following a last-in-first-out principle.",
+      "A stack is a data structure that stores elements, with the characteristic that the last item added is the first to be removed, known as last-in-first-out."
+    ]
+  },
+  {
+    "id": 46,
+    "question": "What are the two main functions defined by a stack?",
+    "desired_answer": "push and pop",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that push is a function"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that pop is a function"
+      }
+    ],
+    "llm_answers": [
+      "The two main functions defined by a stack are pop and push, where push adds an element to the top and pop removes the top element.",
+      "A stack's primary functions are push, which adds an element to the top, and pop, which removes the top element.",
+      "The two main functions defined by a stack are pop and push, where push adds an element to the stack and pop removes the most recently added element."
+    ]
+  },
+  {
+    "id": 47,
+    "question": "How can you implement a stack with an array?",
+    "desired_answer": "Keep the top of the stack toward the end of the array, so the push and pop operations will add or remove elements from the right side of the array.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that the top of the stack is toward the end of the array"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that the push and pop operations will add or remove elements from the right side of the array"
+      }
+    ],
+    "llm_answers": [
+      "Implement a stack using an array by adding elements to the right end and removing from the same end. The stack's top is always at the array's end.",
+      "Implement a stack using an array by keeping the stack's top at the array's end, with push operations adding elements to the right and pop operations removing them from the right.",
+      "Implement a stack using an array by keeping the top of the stack at the end of the array, with the push operation adding elements to the right side and the pop operation removing elements from the right side."
+    ]
+  },
+  {
+    "id": 48,
+    "question": "How can you implement a stack with a list?",
+    "desired_answer": "Keep the top of the stack pointing to the head of the linked list, so the push and pop operations will add or remove elements at the beginning of the list.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that the top of the stack is pointing to the head of the linked list"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that the push and pop operations will add or remove elements at the beginning of the list"
+      }
+    ],
+    "llm_answers": [
+      "Use a list where the stack's top corresponds to the list's head, ensuring push and pop operations manipulate the list's start.",
+      "To implement a stack using a list, keep the top of the stack at the head of the list. Push and pop operations will then add or remove elements at the list's beginning.",
+      "The top of the stack is kept at the head of the linked list, allowing the push and pop operations to add or remove elements at the beginning of the list."
+    ]
+  },
+  {
+    "id": 49,
+    "question": "How are infix expressions evaluated by computers?",
+    "desired_answer": "First, they are converted into postfix form, followed by an evaluation of the postfix expression.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the infix expressions are converted into postfix form"
+      },
+      {
+        "point": 3,
+        "criterion": "Mention that the postfix expression is evaluated"
+      }
+    ],
+    "llm_answers": [
+      "Infix expressions are first transformed into postfix form, then the resulting postfix expression is evaluated by computers.",
+      "Infix expressions are transformed into postfix notation and then computed.",
+      "Computers evaluate infix expressions by first converting them into postfix form, then evaluating the postfix expression."
+    ]
+  },
+  {
+    "id": 50,
+    "question": "What operations would you need to perform to find a given element on a stack?",
+    "desired_answer": "Pop all the elements and store them on another stack until the element is found, then push back all the elements on the original stack.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that the elements are popped and stored on another stack"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that the elements are pushed back on the original stack"
+      }
+    ],
+    "llm_answers": [
+      "Extract elements by popping them from the stack and placing them on a temporary stack until the desired element is found, then return all elements back to the original stack.",
+      "Remove elements from the stack and place them on another stack until the desired element is found, then return all elements to the original stack.",
+      "To locate a specific element, remove each item from the stack and temporarily store it on another stack until the desired element is found, then return all items back to the original stack."
+    ]
+  },
+  {
+    "id": 51,
+    "question": "What is a queue?",
+    "desired_answer": "A data structure that can store elements, which has the property that the last item added will be the last to be removed (or first-in-first-out).",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mention that it is a data structure"
+      },
+      {
+        "point": 4,
+        "criterion": "Mention that it has the property that the last item added will be the last to be removed"
+      }
+    ],
+    "llm_answers": [
+      "A queue is a data structure that stores elements, ensuring the last item added is the last to be removed, adhering to the first-in-first-out principle.",
+      "A queue is a data structure that stores elements, ensuring the last item added is the last to be removed, following a first-in-first-out principle.",
+      "A data structure that stores elements, where the last item added is the last one to be removed, adhering to the first-in-first-out principle."
+    ]
+  },
+  {
+    "id": 52,
+    "question": "What are the two main functions defined by a queue?",
+    "desired_answer": "enqueue and dequeue",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that enqueue is a function"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that dequeue is a function"
+      }
+    ],
+    "llm_answers": [
+      "A queue's primary functions are enqueue, which adds an element, and dequeue, which removes an element.",
+      "A queue has two primary functions: enqueue, which adds an element, and dequeue, which removes an element.",
+      "The two primary operations of a queue are enqueue, which adds an element, and dequeue, which removes an element."
+    ]
+  },
+  {
+    "id": 53,
+    "question": "How can you implement a queue with an array?",
+    "desired_answer": "Use a circular array. Keep the rear of the queue toward the end of the array, and the front toward the beginning, and allow the rear pointer to wrap around.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1,
+        "criterion": "Mention that it is a circular array"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the rear of the queue is toward the end of the array"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the front of the queue is toward the beginning of the array"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the rear pointer can wrap around"
+      }
+    ],
+    "llm_answers": [
+      "Implement a queue using a circular array where the front is at the beginning and the rear at the end, allowing the rear pointer to wrap around.",
+      "Implement a queue using a circular array where the rear of the queue is toward the end of the array, the front is toward the beginning, and the rear pointer can wrap around.",
+      "Using a circular array, position the rear of the queue toward the end and the front toward the beginning. Allow the rear pointer to wrap around, ensuring efficient queue operations."
+    ]
+  },
+  {
+    "id": 54,
+    "question": "How can you implement a queue with a list?",
+    "desired_answer": "Keep the rear of the queue pointing to the tail of the linked list, so the enqueue operation is done at the end of the list, and keep the front of the queue pointing to the head of the linked list, so the dequeue operation is done at the beginning of the list.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 1.5,
+        "criterion": "Mention that the rear of the queue is pointing to the tail of the linked list"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the enqueue operation is done at the end of the list"
+      },
+      {
+        "point": 1.5,
+        "criterion": "Mention that the front of the queue is pointing to the head of the linked list"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the dequeue operation is done at the beginning of the list"
+      }
+    ],
+    "llm_answers": [
+      "Rear of the queue aligns with the linked list's tail, enabling enqueue at the end. Front of the queue aligns with the list's head, allowing dequeue from the start.",
+      "Implement a queue using a list by keeping the rear of the queue linked to the list's end for enqueue operations, and the front of the queue linked to the list's start for dequeue operations.",
+      "Implement a queue using a list by keeping the rear at the list's end and the front at the beginning. Enqueue at the list's end, and dequeue from the list's start."
+    ]
+  },
+  {
+    "id": 55,
+    "question": "What is the stack operation corresponding to the enqueue operation in queues?",
+    "desired_answer": "push",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the stack operation corresponding to the enqueue operation in queues is push"
+      }
+    ],
+    "llm_answers": [
+      "The stack operation corresponding to the enqueue operation in queues is push.",
+      "The stack operation that matches the enqueue operation in queues is push.",
+      "The stack operation that aligns with the enqueue operation in queues is push."
+    ]
+  },
+  {
+    "id": 56,
+    "question": "What is a tree?",
+    "desired_answer": "A collection of nodes, which has a special node called root, and the rest of the nodes are partitioned into one or more disjoint sets, each set being a tree.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that it is a collection of nodes"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that it has a special node called root"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the rest of the nodes are partitioned into one or more disjoint sets"
+      }
+    ],
+    "llm_answers": [
+      "A tree is a collection of nodes, featuring a unique node known as the root, with the remaining nodes divided into one or more disjoint sets, each forming a subtree.",
+      "A tree is a collection of nodes, featuring a unique node called the root, with the remaining nodes divided into one or more disjoint sets, each forming a subtree.",
+      "A tree is a set of interconnected nodes, featuring a unique node known as the root. The remaining nodes are divided into one or more non-overlapping subsets, each forming a separate tree."
+    ]
+  },
+  {
+    "id": 57,
+    "question": "What is the height of a tree?",
+    "desired_answer": "The length of the longest path from the root to any of its leaves.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the height of a tree is the length of the longest path from the root to any of its leaves"
+      }
+    ],
+    "llm_answers": [
+      "The height of a tree is the distance from the root node to the farthest leaf node, measured by the number of edges along the longest downward path.",
+      "The height of a tree is defined as the length of the longest path from the root node to any leaf node.",
+      "The height of a tree is defined as the length of the longest path from any of its leaves to the root."
+    ]
+  },
+  {
+    "id": 58,
+    "question": "What is a leaf?",
+    "desired_answer": "A node that has no children.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a leaf is a node that has no children"
+      }
+    ],
+    "llm_answers": [
+      "A leaf is a node with no offspring. It is a terminal point in a tree structure.",
+      "A leaf is a node in a tree structure that does not have any offspring.",
+      "A leaf is a node in a tree structure that does not have any children."
+    ]
+  },
+  {
+    "id": 59,
+    "question": "What is a binary tree?",
+    "desired_answer": "A tree for which the maximum number of children per node is two.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that it is a tree for which the maximum number of children per node is two"
+      }
+    ],
+    "llm_answers": [
+      "A binary tree is a tree structure where each node has at most two children, typically referred to as the left and right child.",
+      "A binary tree is a type of tree data structure where each node can have at most two children.",
+      "A binary tree is a type of tree data structure where each node can have at most two children, typically referred to as the left and right child."
+    ]
+  },
+  {
+    "id": 60,
+    "question": "What is a binary search tree?",
+    "desired_answer": "A binary tree that has the property that for any node the left child is smaller than the parent which in turn is smaller than the right child.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that it is a binary tree for which the left child is smaller than the parent which in turn is smaller than the right child"
+      }
+    ],
+    "llm_answers": [
+      "A binary search tree is a binary tree where each node's left child is less than the parent, and the parent is less than the right child.",
+      "A binary search tree is a binary tree where each node has a left child smaller than the parent and a right child larger than the parent, ensuring a specific order.",
+      "A binary search tree is a binary tree where each node's left child is smaller than the parent, which is smaller than the right child."
+    ]
+  },
+  {
+    "id": 61,
+    "question": "What is the inorder traversal of a binary tree?",
+    "desired_answer": "Traverse the left subtree, then the root, then the right subtree.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that traveslal starts from the left subtree"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the root is visted after the left subtree"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the right subtree is traversed last"
+      }
+    ],
+    "llm_answers": [
+      "In inorder traversal, the left subtree is explored first, followed by the root node, and finally the right subtree is visited. This sequence ensures that nodes are processed in ascending order for a binary search tree.",
+      "In inorder traversal, begin with the left subtree, proceed to the root node, and finally traverse the right subtree.",
+      "In inorder traversal, start with the left subtree, then visit the root node, and finally traverse the right subtree."
+    ]
+  },
+  {
+    "id": 62,
+    "question": "How many comparisons does it take to find an element in a binary search tree?",
+    "desired_answer": "The height of the tree (or log of the number of elements in the tree).",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that it is the height of the tree or log of the number of elements in the tree"
+      }
+    ],
+    "llm_answers": [
+      "Finding an element in a binary search tree requires a number of comparisons equal to the tree's height or the logarithm of the number of elements in the tree.",
+      "Finding an element in a binary search tree requires up to the height of the tree comparisons, or logarithmic in the number of elements.",
+      "Finding an element in a binary search tree takes the height of the tree comparisons, which is the log of the number of elements in the tree."
+    ]
+  },
+  {
+    "id": 63,
+    "question": "What are the elements typically included in a class definition?",
+    "desired_answer": "Function members and data members.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that function members are declared"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that data members are declared"
+      }
+    ],
+    "llm_answers": [
+      "Data members are declared and function members are declared in a class definition.",
+      "A class definition includes declarations for data members and function members.",
+      "Function members and data members are typically included in a class definition, with data members declared and function members declared."
+    ]
+  },
+  {
+    "id": 64,
+    "question": "What are the access-specifiers that can be used in a C++ class definition?",
+    "desired_answer": "Private and public.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that private is an access specifier"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that public is an access specifier"
+      }
+    ],
+    "llm_answers": [
+      "In C++ class definitions, the access specifiers are public and private.",
+      "Public and private are the access specifiers in a C++ class definition.",
+      "In C++ classes, the access specifiers are public and private, which control the visibility of class members."
+    ]
+  },
+  {
+    "id": 65,
+    "question": "How are objects initialized when they are created?",
+    "desired_answer": "By using constructors.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that constructors are used to initialize objects"
+      }
+    ],
+    "llm_answers": [
+      "Objects are created and initialized using constructors, which set initial values for the object's properties.",
+      "Objects are initialized upon creation through the use of constructors.",
+      "Objects are initialized upon creation through constructors, which set initial values for the object's attributes."
+    ]
+  },
+  {
+    "id": 66,
+    "question": "What is a function signature?",
+    "desired_answer": "The name of the function and the list of parameters, including their types.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the name of the function is included"
+      },
+      {
+        "point": 3,
+        "criterion": "Mention that the list of parameters, including their types, is included"
+      }
+    ],
+    "llm_answers": [
+      "A function signature includes the list of parameters, including their types, and the name of the function.",
+      "A function signature comprises the function's name and its parameters, including their types. It defines the function's interface without its implementation.",
+      "A function signature comprises the function's name and its parameters, including their types."
+    ]
+  },
+  {
+    "id": 67,
+    "question": "What is a recursive function?",
+    "desired_answer": "A function that calls itself.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a function that calls itself is a recursive function"
+      }
+    ],
+    "llm_answers": [
+      "A recursive function is one that invokes itself during its execution, thereby solving problems by breaking them down into smaller, more manageable subproblems.",
+      "A recursive function is one that invokes itself during its execution.",
+      "A recursive function is one that calls itself, allowing it to repeat its process until a base case is reached. It breaks down a problem into smaller, more manageable sub-problems."
+    ]
+  },
+  {
+    "id": 68,
+    "question": "What is the alternative way to solve a problem that could be solved through recursive functions?",
+    "desired_answer": "Through iteration.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the alternative way to solve a problem that could be solved through recursive functions is through iteration"
+      }
+    ],
+    "llm_answers": [
+      "An alternative method to solve a problem that recursive functions can solve is by using loops.",
+      "An alternative method to tackle problems solvable via recursive functions is through iterative techniques.",
+      "An alternative method to tackle a problem solvable via recursive functions is through looping constructs."
+    ]
+  },
+  {
+    "id": 69,
+    "question": "What is the difference between an array that is declared as static and one that is not?",
+    "desired_answer": "The static arrays are intialized only once when the function is called.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that the static arrays are intialized only once"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that the static arrays are intialized only once when the function is called"
+      }
+    ],
+    "llm_answers": [
+      "Static arrays are initialized only once when the function is called, whereas non-static arrays are initialized each time the function is executed.",
+      "Static arrays are initialized only once when the function is first called, while non-static arrays are initialized each time the function is called.",
+      "Static arrays are initialized only once when the function is called, unlike non-static arrays which are initialized each time the function runs."
+    ]
+  },
+  {
+    "id": 70,
+    "question": "What is the main difference between a string of characters that is read into a variable of type string versus a variable of type char[]?",
+    "desired_answer": "The char[] will automatically add a null \\0 character at the end of the string.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the char[] will automatically add a null \\0 character at the end of the string"
+      }
+    ],
+    "llm_answers": [
+      "A string variable stores a sequence of characters as a single object, while a char[] array stores characters individually, automatically appending a null \\0 character at the end.",
+      "A string variable stores a string of characters, while a char[] array automatically adds a null \\0 character at the end of the string.",
+      "A string variable stores a sequence of characters, while a char[] array automatically appends a null terminator \\0 at the end of the string."
+    ]
+  },
+  {
+    "id": 71,
+    "question": "Briefly describe the divide-and-conquer paradigm.",
+    "desired_answer": "Divide a problem into smaller subproblems, solve them recursively, and then combine the solutions into a solution for the original problem.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the problem is divided into smaller subproblems"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the subproblems are solved recursively"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the solutions are combined into a solution for the original problem"
+      }
+    ],
+    "llm_answers": [
+      "Divide-and-conquer breaks a problem into smaller parts, recursively solves each part, and integrates the solutions to address the initial problem.",
+      "The divide-and-conquer paradigm splits a problem into smaller, manageable subproblems, solves these subproblems recursively, and integrates their solutions to form the final answer for the initial problem.",
+      "The divide-and-conquer paradigm splits a problem into smaller subproblems, recursively solves each subproblem, and then merges the solutions to form the solution for the original problem."
+    ]
+  },
+  {
+    "id": 72,
+    "question": "Briefly describe in one sentence how does merge sort work?",
+    "desired_answer": "It splits the original array into two, sorts each of the two halves, and then merges the sorted arrays.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the original array is split into two"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the two halves are sorted"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the sorted arrays are merged"
+      }
+    ],
+    "llm_answers": [
+      "Merge sort splits the original array into two, sorts each of the two halves, and then merges the sorted arrays.",
+      "Merge sort divides the original array into two, sorts each half, and then combines the sorted halves.",
+      "Merge sort divides the original array into two, sorts each half, and then combines the sorted halves."
+    ]
+  },
+  {
+    "id": 73,
+    "question": "What is a pointer?",
+    "desired_answer": "The address of a location in memory.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a pointer is a variable that contains the address in memory of another variable"
+      }
+    ],
+    "llm_answers": [
+      "A pointer is a variable that stores the memory address of another variable, allowing indirect access to the data stored at that address.",
+      "A pointer is a variable that stores the memory address of another variable. It essentially points to the location in memory where the actual data is stored.",
+      "A pointer is a variable that stores the memory address of another variable. It essentially points to the location in memory where another value is held."
+    ]
+  },
+  {
+    "id": 74,
+    "question": "What is the experimental approach for measuring the running time of an algorithm?",
+    "desired_answer": "Implement the algorithm and measure the physical running time.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 3,
+        "criterion": "Mention that the experimental approach for measuring the running time of an algorithm is to implement the algorithm"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the physical running time is measured"
+      }
+    ],
+    "llm_answers": [
+      "Measuring the physical running time of an algorithm involves implementing it and then measuring the actual time it takes to execute.",
+      "To measure the running time of an algorithm, implement it and then measure the actual time it takes to execute.",
+      "Implement the algorithm and measure the actual execution duration."
+    ]
+  },
+  {
+    "id": 75,
+    "question": "Briefly, how does selection sort work?",
+    "desired_answer": "It selects the minimum from an array and places it on the first position, then it selects the minimum from the rest of the array and places it on the second position, and so forth.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": "Mention that the minimum is selected from the array, and placed on the first position"
+      },
+      {
+        "point": 2,
+        "criterion": "Mention that the minimum is selected from the rest of the array, and placed on the second position"
+      },
+      {
+        "point": 1,
+        "criterion": "Mention that the process continues until the entire array is sorted"
+      }
+    ],
+    "llm_answers": [
+      "Selection sort places the smallest element from the array at the first position, then selects the smallest from the remaining elements and places it at the second position, continuing this process until the entire array is sorted.",
+      "Selection sort identifies the smallest element in the array and swaps it with the first element, then finds the smallest from the remaining elements and places it in the second position, repeating this process until the entire array is sorted.",
+      "Selection sort identifies the smallest element in the array and swaps it with the first element. It then finds the next smallest element from the remaining array and places it in the second position. This process continues until the entire array is sorted."
+    ]
+  },
+  {
+    "id": 76,
+    "question": "What is the advantage of linked lists over arrays?",
+    "desired_answer": "Linked lists are dynamic structures, which allow for a variable number of elements to be stored.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that linked lists allow for a variable number of elements to be stored"
+      }
+    ],
+    "llm_answers": [
+      "Linked lists enable the storage of a variable number of elements, unlike arrays which have a fixed size.",
+      "Linked lists allow for a variable number of elements to be stored, unlike arrays which have a fixed size. This dynamic nature of linked lists provides flexibility in managing data.",
+      "Linked lists allow for a variable number of elements to be stored, unlike arrays which have a fixed size."
+    ]
+  },
+  {
+    "id": 77,
+    "question": "What is a queue?",
+    "desired_answer": "A data structure that stores elements following the first in first out principle. The main operations in a queue are enqueue and dequeue.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that a queue is a data structure that stores elements following the first in first out principle"
+      }
+    ],
+    "llm_answers": [
+      "A queue is a data structure that organizes elements in a first in first out manner. Its primary operations include adding elements at the end and removing them from the front.",
+      "A queue is a data structure that organizes elements in a first in first out manner. The primary operations are adding elements (enqueue) and removing elements (dequeue).",
+      "A queue is a data structure that organizes elements in a first in first out manner. The primary operations for a queue are enqueue and dequeue."
+    ]
+  },
+  {
+    "id": 78,
+    "question": "What are the main operations associated with a stack?",
+    "desired_answer": "push and pop",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2.5,
+        "criterion": "Mention that push is a main operation"
+      },
+      {
+        "point": 2.5,
+        "criterion": "Mention that pop is a main operation"
+      }
+    ],
+    "llm_answers": [
+      "The primary operations for a stack are push, which adds an element, and pop, which removes the most recently added element.",
+      "The primary functions of a stack are insertion, known as push, and removal, known as pop.",
+      "The primary operations for a stack are push, which adds an element to the top, and pop, which removes the top element."
+    ]
+  },
+  {
+    "id": 79,
+    "question": "What is the Euler tour traversal of a tree?",
+    "desired_answer": "A walk around the tree, starting with the root, where each node is seen three times: from the left, from below, from the right.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 2,
+        "criterion": " Mention that it is a traversal of a tree that is a walk around the tree, starting with the root."
+      },
+      {
+        "point": 3,
+        "criterion": " Mention that each node is seen three times: from the left, from below, from the right"
+      }
+    ],
+    "llm_answers": [
+      "An Euler tour of a tree is a journey around the tree, beginning at the root, where each node is encountered three times: from the left, from below, and from the right.",
+      "An Euler tour traversal of a tree is a journey around the tree, beginning at the root. Each node is encountered thrice: once from the left, once from below, and once from the right.",
+      "An Euler tour of a tree is a journey starting at the root, encircling the tree, and encountering each node thrice: from the left, from below, and from the right."
+    ]
+  },
+  {
+    "id": 80,
+    "question": "How do you delete a node from a binary search tree?",
+    "desired_answer": "Find the node, then replace it with the leftmost node from its right subtree (or the rightmost node from its left subtree).",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the node is replaced with the leftmost node from its right subtree or the rightmost node from its left subtree"
+      }
+    ],
+    "llm_answers": [
+      "Find the node, then substitute it with the leftmost node from its right subtree or the rightmost node from its left subtree.",
+      "Locate the node, then substitute it with the leftmost node from its right subtree or the rightmost node from its left subtree.",
+      "Locate the node to remove. Replace it with the leftmost node from its right subtree or the rightmost node from its left subtree."
+    ]
+  },
+  {
+    "id": 81,
+    "question": "How many steps does it take to search a node in a binary search tree?",
+    "desired_answer": "The height of the tree.",
+    "max_point": 5,
+    "mark_breakdown": [
+      {
+        "point": 5,
+        "criterion": "Mention that the height of the tree is the number of steps"
+      }
+    ],
+    "llm_answers": [
+      "The number of steps to search a node in a binary search tree is equal to the height of the tree. \n\nThe height of the tree determines the maximum steps required to find a node in a binary search tree.",
+      "Searching a node in a binary search tree takes a number of steps equal to the tree's height.",
+      "The number of steps to search a node in a binary search tree is equal to the height of the tree."
+    ]
+  }
+]

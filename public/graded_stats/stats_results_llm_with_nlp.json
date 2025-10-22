@@ -1,0 +1,4897 @@
+{
+  "inputs": {
+    "questions_file": "/content/mydata/mohlers_question_dataset.json",
+    "graded_file": "/content/graded_results.json"
+  },
+  "overall": {
+    "counts": {
+      "total_answers": 2273,
+      "total_questions": 81,
+      "dropped_failures_total": 0
+    },
+    "means": {
+      "score_me": 3.923449186097668,
+      "score_other": 4.406731192256929,
+      "score_avg": 4.165090189177299,
+      "nlp_score": 3.8787945446546415
+    },
+    "pearson_nlp_vs_score_me": 0.3085045488631286,
+    "mae_nlp_vs_score_me": 1.1339639243290804,
+    "rmse_nlp_vs_score_me": 1.635135823013133,
+    "pearson_nlp_vs_score_other": 0.33013147282417826,
+    "mae_nlp_vs_score_other": 0.9676638803343599,
+    "rmse_nlp_vs_score_other": 1.3857541492820902,
+    "pearson_nlp_vs_score_avg": 0.35203320947970385,
+    "mae_nlp_vs_score_avg": 0.9681038275406951,
+    "rmse_nlp_vs_score_avg": 1.366587773449951,
+    "reference_similarity": {
+      "desired_vs_llm_avg_jaccard_mean": 0.3880858498718761,
+      "desired_vs_llm_max_jaccard_mean": 0.482758829332962,
+      "llm_answer_pairwise_avg_jaccard_mean": 0.5799826847164314,
+      "desired_len_tokens_mean": 15.530864197530864,
+      "llm_len_tokens_avg_mean": 23.03292181069959
+    }
+  },
+  "per_question": [
+    {
+      "question_id": 1,
+      "question": "What is the role of a prototype program in problem solving?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.689655172413793,
+          "score_other": 3.3793103448275863,
+          "score_avg": 3.5344827586206895,
+          "nlp_score": 2.793103448275862
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 3.5,
+          "0.9": 4.6
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.27426182998731685,
+          "pearson_nlp_vs_score_other": -0.2547932554532982,
+          "pearson_nlp_vs_score_avg": -0.28191953256821134,
+          "mae_nlp_vs_score_me": 1.7241379310344827,
+          "mae_nlp_vs_score_other": 1.6896551724137931,
+          "mae_nlp_vs_score_avg": 1.6379310344827587,
+          "rmse_nlp_vs_score_me": 2.1535856227423973,
+          "rmse_nlp_vs_score_other": 2.096795584728738,
+          "rmse_nlp_vs_score_avg": 2.0657302290740542,
+          "agree_score_me_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.3793103448275862,
+            "1.0": 0.41379310344827586
+          },
+          "agree_score_other_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.3448275862068966,
+            "1.0": 0.41379310344827586
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.41379310344827586,
+            "1.0": 0.4482758620689655
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.06131523968336113,
+        "desired_vs_llm_max_jaccard": 0.06451612903225806,
+        "llm_answer_pairwise_avg_jaccard": 0.6511544011544012,
+        "desired_len_tokens": 11,
+        "llm_len_tokens_avg": 30,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 2,
+      "question": "What stages in the software life cycle are influenced by the testing stage?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.8275862068965516,
+          "score_other": 3.103448275862069,
+          "score_avg": 2.9655172413793105,
+          "nlp_score": 2.7413793103448274
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 2.5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.21343446020424262,
+          "pearson_nlp_vs_score_other": -0.03362937923386175,
+          "pearson_nlp_vs_score_avg": 0.08270483239827055,
+          "mae_nlp_vs_score_me": 1.1206896551724137,
+          "mae_nlp_vs_score_other": 1.6379310344827587,
+          "mae_nlp_vs_score_avg": 1.3275862068965518,
+          "rmse_nlp_vs_score_me": 1.4532958974404495,
+          "rmse_nlp_vs_score_other": 1.9586237251069243,
+          "rmse_nlp_vs_score_avg": 1.5947110861456573,
+          "agree_score_me_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.3103448275862069,
+            "1.0": 0.7241379310344828
+          },
+          "agree_score_other_within": {
+            "0.25": 0.10344827586206896,
+            "0.5": 0.2413793103448276,
+            "1.0": 0.4482758620689655
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.06896551724137931,
+            "0.5": 0.3103448275862069,
+            "1.0": 0.5172413793103449
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.368030303030303,
+        "desired_vs_llm_max_jaccard": 0.4090909090909091,
+        "llm_answer_pairwise_avg_jaccard": 0.30344827586206896,
+        "desired_len_tokens": 18,
+        "llm_len_tokens_avg": 27.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 3,
+      "question": "What are the main advantages associated with object-oriented programming?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.413793103448276,
+          "score_other": 3.9655172413793105,
+          "score_avg": 3.689655172413793,
+          "nlp_score": 3.103448275862069
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 2.5,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.20571182857799503,
+          "pearson_nlp_vs_score_other": -0.1433279273720804,
+          "pearson_nlp_vs_score_avg": 0.04787421484970447,
+          "mae_nlp_vs_score_me": 1.0689655172413792,
+          "mae_nlp_vs_score_other": 1.5517241379310345,
+          "mae_nlp_vs_score_avg": 1.2758620689655173,
+          "rmse_nlp_vs_score_me": 1.4263529572376852,
+          "rmse_nlp_vs_score_other": 1.7907809893239703,
+          "rmse_nlp_vs_score_avg": 1.5369023929701071,
+          "agree_score_me_within": {
+            "0.25": 0.10344827586206896,
+            "0.5": 0.5517241379310345,
+            "1.0": 0.6896551724137931
+          },
+          "agree_score_other_within": {
+            "0.25": 0.06896551724137931,
+            "0.5": 0.1724137931034483,
+            "1.0": 0.3448275862068966
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.10344827586206896,
+            "0.5": 0.2413793103448276,
+            "1.0": 0.5172413793103449
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.09057371096586782,
+        "desired_vs_llm_max_jaccard": 0.11764705882352941,
+        "llm_answer_pairwise_avg_jaccard": 0.3499795093964053,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 24.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 4,
+      "question": "Where do C++ programs begin to execute?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.655172413793103,
+          "score_other": 4.827586206896552,
+          "score_avg": 4.741379310344827,
+          "nlp_score": 3.5517241379310347
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 3.5,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.3948735948694925,
+          "pearson_nlp_vs_score_other": 0.274186433249715,
+          "pearson_nlp_vs_score_avg": 0.3732302006578989,
+          "mae_nlp_vs_score_me": 1.3793103448275863,
+          "mae_nlp_vs_score_other": 1.4137931034482758,
+          "mae_nlp_vs_score_avg": 1.3275862068965518,
+          "rmse_nlp_vs_score_me": 1.7019258867935263,
+          "rmse_nlp_vs_score_other": 1.7518463166731777,
+          "rmse_nlp_vs_score_avg": 1.663502744004453,
+          "agree_score_me_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.27586206896551724,
+            "1.0": 0.4827586206896552
+          },
+          "agree_score_other_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.27586206896551724,
+            "1.0": 0.4827586206896552
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.20689655172413793,
+            "0.5": 0.3103448275862069,
+            "1.0": 0.5172413793103449
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.25620915032679736,
+        "desired_vs_llm_max_jaccard": 0.26666666666666666,
+        "llm_answer_pairwise_avg_jaccard": 0.6210526315789474,
+        "desired_len_tokens": 4,
+        "llm_len_tokens_avg": 18.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 5,
+      "question": "What is a variable?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.068965517241379,
+          "score_other": 4.862068965517241,
+          "score_avg": 4.4655172413793105,
+          "nlp_score": 3.913793103448276
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5418827041302144,
+          "pearson_nlp_vs_score_other": 0.3005478234990639,
+          "pearson_nlp_vs_score_avg": 0.5330844797300693,
+          "mae_nlp_vs_score_me": 0.7413793103448276,
+          "mae_nlp_vs_score_other": 0.9482758620689655,
+          "mae_nlp_vs_score_avg": 0.8275862068965517,
+          "rmse_nlp_vs_score_me": 1.199856313236628,
+          "rmse_nlp_vs_score_other": 1.550861829368788,
+          "rmse_nlp_vs_score_avg": 1.217685764345488,
+          "agree_score_me_within": {
+            "0.25": 0.5172413793103449,
+            "0.5": 0.5862068965517241,
+            "1.0": 0.7241379310344828
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5862068965517241,
+            "0.5": 0.6206896551724138,
+            "1.0": 0.6551724137931034
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.4827586206896552,
+            "0.5": 0.5172413793103449,
+            "1.0": 0.6551724137931034
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4262626262626263,
+        "desired_vs_llm_max_jaccard": 0.5454545454545454,
+        "llm_answer_pairwise_avg_jaccard": 0.3762962962962963,
+        "desired_len_tokens": 9,
+        "llm_len_tokens_avg": 18,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 6,
+      "question": "Where are variables declared in a C++ program?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.7586206896551726,
+          "score_other": 3.8620689655172415,
+          "score_avg": 3.310344827586207,
+          "nlp_score": 3.5172413793103448
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 4,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6293601092172214,
+          "pearson_nlp_vs_score_other": 0.6197672977705563,
+          "pearson_nlp_vs_score_avg": 0.6711588668370061,
+          "mae_nlp_vs_score_me": 1.0344827586206897,
+          "mae_nlp_vs_score_other": 0.7931034482758621,
+          "mae_nlp_vs_score_avg": 0.7241379310344828,
+          "rmse_nlp_vs_score_me": 1.444370761456948,
+          "rmse_nlp_vs_score_other": 1.181757895737503,
+          "rmse_nlp_vs_score_avg": 1.0907131485472215,
+          "agree_score_me_within": {
+            "0.25": 0.27586206896551724,
+            "0.5": 0.41379310344827586,
+            "1.0": 0.7241379310344828
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4482758620689655,
+            "0.5": 0.5172413793103449,
+            "1.0": 0.7241379310344828
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3448275862068966,
+            "0.5": 0.6551724137931034,
+            "1.0": 0.7931034482758621
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4799422799422799,
+        "desired_vs_llm_max_jaccard": 0.6,
+        "llm_answer_pairwise_avg_jaccard": 0.753186274509804,
+        "desired_len_tokens": 23,
+        "llm_len_tokens_avg": 18,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 7,
+      "question": "What is the main difference between a while and a do...while statement?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 29,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.586206896551724,
+          "score_other": 4.724137931034483,
+          "score_avg": 4.655172413793103,
+          "nlp_score": 4.448275862068965
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 4.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6443251458004039,
+          "pearson_nlp_vs_score_other": 0.607463074233133,
+          "pearson_nlp_vs_score_avg": 0.6357969260035414,
+          "mae_nlp_vs_score_me": 0.41379310344827586,
+          "mae_nlp_vs_score_other": 0.41379310344827586,
+          "mae_nlp_vs_score_avg": 0.41379310344827586,
+          "rmse_nlp_vs_score_me": 0.8808303292720552,
+          "rmse_nlp_vs_score_other": 0.9191450300180579,
+          "rmse_nlp_vs_score_avg": 0.8808303292720552,
+          "agree_score_me_within": {
+            "0.25": 0.6551724137931034,
+            "0.5": 0.7931034482758621,
+            "1.0": 0.896551724137931
+          },
+          "agree_score_other_within": {
+            "0.25": 0.7241379310344828,
+            "0.5": 0.7931034482758621,
+            "1.0": 0.8275862068965517
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.6551724137931034,
+            "0.5": 0.7931034482758621,
+            "1.0": 0.896551724137931
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4549961861174676,
+        "desired_vs_llm_max_jaccard": 0.5,
+        "llm_answer_pairwise_avg_jaccard": 0.41628756548111384,
+        "desired_len_tokens": 12,
+        "llm_len_tokens_avg": 25.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 8,
+      "question": "What is typically included in a class definition?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4,
+          "score_other": 4.4,
+          "score_avg": 4.2,
+          "nlp_score": 4.283333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 3.625,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6765165342389986,
+          "pearson_nlp_vs_score_other": 0.6611035657656074,
+          "pearson_nlp_vs_score_avg": 0.7215390161119631,
+          "mae_nlp_vs_score_me": 0.75,
+          "mae_nlp_vs_score_other": 0.45,
+          "mae_nlp_vs_score_avg": 0.45,
+          "rmse_nlp_vs_score_me": 1.1291589790636214,
+          "rmse_nlp_vs_score_other": 0.7359800721939872,
+          "rmse_nlp_vs_score_avg": 0.7472170590486632,
+          "agree_score_me_within": {
+            "0.25": 0.4666666666666667,
+            "0.5": 0.5666666666666667,
+            "1.0": 0.7
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5,
+            "0.5": 0.7666666666666667,
+            "1.0": 0.9
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5333333333333333,
+            "0.5": 0.7666666666666667,
+            "1.0": 0.8333333333333334
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.3398692810457516,
+        "desired_vs_llm_max_jaccard": 0.35294117647058826,
+        "llm_answer_pairwise_avg_jaccard": 0.8148148148148149,
+        "desired_len_tokens": 6,
+        "llm_len_tokens_avg": 23.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 9,
+      "question": "What is the difference between a data member and a local variable inside a member function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.6333333333333333,
+          "score_other": 4.8,
+          "score_avg": 4.216666666666667,
+          "nlp_score": 5
+        },
+        "nlp_quantiles": {
+          "0.1": 5,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0,
+          "mae_nlp_vs_score_me": 1.3666666666666667,
+          "mae_nlp_vs_score_other": 0.2,
+          "mae_nlp_vs_score_avg": 0.7833333333333333,
+          "rmse_nlp_vs_score_me": 2.008316044185609,
+          "rmse_nlp_vs_score_other": 0.4472135954999579,
+          "rmse_nlp_vs_score_avg": 1.1510864433221337,
+          "agree_score_me_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.6666666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.8,
+            "0.5": 0.8,
+            "1.0": 1
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.26666666666666666,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.8
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.37863799283154115,
+        "desired_vs_llm_max_jaccard": 0.48,
+        "llm_answer_pairwise_avg_jaccard": 0.6017249417249417,
+        "desired_len_tokens": 26,
+        "llm_len_tokens_avg": 24.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 10,
+      "question": "What is the difference between a constructor and a function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.1666666666666665,
+          "score_other": 4.066666666666666,
+          "score_avg": 3.6166666666666667,
+          "nlp_score": 4.916666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 4.5,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 4.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.24473735525455603,
+          "pearson_nlp_vs_score_other": 0.2564601569065589,
+          "pearson_nlp_vs_score_avg": 0.3130674348537959,
+          "mae_nlp_vs_score_me": 1.75,
+          "mae_nlp_vs_score_other": 0.8833333333333333,
+          "mae_nlp_vs_score_avg": 1.3,
+          "rmse_nlp_vs_score_me": 2.018662923818635,
+          "rmse_nlp_vs_score_other": 1.1583033569262702,
+          "rmse_nlp_vs_score_avg": 1.4776106839534333,
+          "agree_score_me_within": {
+            "0.25": 0.1,
+            "0.5": 0.13333333333333333,
+            "1.0": 0.4
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.4,
+            "1.0": 0.7
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.1,
+            "0.5": 0.16666666666666666,
+            "1.0": 0.5333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5026455026455027,
+        "desired_vs_llm_max_jaccard": 0.7777777777777778,
+        "llm_answer_pairwise_avg_jaccard": 0.4364902717843894,
+        "desired_len_tokens": 31,
+        "llm_len_tokens_avg": 33,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 11,
+      "question": "When does C++ create a default constructor?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.433333333333334,
+          "score_other": 4.733333333333333,
+          "score_avg": 4.583333333333333,
+          "nlp_score": 4.2
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 3.125,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6016122096140823,
+          "pearson_nlp_vs_score_other": 0.3569491467844929,
+          "pearson_nlp_vs_score_avg": 0.5329159994034924,
+          "mae_nlp_vs_score_me": 0.6333333333333333,
+          "mae_nlp_vs_score_other": 0.7,
+          "mae_nlp_vs_score_avg": 0.65,
+          "rmse_nlp_vs_score_me": 1.1474609652039003,
+          "rmse_nlp_vs_score_other": 1.27148207485071,
+          "rmse_nlp_vs_score_avg": 1.1291589790636214,
+          "agree_score_me_within": {
+            "0.25": 0.6,
+            "0.5": 0.7333333333333333,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.6,
+            "0.5": 0.7333333333333333,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5666666666666667,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.7666666666666667
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5627391931739758,
+        "desired_vs_llm_max_jaccard": 0.6190476190476191,
+        "llm_answer_pairwise_avg_jaccard": 0.5586580086580086,
+        "desired_len_tokens": 27,
+        "llm_len_tokens_avg": 24.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 12,
+      "question": "How many constructors can be created for a class?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.3666666666666667,
+          "score_other": 3.6333333333333333,
+          "score_avg": 3.5,
+          "nlp_score": 2.5166666666666666
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 2.5,
+          "0.9": 4.550000000000001
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.2888236306734604,
+          "pearson_nlp_vs_score_other": 0.2835905021664182,
+          "pearson_nlp_vs_score_avg": 0.29070050125075164,
+          "mae_nlp_vs_score_me": 2.15,
+          "mae_nlp_vs_score_other": 2.1166666666666667,
+          "mae_nlp_vs_score_avg": 2.05,
+          "rmse_nlp_vs_score_me": 2.346983880075305,
+          "rmse_nlp_vs_score_other": 2.339871791359518,
+          "rmse_nlp_vs_score_avg": 2.307596151842865,
+          "agree_score_me_within": {
+            "0.25": 0.1,
+            "0.5": 0.13333333333333333,
+            "1.0": 0.13333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.1,
+            "0.5": 0.13333333333333333,
+            "1.0": 0.2
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.13333333333333333,
+            "0.5": 0.2,
+            "1.0": 0.2
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.055088702147525676,
+        "desired_vs_llm_max_jaccard": 0.058823529411764705,
+        "llm_answer_pairwise_avg_jaccard": 0.7380471380471381,
+        "desired_len_tokens": 2,
+        "llm_len_tokens_avg": 17.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 13,
+      "question": "What is the difference between a function prototype and a function definition?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.166666666666667,
+          "score_other": 4.133333333333334,
+          "score_avg": 4.15,
+          "nlp_score": 4.983333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 5,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 4.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.18723003649148165,
+          "pearson_nlp_vs_score_other": 0.31411540480913874,
+          "pearson_nlp_vs_score_avg": 0.2678102503356477,
+          "mae_nlp_vs_score_me": 0.8166666666666667,
+          "mae_nlp_vs_score_other": 0.85,
+          "mae_nlp_vs_score_avg": 0.8333333333333334,
+          "rmse_nlp_vs_score_me": 1.4053469322555197,
+          "rmse_nlp_vs_score_other": 1.0684880283216405,
+          "rmse_nlp_vs_score_avg": 1.140175425099138,
+          "agree_score_me_within": {
+            "0.25": 0.5666666666666667,
+            "0.5": 0.5666666666666667,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3,
+            "0.5": 0.3,
+            "1.0": 0.8333333333333334
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.6,
+            "1.0": 0.7333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5317460317460317,
+        "desired_vs_llm_max_jaccard": 0.625,
+        "llm_answer_pairwise_avg_jaccard": 0.5476646597336252,
+        "desired_len_tokens": 31,
+        "llm_len_tokens_avg": 33.333333333333336,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 14,
+      "question": "What is the role of a header-file?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.2,
+          "score_other": 3.2,
+          "score_avg": 3.2,
+          "nlp_score": 3.35
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2.75,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.32200091520829155,
+          "pearson_nlp_vs_score_other": 0.39443775733620323,
+          "pearson_nlp_vs_score_avg": 0.3928653686021559,
+          "mae_nlp_vs_score_me": 1.2833333333333334,
+          "mae_nlp_vs_score_other": 1.05,
+          "mae_nlp_vs_score_avg": 1.1166666666666667,
+          "rmse_nlp_vs_score_me": 1.6507574019219178,
+          "rmse_nlp_vs_score_other": 1.2616127245183708,
+          "rmse_nlp_vs_score_avg": 1.326021618727739,
+          "agree_score_me_within": {
+            "0.25": 0.1,
+            "0.5": 0.3,
+            "1.0": 0.6333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.36666666666666664,
+            "1.0": 0.6
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.1,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.5333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5113636363636364,
+        "desired_vs_llm_max_jaccard": 0.625,
+        "llm_answer_pairwise_avg_jaccard": 0.6676587301587302,
+        "desired_len_tokens": 12,
+        "llm_len_tokens_avg": 19.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 15,
+      "question": "What does a function signature include?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.129032258064516,
+          "score_other": 4.935483870967742,
+          "score_avg": 4.532258064516129,
+          "nlp_score": 4.241935483870968
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 4,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5055619216441872,
+          "pearson_nlp_vs_score_other": 0.04494968451425475,
+          "pearson_nlp_vs_score_avg": 0.46748707888750524,
+          "mae_nlp_vs_score_me": 0.8870967741935484,
+          "mae_nlp_vs_score_other": 0.7580645161290323,
+          "mae_nlp_vs_score_avg": 0.6774193548387096,
+          "rmse_nlp_vs_score_me": 1.3648821289058084,
+          "rmse_nlp_vs_score_other": 1.2410973292393959,
+          "rmse_nlp_vs_score_avg": 1,
+          "agree_score_me_within": {
+            "0.25": 0.3548387096774194,
+            "0.5": 0.5806451612903226,
+            "1.0": 0.7419354838709677
+          },
+          "agree_score_other_within": {
+            "0.25": 0.45161290322580644,
+            "0.5": 0.6774193548387096,
+            "1.0": 0.7741935483870968
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3548387096774194,
+            "0.5": 0.6774193548387096,
+            "1.0": 0.8064516129032258
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.6222222222222222,
+        "desired_vs_llm_max_jaccard": 0.7,
+        "llm_answer_pairwise_avg_jaccard": 0.7948717948717948,
+        "desired_len_tokens": 11,
+        "llm_len_tokens_avg": 14.333333333333334,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 16,
+      "question": "What is the scope of global variables?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.967741935483871,
+          "score_other": 5,
+          "score_avg": 4.483870967741935,
+          "nlp_score": 4.080645161290323
+        },
+        "nlp_quantiles": {
+          "0.1": 3,
+          "0.25": 3,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.134374373494175,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0.13437437349417508,
+          "mae_nlp_vs_score_me": 1.0806451612903225,
+          "mae_nlp_vs_score_other": 0.9193548387096774,
+          "mae_nlp_vs_score_avg": 0.8548387096774194,
+          "rmse_nlp_vs_score_me": 1.6139512723987113,
+          "rmse_nlp_vs_score_other": 1.3044588545545646,
+          "rmse_nlp_vs_score_avg": 1.1674344631740368,
+          "agree_score_me_within": {
+            "0.25": 0.3225806451612903,
+            "0.5": 0.45161290322580644,
+            "1.0": 0.6774193548387096
+          },
+          "agree_score_other_within": {
+            "0.25": 0.41935483870967744,
+            "0.5": 0.5161290322580645,
+            "1.0": 0.6129032258064516
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3225806451612903,
+            "0.5": 0.5483870967741935,
+            "1.0": 0.6451612903225806
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.1067632850241546,
+        "desired_vs_llm_max_jaccard": 0.13333333333333333,
+        "llm_answer_pairwise_avg_jaccard": 0.6181849551414769,
+        "desired_len_tokens": 2,
+        "llm_len_tokens_avg": 25.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 17,
+      "question": "How does the compiler handle inline functions?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.7419354838709675,
+          "score_other": 4.290322580645161,
+          "score_avg": 4.016129032258065,
+          "nlp_score": 3.903225806451613
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.43752916350057736,
+          "pearson_nlp_vs_score_other": 0.5732627583513994,
+          "pearson_nlp_vs_score_avg": 0.5358139339886083,
+          "mae_nlp_vs_score_me": 1,
+          "mae_nlp_vs_score_other": 0.7741935483870968,
+          "mae_nlp_vs_score_avg": 0.8548387096774194,
+          "rmse_nlp_vs_score_me": 1.4864983751605108,
+          "rmse_nlp_vs_score_other": 1.170883316960099,
+          "rmse_nlp_vs_score_avg": 1.194746565108563,
+          "agree_score_me_within": {
+            "0.25": 0.3870967741935484,
+            "0.5": 0.5483870967741935,
+            "1.0": 0.6451612903225806
+          },
+          "agree_score_other_within": {
+            "0.25": 0.45161290322580644,
+            "0.5": 0.5806451612903226,
+            "1.0": 0.7096774193548387
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3548387096774194,
+            "0.5": 0.5483870967741935,
+            "1.0": 0.6451612903225806
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.20916666666666664,
+        "desired_vs_llm_max_jaccard": 0.24,
+        "llm_answer_pairwise_avg_jaccard": 0.3723318713450292,
+        "desired_len_tokens": 17,
+        "llm_len_tokens_avg": 22.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 18,
+      "question": "What is the main advantage associated with function arguments that are passed by reference?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4,
+          "score_other": 4.193548387096774,
+          "score_avg": 4.096774193548387,
+          "nlp_score": 2.9838709677419355
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2.5,
+          "0.75": 3.75,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.42813148010157626,
+          "pearson_nlp_vs_score_other": 0.46931435202103566,
+          "pearson_nlp_vs_score_avg": 0.47527737603135833,
+          "mae_nlp_vs_score_me": 1.1774193548387097,
+          "mae_nlp_vs_score_other": 1.2741935483870968,
+          "mae_nlp_vs_score_avg": 1.2096774193548387,
+          "rmse_nlp_vs_score_me": 1.4946139861990906,
+          "rmse_nlp_vs_score_other": 1.5785865462086541,
+          "rmse_nlp_vs_score_avg": 1.5053667434409679,
+          "agree_score_me_within": {
+            "0.25": 0.16129032258064516,
+            "0.5": 0.41935483870967744,
+            "1.0": 0.6129032258064516
+          },
+          "agree_score_other_within": {
+            "0.25": 0.16129032258064516,
+            "0.5": 0.3225806451612903,
+            "1.0": 0.5483870967741935
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.1935483870967742,
+            "0.5": 0.2903225806451613,
+            "1.0": 0.5806451612903226
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.3027113237639553,
+        "desired_vs_llm_max_jaccard": 0.5263157894736842,
+        "llm_answer_pairwise_avg_jaccard": 0.30169761273209544,
+        "desired_len_tokens": 11,
+        "llm_len_tokens_avg": 17.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 19,
+      "question": "How are overloaded functions differentiated by the compiler?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.064516129032258,
+          "score_other": 4.612903225806452,
+          "score_avg": 4.338709677419355,
+          "nlp_score": 3.306451612903226
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.3190717080122371,
+          "pearson_nlp_vs_score_other": 0.21233424630152828,
+          "pearson_nlp_vs_score_avg": 0.3138437484174855,
+          "mae_nlp_vs_score_me": 1.403225806451613,
+          "mae_nlp_vs_score_other": 1.596774193548387,
+          "mae_nlp_vs_score_avg": 1.3870967741935485,
+          "rmse_nlp_vs_score_me": 1.8117003241474925,
+          "rmse_nlp_vs_score_other": 1.9898938211258506,
+          "rmse_nlp_vs_score_avg": 1.7643421510031583,
+          "agree_score_me_within": {
+            "0.25": 0.2903225806451613,
+            "0.5": 0.3225806451612903,
+            "1.0": 0.5161290322580645
+          },
+          "agree_score_other_within": {
+            "0.25": 0.2903225806451613,
+            "0.5": 0.2903225806451613,
+            "1.0": 0.3870967741935484
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.25806451612903225,
+            "0.5": 0.3225806451612903,
+            "1.0": 0.4838709677419355
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.31785375118708453,
+        "desired_vs_llm_max_jaccard": 0.4074074074074074,
+        "llm_answer_pairwise_avg_jaccard": 0.43678160919540227,
+        "desired_len_tokens": 26,
+        "llm_len_tokens_avg": 23.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 20,
+      "question": "When defining a recursive function, what are possible causes for infinite recursion?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.32258064516129,
+          "score_other": 4.935483870967742,
+          "score_avg": 4.629032258064516,
+          "nlp_score": 4.403225806451613
+        },
+        "nlp_quantiles": {
+          "0.1": 3.5,
+          "0.25": 3.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5259775356448985,
+          "pearson_nlp_vs_score_other": 0.19936527926249328,
+          "pearson_nlp_vs_score_avg": 0.5107324592686536,
+          "mae_nlp_vs_score_me": 0.5645161290322581,
+          "mae_nlp_vs_score_other": 0.5645161290322581,
+          "mae_nlp_vs_score_avg": 0.5161290322580645,
+          "rmse_nlp_vs_score_me": 1.0040241611281235,
+          "rmse_nlp_vs_score_other": 0.9878291611472619,
+          "rmse_nlp_vs_score_avg": 0.7828813612588127,
+          "agree_score_me_within": {
+            "0.25": 0.5161290322580645,
+            "0.5": 0.6774193548387096,
+            "1.0": 0.8387096774193549
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5806451612903226,
+            "0.5": 0.7096774193548387,
+            "1.0": 0.7419354838709677
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.45161290322580644,
+            "0.5": 0.7096774193548387,
+            "1.0": 0.8387096774193549
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4818342151675485,
+        "desired_vs_llm_max_jaccard": 0.8,
+        "llm_answer_pairwise_avg_jaccard": 0.33050309861904065,
+        "desired_len_tokens": 15,
+        "llm_len_tokens_avg": 24.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 21,
+      "question": "What are the similarities between iteration and recursion?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 31,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.903225806451613,
+          "score_other": 4.516129032258065,
+          "score_avg": 4.209677419354839,
+          "nlp_score": 4.064516129032258
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.8459193836290579,
+          "pearson_nlp_vs_score_other": 0.7269070441540854,
+          "pearson_nlp_vs_score_avg": 0.84407980421303,
+          "mae_nlp_vs_score_me": 0.45161290322580644,
+          "mae_nlp_vs_score_other": 0.5483870967741935,
+          "mae_nlp_vs_score_avg": 0.4032258064516129,
+          "rmse_nlp_vs_score_me": 0.8327955253822958,
+          "rmse_nlp_vs_score_other": 0.9919027007433419,
+          "rmse_nlp_vs_score_avg": 0.7127864449672372,
+          "agree_score_me_within": {
+            "0.25": 0.5806451612903226,
+            "0.5": 0.7741935483870968,
+            "1.0": 0.8387096774193549
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5806451612903226,
+            "0.5": 0.7419354838709677,
+            "1.0": 0.7741935483870968
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5806451612903226,
+            "0.5": 0.8064516129032258,
+            "1.0": 0.8387096774193549
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5759591285907075,
+        "desired_vs_llm_max_jaccard": 0.7692307692307693,
+        "llm_answer_pairwise_avg_jaccard": 0.6287942077415761,
+        "desired_len_tokens": 14,
+        "llm_len_tokens_avg": 15,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 22,
+      "question": "What are the two different ways of specifying the length of an array?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.066666666666666,
+          "score_other": 4.733333333333333,
+          "score_avg": 4.4,
+          "nlp_score": 3.6333333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 3,
+          "0.5": 3.5,
+          "0.75": 4.875,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6666900469124701,
+          "pearson_nlp_vs_score_other": 0.6055035798857736,
+          "pearson_nlp_vs_score_avg": 0.7155269545427385,
+          "mae_nlp_vs_score_me": 0.7333333333333333,
+          "mae_nlp_vs_score_other": 1.1,
+          "mae_nlp_vs_score_avg": 0.8333333333333334,
+          "rmse_nlp_vs_score_me": 0.991631652042901,
+          "rmse_nlp_vs_score_other": 1.3844373104863459,
+          "rmse_nlp_vs_score_avg": 1.0645812948447542,
+          "agree_score_me_within": {
+            "0.25": 0.36666666666666664,
+            "0.5": 0.5,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.26666666666666666,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.5666666666666667
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.26666666666666666,
+            "0.5": 0.4666666666666667,
+            "1.0": 0.7
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4276960784313726,
+        "desired_vs_llm_max_jaccard": 0.5625,
+        "llm_answer_pairwise_avg_jaccard": 0.5569852941176471,
+        "desired_len_tokens": 10,
+        "llm_len_tokens_avg": 26,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 23,
+      "question": "What is the main difference between strings declared using the type string versus strings declared using an array of characters?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.8666666666666667,
+          "score_other": 4.266666666666667,
+          "score_avg": 3.566666666666667,
+          "nlp_score": 4.366666666666666
+        },
+        "nlp_quantiles": {
+          "0.1": 2.95,
+          "0.25": 4,
+          "0.5": 4.75,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.21695834358961777,
+          "pearson_nlp_vs_score_other": 0.4217938175126571,
+          "pearson_nlp_vs_score_avg": 0.29310714940147886,
+          "mae_nlp_vs_score_me": 1.7,
+          "mae_nlp_vs_score_other": 0.5666666666666667,
+          "mae_nlp_vs_score_avg": 1.0666666666666667,
+          "rmse_nlp_vs_score_me": 2.250925735484551,
+          "rmse_nlp_vs_score_other": 0.7958224257542215,
+          "rmse_nlp_vs_score_avg": 1.37234592334926,
+          "agree_score_me_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.4666666666666667
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4,
+            "0.5": 0.6,
+            "1.0": 0.9
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.6333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.655982905982906,
+        "desired_vs_llm_max_jaccard": 0.8333333333333334,
+        "llm_answer_pairwise_avg_jaccard": 0.5559204524721766,
+        "desired_len_tokens": 19,
+        "llm_len_tokens_avg": 25.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 24,
+      "question": "How are arrays passed to functions?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.3,
+          "score_other": 4.5,
+          "score_avg": 4.4,
+          "nlp_score": 3.183333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2.75,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.1153023711332096,
+          "pearson_nlp_vs_score_other": 0.15462257208381605,
+          "pearson_nlp_vs_score_avg": 0.13831991767200966,
+          "mae_nlp_vs_score_me": 1.45,
+          "mae_nlp_vs_score_other": 1.3833333333333333,
+          "mae_nlp_vs_score_avg": 1.35,
+          "rmse_nlp_vs_score_me": 1.9386421364793796,
+          "rmse_nlp_vs_score_other": 1.8951692976266439,
+          "rmse_nlp_vs_score_avg": 1.8819316317727024,
+          "agree_score_me_within": {
+            "0.25": 0.3,
+            "0.5": 0.43333333333333335,
+            "1.0": 0.5
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3,
+            "0.5": 0.4666666666666667,
+            "1.0": 0.5666666666666667
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.4666666666666667,
+            "1.0": 0.6
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.11379142300194932,
+        "desired_vs_llm_max_jaccard": 0.125,
+        "llm_answer_pairwise_avg_jaccard": 0.5189393939393939,
+        "desired_len_tokens": 2,
+        "llm_len_tokens_avg": 20.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 25,
+      "question": "What is the difference between an array declared as static, and one that is not?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.533333333333333,
+          "score_other": 4.833333333333333,
+          "score_avg": 4.183333333333334,
+          "nlp_score": 4.383333333333334
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 3.625,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6862725657378591,
+          "pearson_nlp_vs_score_other": 0.4475113205311628,
+          "pearson_nlp_vs_score_avg": 0.7096564647048622,
+          "mae_nlp_vs_score_me": 0.9833333333333333,
+          "mae_nlp_vs_score_other": 0.5833333333333334,
+          "mae_nlp_vs_score_avg": 0.5333333333333333,
+          "rmse_nlp_vs_score_me": 1.5027752105133134,
+          "rmse_nlp_vs_score_other": 1.091634859587521,
+          "rmse_nlp_vs_score_avg": 0.8266397845091497,
+          "agree_score_me_within": {
+            "0.25": 0.43333333333333335,
+            "0.5": 0.5,
+            "1.0": 0.6666666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.6666666666666666,
+            "0.5": 0.7,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.4666666666666667,
+            "0.5": 0.7,
+            "1.0": 0.8333333333333334
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5569246646026832,
+        "desired_vs_llm_max_jaccard": 0.92,
+        "llm_answer_pairwise_avg_jaccard": 0.49160303999013677,
+        "desired_len_tokens": 30,
+        "llm_len_tokens_avg": 31.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 26,
+      "question": "How many dimensions need to be specified when passing a multi-dimensional array as an argument to a function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3,
+          "score_other": 4.4,
+          "score_avg": 3.7,
+          "nlp_score": 3.1333333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3,
+          "0.75": 4.375,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.2846429443382295,
+          "pearson_nlp_vs_score_other": 0.3954098520752203,
+          "pearson_nlp_vs_score_avg": 0.36249960833665107,
+          "mae_nlp_vs_score_me": 1.5,
+          "mae_nlp_vs_score_other": 1.5,
+          "mae_nlp_vs_score_avg": 1.2333333333333334,
+          "rmse_nlp_vs_score_me": 1.8257418583505538,
+          "rmse_nlp_vs_score_other": 1.798147194568157,
+          "rmse_nlp_vs_score_avg": 1.52206000757745,
+          "agree_score_me_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.23333333333333334,
+            "1.0": 0.43333333333333335
+          },
+          "agree_score_other_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.26666666666666666,
+            "1.0": 0.4
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.36666666666666664,
+            "1.0": 0.5
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.22313456274958496,
+        "desired_vs_llm_max_jaccard": 0.29411764705882354,
+        "llm_answer_pairwise_avg_jaccard": 0.639905924230867,
+        "desired_len_tokens": 7,
+        "llm_len_tokens_avg": 20,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 27,
+      "question": "In one sentence, what is the main idea implemented by insertion sort?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.9642857142857144,
+          "score_other": 4.464285714285714,
+          "score_avg": 4.214285714285714,
+          "nlp_score": 4.071428571428571
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 3.25,
+          "0.5": 4.75,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5474850638440498,
+          "pearson_nlp_vs_score_other": 0.32254900211771165,
+          "pearson_nlp_vs_score_avg": 0.5662313030209584,
+          "mae_nlp_vs_score_me": 0.75,
+          "mae_nlp_vs_score_other": 0.8571428571428571,
+          "mae_nlp_vs_score_avg": 0.7142857142857143,
+          "rmse_nlp_vs_score_me": 1.1952286093343936,
+          "rmse_nlp_vs_score_other": 1.1952286093343936,
+          "rmse_nlp_vs_score_avg": 0.9819805060619657,
+          "agree_score_me_within": {
+            "0.25": 0.42857142857142855,
+            "0.5": 0.5714285714285714,
+            "1.0": 0.7857142857142857
+          },
+          "agree_score_other_within": {
+            "0.25": 0.35714285714285715,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.75
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2857142857142857,
+            "0.5": 0.6071428571428571,
+            "1.0": 0.8214285714285714
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4319230679129477,
+        "desired_vs_llm_max_jaccard": 0.7407407407407407,
+        "llm_answer_pairwise_avg_jaccard": 0.39482746503619365,
+        "desired_len_tokens": 26,
+        "llm_len_tokens_avg": 23.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 28,
+      "question": "In one sentence, what is the main idea implemented by selection sort?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.75,
+          "score_other": 4.642857142857143,
+          "score_avg": 4.696428571428571,
+          "nlp_score": 3.8214285714285716
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4.25,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.054912855764997597,
+          "pearson_nlp_vs_score_other": -0.11262289639991442,
+          "pearson_nlp_vs_score_avg": -0.019821355695213358,
+          "mae_nlp_vs_score_me": 1.1785714285714286,
+          "mae_nlp_vs_score_other": 1.2142857142857142,
+          "mae_nlp_vs_score_avg": 1.1607142857142858,
+          "rmse_nlp_vs_score_me": 1.625686668105863,
+          "rmse_nlp_vs_score_other": 1.558387444947959,
+          "rmse_nlp_vs_score_avg": 1.532388425208924,
+          "agree_score_me_within": {
+            "0.25": 0.35714285714285715,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.5714285714285714
+          },
+          "agree_score_other_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.32142857142857145,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.6071428571428571
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.49789621318373073,
+        "desired_vs_llm_max_jaccard": 0.9130434782608695,
+        "llm_answer_pairwise_avg_jaccard": 0.4098924731182796,
+        "desired_len_tokens": 26,
+        "llm_len_tokens_avg": 24.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 29,
+      "question": "What is the number of operations for insertion sort under a best-case scenario, and what is the best-case scenario?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.6785714285714284,
+          "score_other": 3.9642857142857144,
+          "score_avg": 3.8214285714285716,
+          "nlp_score": 3.857142857142857
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4.25,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.547918366248758,
+          "pearson_nlp_vs_score_other": 0.4039600624764585,
+          "pearson_nlp_vs_score_avg": 0.5867756466783415,
+          "mae_nlp_vs_score_me": 0.8928571428571429,
+          "mae_nlp_vs_score_other": 0.9285714285714286,
+          "mae_nlp_vs_score_avg": 0.75,
+          "rmse_nlp_vs_score_me": 1.2606687567659136,
+          "rmse_nlp_vs_score_other": 1.1726039399558574,
+          "rmse_nlp_vs_score_avg": 1.026436275942851,
+          "agree_score_me_within": {
+            "0.25": 0.39285714285714285,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.6785714285714286
+          },
+          "agree_score_other_within": {
+            "0.25": 0.25,
+            "0.5": 0.39285714285714285,
+            "1.0": 0.7142857142857143
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2857142857142857,
+            "0.5": 0.6071428571428571,
+            "1.0": 0.75
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.393939393939394,
+        "desired_vs_llm_max_jaccard": 0.45454545454545453,
+        "llm_answer_pairwise_avg_jaccard": 0.772342995169082,
+        "desired_len_tokens": 12,
+        "llm_len_tokens_avg": 28,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 30,
+      "question": "What is the base case for a recursive implementation of merge sort?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.9285714285714284,
+          "score_other": 4.321428571428571,
+          "score_avg": 4.125,
+          "nlp_score": 2.892857142857143
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 3.375,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.07089814096444116,
+          "pearson_nlp_vs_score_other": -0.0012058621011997242,
+          "pearson_nlp_vs_score_avg": 0.04688170440614821,
+          "mae_nlp_vs_score_me": 1.8571428571428572,
+          "mae_nlp_vs_score_other": 1.7142857142857142,
+          "mae_nlp_vs_score_avg": 1.625,
+          "rmse_nlp_vs_score_me": 2.187627547301936,
+          "rmse_nlp_vs_score_other": 2.0615528128088303,
+          "rmse_nlp_vs_score_avg": 2.059386177619785,
+          "agree_score_me_within": {
+            "0.25": 0.14285714285714285,
+            "0.5": 0.17857142857142858,
+            "1.0": 0.39285714285714285
+          },
+          "agree_score_other_within": {
+            "0.25": 0.17857142857142858,
+            "0.5": 0.25,
+            "1.0": 0.42857142857142855
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2857142857142857,
+            "0.5": 0.35714285714285715,
+            "1.0": 0.42857142857142855
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4570175438596491,
+        "desired_vs_llm_max_jaccard": 0.5,
+        "llm_answer_pairwise_avg_jaccard": 0.774637127578304,
+        "desired_len_tokens": 13,
+        "llm_len_tokens_avg": 29.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 31,
+      "question": "What is a pointer?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.6923076923076925,
+          "score_other": 4.8076923076923075,
+          "score_avg": 4.75,
+          "nlp_score": 4.3076923076923075
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 3.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.05345835825829867,
+          "pearson_nlp_vs_score_other": 0.3325289137454262,
+          "pearson_nlp_vs_score_avg": 0.22317802113732868,
+          "mae_nlp_vs_score_me": 0.7692307692307693,
+          "mae_nlp_vs_score_other": 0.6538461538461539,
+          "mae_nlp_vs_score_avg": 0.7115384615384616,
+          "rmse_nlp_vs_score_me": 1.2633898235120649,
+          "rmse_nlp_vs_score_other": 1.1006990785580142,
+          "rmse_nlp_vs_score_avg": 1.1137255565823276,
+          "agree_score_me_within": {
+            "0.25": 0.5384615384615384,
+            "0.5": 0.6153846153846154,
+            "1.0": 0.6923076923076923
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5769230769230769,
+            "0.5": 0.6153846153846154,
+            "1.0": 0.7307692307692307
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.46153846153846156,
+            "0.5": 0.6538461538461539,
+            "1.0": 0.6923076923076923
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5372405372405372,
+        "desired_vs_llm_max_jaccard": 0.6153846153846154,
+        "llm_answer_pairwise_avg_jaccard": 0.7192982456140351,
+        "desired_len_tokens": 11,
+        "llm_len_tokens_avg": 17,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 32,
+      "question": "What does the address (&) operator return?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.730769230769231,
+          "score_other": 4.538461538461538,
+          "score_avg": 4.634615384615385,
+          "nlp_score": 4.038461538461538
+        },
+        "nlp_quantiles": {
+          "0.1": 2.25,
+          "0.25": 2.625,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.34213509202508935,
+          "pearson_nlp_vs_score_other": 0.7055647790853201,
+          "pearson_nlp_vs_score_avg": 0.6905341298991139,
+          "mae_nlp_vs_score_me": 0.8461538461538461,
+          "mae_nlp_vs_score_other": 0.5769230769230769,
+          "mae_nlp_vs_score_avg": 0.7115384615384616,
+          "rmse_nlp_vs_score_me": 1.3587324409735149,
+          "rmse_nlp_vs_score_other": 1.0190493307301363,
+          "rmse_nlp_vs_score_avg": 1.130860802153012,
+          "agree_score_me_within": {
+            "0.25": 0.5384615384615384,
+            "0.5": 0.5769230769230769,
+            "1.0": 0.6923076923076923
+          },
+          "agree_score_other_within": {
+            "0.25": 0.6153846153846154,
+            "0.5": 0.6923076923076923,
+            "1.0": 0.7692307692307693
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5,
+            "0.5": 0.6538461538461539,
+            "1.0": 0.6923076923076923
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.6944444444444443,
+        "desired_vs_llm_max_jaccard": 0.75,
+        "llm_answer_pairwise_avg_jaccard": 0.7962962962962963,
+        "desired_len_tokens": 6,
+        "llm_len_tokens_avg": 10,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 33,
+      "question": "What does the star (*) operator return?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.230769230769231,
+          "score_other": 4.384615384615385,
+          "score_avg": 4.3076923076923075,
+          "nlp_score": 3.6923076923076925
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4,
+          "0.75": 4.875,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5401573359274678,
+          "pearson_nlp_vs_score_other": 0.4904545670446208,
+          "pearson_nlp_vs_score_avg": 0.5573887846563932,
+          "mae_nlp_vs_score_me": 0.9615384615384616,
+          "mae_nlp_vs_score_other": 1.0384615384615385,
+          "mae_nlp_vs_score_avg": 0.9230769230769231,
+          "rmse_nlp_vs_score_me": 1.2009611535381535,
+          "rmse_nlp_vs_score_other": 1.2480754415067656,
+          "rmse_nlp_vs_score_avg": 1.168496733151024,
+          "agree_score_me_within": {
+            "0.25": 0.19230769230769232,
+            "0.5": 0.4230769230769231,
+            "1.0": 0.6923076923076923
+          },
+          "agree_score_other_within": {
+            "0.25": 0.15384615384615385,
+            "0.5": 0.34615384615384615,
+            "1.0": 0.6538461538461539
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.19230769230769232,
+            "0.5": 0.5,
+            "1.0": 0.6538461538461539
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5596432552954292,
+        "desired_vs_llm_max_jaccard": 0.6086956521739131,
+        "llm_answer_pairwise_avg_jaccard": 0.7391304347826088,
+        "desired_len_tokens": 21,
+        "llm_len_tokens_avg": 21.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 34,
+      "question": "How can an array be addressed in pointer/offset notation?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4,
+          "score_other": 3.5,
+          "score_avg": 3.75,
+          "nlp_score": 3.576923076923077
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 3.25,
+          "0.75": 4.875,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.0765446769173766,
+          "pearson_nlp_vs_score_other": 0.5421556091462403,
+          "pearson_nlp_vs_score_avg": 0.17507245667851692,
+          "mae_nlp_vs_score_me": 1.6923076923076923,
+          "mae_nlp_vs_score_other": 0.7692307692307693,
+          "mae_nlp_vs_score_avg": 1.2115384615384615,
+          "rmse_nlp_vs_score_me": 2.023895710295826,
+          "rmse_nlp_vs_score_other": 0.9903379376602871,
+          "rmse_nlp_vs_score_avg": 1.3480755514093756,
+          "agree_score_me_within": {
+            "0.25": 0.19230769230769232,
+            "0.5": 0.3076923076923077,
+            "1.0": 0.34615384615384615
+          },
+          "agree_score_other_within": {
+            "0.25": 0.23076923076923078,
+            "0.5": 0.5384615384615384,
+            "1.0": 0.8076923076923077
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.038461538461538464,
+            "0.5": 0.2692307692307692,
+            "1.0": 0.5
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5699730094466936,
+        "desired_vs_llm_max_jaccard": 0.7368421052631579,
+        "llm_answer_pairwise_avg_jaccard": 0.47668997668997665,
+        "desired_len_tokens": 25,
+        "llm_len_tokens_avg": 22.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 35,
+      "question": "What does the sizeof operator return?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.153846153846154,
+          "score_other": 4.461538461538462,
+          "score_avg": 4.3076923076923075,
+          "nlp_score": 3.8653846153846154
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.44385798989339353,
+          "pearson_nlp_vs_score_other": 0.40460992227627024,
+          "pearson_nlp_vs_score_avg": 0.584389832674268,
+          "mae_nlp_vs_score_me": 0.9423076923076923,
+          "mae_nlp_vs_score_other": 0.9038461538461539,
+          "mae_nlp_vs_score_avg": 0.8653846153846154,
+          "rmse_nlp_vs_score_me": 1.2747548783981961,
+          "rmse_nlp_vs_score_other": 1.4176090379986241,
+          "rmse_nlp_vs_score_avg": 1.180775494846827,
+          "agree_score_me_within": {
+            "0.25": 0.38461538461538464,
+            "0.5": 0.4230769230769231,
+            "1.0": 0.6153846153846154
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5,
+            "0.5": 0.5769230769230769,
+            "1.0": 0.6923076923076923
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3076923076923077,
+            "0.5": 0.5,
+            "1.0": 0.7307692307692307
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.6999999999999998,
+        "desired_vs_llm_max_jaccard": 0.7,
+        "llm_answer_pairwise_avg_jaccard": 0.8787878787878789,
+        "desired_len_tokens": 7,
+        "llm_len_tokens_avg": 11,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 36,
+      "question": "What are the different ways to pass a pointer to a function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.576923076923077,
+          "score_other": 3.9615384615384617,
+          "score_avg": 3.769230769230769,
+          "nlp_score": 4.384615384615385
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 4.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.32156189890786707,
+          "pearson_nlp_vs_score_other": 0.20984160154053583,
+          "pearson_nlp_vs_score_avg": 0.2826291698937937,
+          "mae_nlp_vs_score_me": 1.1923076923076923,
+          "mae_nlp_vs_score_other": 0.9615384615384616,
+          "mae_nlp_vs_score_avg": 1.0384615384615385,
+          "rmse_nlp_vs_score_me": 1.7541160386140584,
+          "rmse_nlp_vs_score_other": 1.3728129459672882,
+          "rmse_nlp_vs_score_avg": 1.5191090506254998,
+          "agree_score_me_within": {
+            "0.25": 0.5,
+            "0.5": 0.5,
+            "1.0": 0.5769230769230769
+          },
+          "agree_score_other_within": {
+            "0.25": 0.46153846153846156,
+            "0.5": 0.46153846153846156,
+            "1.0": 0.5769230769230769
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.46153846153846156,
+            "0.5": 0.5384615384615384,
+            "1.0": 0.5769230769230769
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.3444444444444444,
+        "desired_vs_llm_max_jaccard": 0.5,
+        "llm_answer_pairwise_avg_jaccard": 0.5294117647058824,
+        "desired_len_tokens": 24,
+        "llm_len_tokens_avg": 25,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 37,
+      "question": "What is a function pointer?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.884615384615385,
+          "score_other": 4.6923076923076925,
+          "score_avg": 4.788461538461538,
+          "nlp_score": 4.826923076923077
+        },
+        "nlp_quantiles": {
+          "0.1": 4.25,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 3.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.40768140989817636,
+          "pearson_nlp_vs_score_other": 0.9233715659142391,
+          "pearson_nlp_vs_score_avg": 0.9104732862179359,
+          "mae_nlp_vs_score_me": 0.17307692307692307,
+          "mae_nlp_vs_score_other": 0.1346153846153846,
+          "mae_nlp_vs_score_avg": 0.07692307692307693,
+          "rmse_nlp_vs_score_me": 0.42742520713255516,
+          "rmse_nlp_vs_score_other": 0.42742520713255516,
+          "rmse_nlp_vs_score_avg": 0.19611613513818404,
+          "agree_score_me_within": {
+            "0.25": 0.8076923076923077,
+            "0.5": 0.8846153846153846,
+            "1.0": 0.9615384615384616
+          },
+          "agree_score_other_within": {
+            "0.25": 0.8461538461538461,
+            "0.5": 0.9615384615384616,
+            "1.0": 0.9615384615384616
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.8461538461538461,
+            "0.5": 1,
+            "1.0": 1
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.33968253968253964,
+        "desired_vs_llm_max_jaccard": 0.4,
+        "llm_answer_pairwise_avg_jaccard": 0.5966386554621849,
+        "desired_len_tokens": 12,
+        "llm_len_tokens_avg": 18,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 38,
+      "question": "What is a linked list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.8461538461538463,
+          "score_other": 4.884615384615385,
+          "score_avg": 4.365384615384615,
+          "nlp_score": 3.4038461538461537
+        },
+        "nlp_quantiles": {
+          "0.1": 2.25,
+          "0.25": 2.5,
+          "0.5": 2.5,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.2972315218068189,
+          "pearson_nlp_vs_score_other": 0.12224808045512851,
+          "pearson_nlp_vs_score_avg": 0.27998468829914913,
+          "mae_nlp_vs_score_me": 1.1730769230769231,
+          "mae_nlp_vs_score_other": 1.5192307692307692,
+          "mae_nlp_vs_score_avg": 1.2307692307692308,
+          "rmse_nlp_vs_score_me": 1.2747548783981961,
+          "rmse_nlp_vs_score_other": 1.9039432764659772,
+          "rmse_nlp_vs_score_avg": 1.5,
+          "agree_score_me_within": {
+            "0.25": 0.038461538461538464,
+            "0.5": 0.23076923076923078,
+            "1.0": 0.46153846153846156
+          },
+          "agree_score_other_within": {
+            "0.25": 0.23076923076923078,
+            "0.5": 0.4230769230769231,
+            "1.0": 0.4230769230769231
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.15384615384615385,
+            "0.5": 0.46153846153846156,
+            "1.0": 0.46153846153846156
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5070028011204482,
+        "desired_vs_llm_max_jaccard": 1,
+        "llm_answer_pairwise_avg_jaccard": 0.2751187431494337,
+        "desired_len_tokens": 9,
+        "llm_len_tokens_avg": 13.666666666666666,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 39,
+      "question": "What is the main advantage of linked lists over arrays?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.769230769230769,
+          "score_other": 4.8076923076923075,
+          "score_avg": 4.788461538461538,
+          "nlp_score": 3.3653846153846154
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 3.25,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.01889527149490943,
+          "pearson_nlp_vs_score_other": -0.042790963388135025,
+          "pearson_nlp_vs_score_avg": -0.03444149965463328,
+          "mae_nlp_vs_score_me": 1.5961538461538463,
+          "mae_nlp_vs_score_other": 1.5961538461538463,
+          "mae_nlp_vs_score_avg": 1.5769230769230769,
+          "rmse_nlp_vs_score_me": 1.8733967504550082,
+          "rmse_nlp_vs_score_other": 1.9039432764659772,
+          "rmse_nlp_vs_score_avg": 1.8708286933869707,
+          "agree_score_me_within": {
+            "0.25": 0.11538461538461539,
+            "0.5": 0.2692307692307692,
+            "1.0": 0.38461538461538464
+          },
+          "agree_score_other_within": {
+            "0.25": 0.15384615384615385,
+            "0.5": 0.2692307692307692,
+            "1.0": 0.38461538461538464
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.15384615384615385,
+            "0.5": 0.23076923076923078,
+            "1.0": 0.4230769230769231
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.21756613756613755,
+        "desired_vs_llm_max_jaccard": 0.24,
+        "llm_answer_pairwise_avg_jaccard": 0.4129032258064516,
+        "desired_len_tokens": 8,
+        "llm_len_tokens_avg": 22.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 40,
+      "question": "What is the main advantage of arrays over linked lists?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.923076923076923,
+          "score_other": 4.423076923076923,
+          "score_avg": 4.173076923076923,
+          "nlp_score": 4
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 3,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.7150830900432898,
+          "pearson_nlp_vs_score_other": 0.7073867458731266,
+          "pearson_nlp_vs_score_avg": 0.7660973802830487,
+          "mae_nlp_vs_score_me": 0.6153846153846154,
+          "mae_nlp_vs_score_other": 0.5769230769230769,
+          "mae_nlp_vs_score_avg": 0.4807692307692308,
+          "rmse_nlp_vs_score_me": 1.0095695960312836,
+          "rmse_nlp_vs_score_other": 0.8660254037844386,
+          "rmse_nlp_vs_score_avg": 0.7272180923534245,
+          "agree_score_me_within": {
+            "0.25": 0.46153846153846156,
+            "0.5": 0.6923076923076923,
+            "1.0": 0.8461538461538461
+          },
+          "agree_score_other_within": {
+            "0.25": 0.46153846153846156,
+            "0.5": 0.6153846153846154,
+            "1.0": 0.8461538461538461
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.38461538461538464,
+            "0.5": 0.8076923076923077,
+            "1.0": 0.9230769230769231
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.2761235180590019,
+        "desired_vs_llm_max_jaccard": 0.3333333333333333,
+        "llm_answer_pairwise_avg_jaccard": 0.5009065009065009,
+        "desired_len_tokens": 18,
+        "llm_len_tokens_avg": 18.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 41,
+      "question": "How are linked lists passed as arguments to a function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4,
+          "score_other": 3.6923076923076925,
+          "score_avg": 3.8461538461538463,
+          "nlp_score": 3.673076923076923
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.2904582107128093,
+          "pearson_nlp_vs_score_other": 0.596846798419582,
+          "pearson_nlp_vs_score_avg": 0.4676611399804558,
+          "mae_nlp_vs_score_me": 1.25,
+          "mae_nlp_vs_score_other": 0.8269230769230769,
+          "mae_nlp_vs_score_avg": 0.9423076923076923,
+          "rmse_nlp_vs_score_me": 1.6899021364473241,
+          "rmse_nlp_vs_score_other": 1.0786387432600122,
+          "rmse_nlp_vs_score_avg": 1.2747548783981961,
+          "agree_score_me_within": {
+            "0.25": 0.2692307692307692,
+            "0.5": 0.38461538461538464,
+            "1.0": 0.5769230769230769
+          },
+          "agree_score_other_within": {
+            "0.25": 0.19230769230769232,
+            "0.5": 0.5,
+            "1.0": 0.8461538461538461
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.23076923076923078,
+            "0.5": 0.5384615384615384,
+            "1.0": 0.6923076923076923
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.1565934065934066,
+        "desired_vs_llm_max_jaccard": 0.25,
+        "llm_answer_pairwise_avg_jaccard": 0.4535341202007868,
+        "desired_len_tokens": 2,
+        "llm_len_tokens_avg": 18.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 42,
+      "question": "What is the difference between a circular linked list and a basic linked list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.423076923076923,
+          "score_other": 4.615384615384615,
+          "score_avg": 4.519230769230769,
+          "nlp_score": 4.8076923076923075
+        },
+        "nlp_quantiles": {
+          "0.1": 4.75,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6208482168266359,
+          "pearson_nlp_vs_score_other": 0.6922232319408274,
+          "pearson_nlp_vs_score_avg": 0.6748344121759623,
+          "mae_nlp_vs_score_me": 0.5,
+          "mae_nlp_vs_score_other": 0.3076923076923077,
+          "mae_nlp_vs_score_avg": 0.40384615384615385,
+          "rmse_nlp_vs_score_me": 1.0830867569483633,
+          "rmse_nlp_vs_score_other": 0.6933752452815364,
+          "rmse_nlp_vs_score_avg": 0.8378084965689216,
+          "agree_score_me_within": {
+            "0.25": 0.7692307692307693,
+            "0.5": 0.7692307692307693,
+            "1.0": 0.7692307692307693
+          },
+          "agree_score_other_within": {
+            "0.25": 0.7692307692307693,
+            "0.5": 0.8076923076923077,
+            "1.0": 0.8846153846153846
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.7307692307692307,
+            "0.5": 0.7692307692307693,
+            "1.0": 0.8076923076923077
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.442849548112706,
+        "desired_vs_llm_max_jaccard": 0.631578947368421,
+        "llm_answer_pairwise_avg_jaccard": 0.43870101986044013,
+        "desired_len_tokens": 15,
+        "llm_len_tokens_avg": 24.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 43,
+      "question": "What is the main advantage of a doubly-linked list over a basic linked list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.3846153846153846,
+          "score_other": 4,
+          "score_avg": 3.6923076923076925,
+          "nlp_score": 3.5
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.07230099287964598,
+          "pearson_nlp_vs_score_other": 0.3771682545706787,
+          "pearson_nlp_vs_score_avg": 0.2255918705095939,
+          "mae_nlp_vs_score_me": 1.3076923076923077,
+          "mae_nlp_vs_score_other": 1.2307692307692308,
+          "mae_nlp_vs_score_avg": 1.2692307692307692,
+          "rmse_nlp_vs_score_me": 1.6290629680421054,
+          "rmse_nlp_vs_score_other": 1.3728129459672882,
+          "rmse_nlp_vs_score_avg": 1.3797993165116997,
+          "agree_score_me_within": {
+            "0.25": 0.11538461538461539,
+            "0.5": 0.19230769230769232,
+            "1.0": 0.6153846153846154
+          },
+          "agree_score_other_within": {
+            "0.25": 0.07692307692307693,
+            "0.5": 0.15384615384615385,
+            "1.0": 0.6153846153846154
+          },
+          "agree_score_avg_within": {
+            "0.25": 0,
+            "0.5": 0.19230769230769232,
+            "1.0": 0.4230769230769231
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.3060931899641577,
+        "desired_vs_llm_max_jaccard": 0.45161290322580644,
+        "llm_answer_pairwise_avg_jaccard": 0.4511117537433327,
+        "desired_len_tokens": 30,
+        "llm_len_tokens_avg": 29.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 44,
+      "question": "What is the main disadvantage of a doubly-linked list over a basic linked list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 26,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.038461538461538,
+          "score_other": 4.115384615384615,
+          "score_avg": 4.076923076923077,
+          "nlp_score": 2.6538461538461537
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 2.875,
+          "0.9": 4.5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.13638736071844754,
+          "pearson_nlp_vs_score_other": 0.0942552332594324,
+          "pearson_nlp_vs_score_avg": 0.1182445261912043,
+          "mae_nlp_vs_score_me": 1.8076923076923077,
+          "mae_nlp_vs_score_other": 1.8076923076923077,
+          "mae_nlp_vs_score_avg": 1.7692307692307692,
+          "rmse_nlp_vs_score_me": 2.0939473213563384,
+          "rmse_nlp_vs_score_other": 2.103111248383433,
+          "rmse_nlp_vs_score_avg": 2.0847431127488694,
+          "agree_score_me_within": {
+            "0.25": 0.038461538461538464,
+            "0.5": 0.19230769230769232,
+            "1.0": 0.46153846153846156
+          },
+          "agree_score_other_within": {
+            "0.25": 0.07692307692307693,
+            "0.5": 0.19230769230769232,
+            "1.0": 0.4230769230769231
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.07692307692307693,
+            "0.5": 0.23076923076923078,
+            "1.0": 0.46153846153846156
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.21997113997113996,
+        "desired_vs_llm_max_jaccard": 0.24,
+        "llm_answer_pairwise_avg_jaccard": 0.7952262903635902,
+        "desired_len_tokens": 8,
+        "llm_len_tokens_avg": 26,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 45,
+      "question": "What is a stack?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.074074074074074,
+          "score_other": 4.814814814814815,
+          "score_avg": 4.444444444444445,
+          "nlp_score": 3.888888888888889
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.4939941521103536,
+          "pearson_nlp_vs_score_other": 0.45353642946233447,
+          "pearson_nlp_vs_score_avg": 0.48803022138343616,
+          "mae_nlp_vs_score_me": 1.0740740740740742,
+          "mae_nlp_vs_score_other": 1,
+          "mae_nlp_vs_score_avg": 0.7777777777777778,
+          "rmse_nlp_vs_score_me": 1.6043921197992945,
+          "rmse_nlp_vs_score_other": 1.4593250596181886,
+          "rmse_nlp_vs_score_avg": 1.3123346456686351,
+          "agree_score_me_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.5925925925925926,
+            "1.0": 0.6666666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.5925925925925926,
+            "1.0": 0.6666666666666666
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.4444444444444444,
+            "0.5": 0.7407407407407407,
+            "1.0": 0.7777777777777778
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5065407772304323,
+        "desired_vs_llm_max_jaccard": 0.5357142857142857,
+        "llm_answer_pairwise_avg_jaccard": 0.6704761904761906,
+        "desired_len_tokens": 28,
+        "llm_len_tokens_avg": 28,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 46,
+      "question": "What are the two main functions defined by a stack?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 5,
+          "score_other": 5,
+          "score_avg": 5,
+          "nlp_score": 4.333333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 4,
+          "0.25": 4,
+          "0.5": 4,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0,
+          "mae_nlp_vs_score_me": 0.6666666666666666,
+          "mae_nlp_vs_score_other": 0.6666666666666666,
+          "mae_nlp_vs_score_avg": 0.6666666666666666,
+          "rmse_nlp_vs_score_me": 0.9329364235414814,
+          "rmse_nlp_vs_score_other": 0.9329364235414814,
+          "rmse_nlp_vs_score_avg": 0.9329364235414814,
+          "agree_score_me_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.9629629629629629
+          },
+          "agree_score_other_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.9629629629629629
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.9629629629629629
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.15907415597818075,
+        "desired_vs_llm_max_jaccard": 0.17647058823529413,
+        "llm_answer_pairwise_avg_jaccard": 0.6581818181818182,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 25,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 47,
+      "question": "How can you implement a stack with an array?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.148148148148148,
+          "score_other": 3.925925925925926,
+          "score_avg": 4.037037037037037,
+          "nlp_score": 3.5555555555555554
+        },
+        "nlp_quantiles": {
+          "0.1": 2.3,
+          "0.25": 2.5,
+          "0.5": 3.5,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.04925377678448628,
+          "pearson_nlp_vs_score_other": 0.3968695629745012,
+          "pearson_nlp_vs_score_avg": 0.11712944526562792,
+          "mae_nlp_vs_score_me": 1.4444444444444444,
+          "mae_nlp_vs_score_other": 0.8518518518518519,
+          "mae_nlp_vs_score_avg": 1.0740740740740742,
+          "rmse_nlp_vs_score_me": 1.7690759253434065,
+          "rmse_nlp_vs_score_other": 1.0274023338281628,
+          "rmse_nlp_vs_score_avg": 1.2909944487358056,
+          "agree_score_me_within": {
+            "0.25": 0.14814814814814814,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.4444444444444444
+          },
+          "agree_score_other_within": {
+            "0.25": 0.14814814814814814,
+            "0.5": 0.48148148148148145,
+            "1.0": 0.7407407407407407
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.14814814814814814,
+            "0.5": 0.4074074074074074,
+            "1.0": 0.5555555555555556
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.33719548425430784,
+        "desired_vs_llm_max_jaccard": 0.3939393939393939,
+        "llm_answer_pairwise_avg_jaccard": 0.694991789819376,
+        "desired_len_tokens": 30,
+        "llm_len_tokens_avg": 34,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 48,
+      "question": "How can you implement a stack with a list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.3333333333333335,
+          "score_other": 3.962962962962963,
+          "score_avg": 3.6481481481481484,
+          "nlp_score": 3.8703703703703702
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.75,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.45582504006554636,
+          "pearson_nlp_vs_score_other": 0.6814655658544763,
+          "pearson_nlp_vs_score_avg": 0.5730115983367533,
+          "mae_nlp_vs_score_me": 1.1666666666666667,
+          "mae_nlp_vs_score_other": 0.7592592592592593,
+          "mae_nlp_vs_score_avg": 0.7777777777777778,
+          "rmse_nlp_vs_score_me": 1.7240134054647667,
+          "rmse_nlp_vs_score_other": 0.927960727138337,
+          "rmse_nlp_vs_score_avg": 1.0801234497346435,
+          "agree_score_me_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.6296296296296297
+          },
+          "agree_score_other_within": {
+            "0.25": 0.25925925925925924,
+            "0.5": 0.37037037037037035,
+            "1.0": 0.8888888888888888
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2222222222222222,
+            "0.5": 0.6296296296296297,
+            "1.0": 0.8148148148148148
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.585679012345679,
+        "desired_vs_llm_max_jaccard": 0.72,
+        "llm_answer_pairwise_avg_jaccard": 0.4506568144499179,
+        "desired_len_tokens": 31,
+        "llm_len_tokens_avg": 29.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 49,
+      "question": "How are infix expressions evaluated by computers?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.074074074074074,
+          "score_other": 4.62962962962963,
+          "score_avg": 4.351851851851852,
+          "nlp_score": 4.537037037037037
+        },
+        "nlp_quantiles": {
+          "0.1": 2.6,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5132587576568688,
+          "pearson_nlp_vs_score_other": 0.7388171306529491,
+          "pearson_nlp_vs_score_avg": 0.606515675925403,
+          "mae_nlp_vs_score_me": 0.6481481481481481,
+          "mae_nlp_vs_score_other": 0.3148148148148148,
+          "mae_nlp_vs_score_avg": 0.4074074074074074,
+          "rmse_nlp_vs_score_me": 1.4304881321759704,
+          "rmse_nlp_vs_score_other": 0.6735753140545634,
+          "rmse_nlp_vs_score_avg": 0.9525793444156804,
+          "agree_score_me_within": {
+            "0.25": 0.7037037037037037,
+            "0.5": 0.7407407407407407,
+            "1.0": 0.8148148148148148
+          },
+          "agree_score_other_within": {
+            "0.25": 0.7407407407407407,
+            "0.5": 0.7777777777777778,
+            "1.0": 0.9259259259259259
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.7037037037037037,
+            "0.5": 0.8518518518518519,
+            "1.0": 0.8888888888888888
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.2748917748917749,
+        "desired_vs_llm_max_jaccard": 0.36363636363636365,
+        "llm_answer_pairwise_avg_jaccard": 0.38947368421052636,
+        "desired_len_tokens": 15,
+        "llm_len_tokens_avg": 14.333333333333334,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 50,
+      "question": "What operations would you need to perform to find a given element on a stack?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3,
+          "score_other": 4.2592592592592595,
+          "score_avg": 3.6296296296296298,
+          "nlp_score": 4.296296296296297
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 4,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5294429771816717,
+          "pearson_nlp_vs_score_other": 0.3005971022852122,
+          "pearson_nlp_vs_score_avg": 0.4700189142030584,
+          "mae_nlp_vs_score_me": 1.3333333333333333,
+          "mae_nlp_vs_score_other": 0.8148148148148148,
+          "mae_nlp_vs_score_avg": 0.9629629629629629,
+          "rmse_nlp_vs_score_me": 1.8408935028645435,
+          "rmse_nlp_vs_score_other": 1.04527154012371,
+          "rmse_nlp_vs_score_avg": 1.2692955176439846,
+          "agree_score_me_within": {
+            "0.25": 0.25925925925925924,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.5925925925925926
+          },
+          "agree_score_other_within": {
+            "0.25": 0.2962962962962963,
+            "0.5": 0.4444444444444444,
+            "1.0": 0.7037037037037037
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.25925925925925924,
+            "0.5": 0.48148148148148145,
+            "1.0": 0.5925925925925926
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5116487455197133,
+        "desired_vs_llm_max_jaccard": 0.5833333333333334,
+        "llm_answer_pairwise_avg_jaccard": 0.5654320987654321,
+        "desired_len_tokens": 25,
+        "llm_len_tokens_avg": 29.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 51,
+      "question": "What is a queue?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.814814814814815,
+          "score_other": 4.962962962962963,
+          "score_avg": 4.888888888888889,
+          "nlp_score": 3.7222222222222223
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.11802502268072208,
+          "pearson_nlp_vs_score_other": -0.044388801514277154,
+          "pearson_nlp_vs_score_avg": -0.11749469908920933,
+          "mae_nlp_vs_score_me": 1.3148148148148149,
+          "mae_nlp_vs_score_other": 1.2407407407407407,
+          "mae_nlp_vs_score_avg": 1.2777777777777777,
+          "rmse_nlp_vs_score_me": 1.8027756377319946,
+          "rmse_nlp_vs_score_other": 1.7612074982385952,
+          "rmse_nlp_vs_score_avg": 1.7559422921421233,
+          "agree_score_me_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.48148148148148145,
+            "1.0": 0.48148148148148145
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4074074074074074,
+            "0.5": 0.5185185185185185,
+            "1.0": 0.5185185185185185
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.48148148148148145,
+            "1.0": 0.48148148148148145
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5357142857142857,
+        "desired_vs_llm_max_jaccard": 0.5357142857142857,
+        "llm_answer_pairwise_avg_jaccard": 0.8283926218708828,
+        "desired_len_tokens": 28,
+        "llm_len_tokens_avg": 27,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 52,
+      "question": "What are the two main functions defined by a queue?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.888888888888889,
+          "score_other": 4.925925925925926,
+          "score_avg": 4.907407407407407,
+          "nlp_score": 4.12962962962963
+        },
+        "nlp_quantiles": {
+          "0.1": 3.4000000000000004,
+          "0.25": 4,
+          "0.5": 4,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5005680744115842,
+          "pearson_nlp_vs_score_other": 0.5005680744115842,
+          "pearson_nlp_vs_score_avg": 0.5005680744115842,
+          "mae_nlp_vs_score_me": 0.7592592592592593,
+          "mae_nlp_vs_score_other": 0.7962962962962963,
+          "mae_nlp_vs_score_avg": 0.7777777777777778,
+          "rmse_nlp_vs_score_me": 1.058475493514314,
+          "rmse_nlp_vs_score_other": 1.075828707279838,
+          "rmse_nlp_vs_score_avg": 1.0628403594282771,
+          "agree_score_me_within": {
+            "0.25": 0.37037037037037035,
+            "0.5": 0.37037037037037035,
+            "1.0": 0.9259259259259259
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.9259259259259259
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.37037037037037035,
+            "1.0": 0.9259259259259259
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.20535714285714288,
+        "desired_vs_llm_max_jaccard": 0.21428571428571427,
+        "llm_answer_pairwise_avg_jaccard": 0.6944444444444443,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 17.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 53,
+      "question": "How can you implement a queue with an array?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.259259259259259,
+          "score_other": 4.185185185185185,
+          "score_avg": 3.7222222222222223,
+          "nlp_score": 3.2777777777777777
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 3,
+          "0.75": 4,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.010040083471090951,
+          "pearson_nlp_vs_score_other": 0.0834783871129682,
+          "pearson_nlp_vs_score_avg": 0.012555296411486911,
+          "mae_nlp_vs_score_me": 1.462962962962963,
+          "mae_nlp_vs_score_other": 1.2407407407407407,
+          "mae_nlp_vs_score_avg": 1.2222222222222223,
+          "rmse_nlp_vs_score_me": 1.8978545391709691,
+          "rmse_nlp_vs_score_other": 1.4304881321759704,
+          "rmse_nlp_vs_score_avg": 1.46565621758588,
+          "agree_score_me_within": {
+            "0.25": 0.2222222222222222,
+            "0.5": 0.2962962962962963,
+            "1.0": 0.48148148148148145
+          },
+          "agree_score_other_within": {
+            "0.25": 0.07407407407407407,
+            "0.5": 0.25925925925925924,
+            "1.0": 0.5925925925925926
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.1111111111111111,
+            "0.5": 0.2962962962962963,
+            "1.0": 0.5925925925925926
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.6311111111111112,
+        "desired_vs_llm_max_jaccard": 0.7083333333333334,
+        "llm_answer_pairwise_avg_jaccard": 0.6366902019075932,
+        "desired_len_tokens": 30,
+        "llm_len_tokens_avg": 30,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 54,
+      "question": "How can you implement a queue with a list?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.740740740740741,
+          "score_other": 4.296296296296297,
+          "score_avg": 4.018518518518518,
+          "nlp_score": 4.074074074074074
+        },
+        "nlp_quantiles": {
+          "0.1": 2.3,
+          "0.25": 3.25,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.4206981796146684,
+          "pearson_nlp_vs_score_other": 0.2526418938494768,
+          "pearson_nlp_vs_score_avg": 0.4201633405984785,
+          "mae_nlp_vs_score_me": 1.0740740740740742,
+          "mae_nlp_vs_score_other": 0.8518518518518519,
+          "mae_nlp_vs_score_avg": 0.8333333333333334,
+          "rmse_nlp_vs_score_me": 1.509230856356236,
+          "rmse_nlp_vs_score_other": 1.097134314340639,
+          "rmse_nlp_vs_score_avg": 1.092906420717,
+          "agree_score_me_within": {
+            "0.25": 0.2962962962962963,
+            "0.5": 0.4074074074074074,
+            "1.0": 0.6296296296296297
+          },
+          "agree_score_other_within": {
+            "0.25": 0.2222222222222222,
+            "0.5": 0.48148148148148145,
+            "1.0": 0.7777777777777778
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2222222222222222,
+            "0.5": 0.5185185185185185,
+            "1.0": 0.7407407407407407
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4006797676430602,
+        "desired_vs_llm_max_jaccard": 0.4482758620689655,
+        "llm_answer_pairwise_avg_jaccard": 0.508301404853129,
+        "desired_len_tokens": 53,
+        "llm_len_tokens_avg": 34,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 55,
+      "question": "What is the stack operation corresponding to the enqueue operation in queues?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 27,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.62962962962963,
+          "score_other": 4.851851851851852,
+          "score_avg": 4.7407407407407405,
+          "nlp_score": 3.0925925925925926
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": -0.08508871695576779,
+          "pearson_nlp_vs_score_other": -0.09958881045949908,
+          "pearson_nlp_vs_score_avg": -0.09776108912563403,
+          "mae_nlp_vs_score_me": 2.0555555555555554,
+          "mae_nlp_vs_score_other": 1.9074074074074074,
+          "mae_nlp_vs_score_avg": 1.9444444444444444,
+          "rmse_nlp_vs_score_me": 2.492581586019395,
+          "rmse_nlp_vs_score_other": 2.29128784747792,
+          "rmse_nlp_vs_score_avg": 2.3233915184807206,
+          "agree_score_me_within": {
+            "0.25": 0.25925925925925924,
+            "0.5": 0.2962962962962963,
+            "1.0": 0.2962962962962963
+          },
+          "agree_score_other_within": {
+            "0.25": 0.2222222222222222,
+            "0.5": 0.25925925925925924,
+            "1.0": 0.37037037037037035
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.18518518518518517,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.3333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.09696969696969697,
+        "desired_vs_llm_max_jaccard": 0.1,
+        "llm_answer_pairwise_avg_jaccard": 0.6773504273504273,
+        "desired_len_tokens": 1,
+        "llm_len_tokens_avg": 12.333333333333334,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 56,
+      "question": "What is a tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.1666666666666665,
+          "score_other": 4.875,
+          "score_avg": 4.020833333333333,
+          "nlp_score": 4.083333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 3.25,
+          "0.5": 4.75,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.4415246152244023,
+          "pearson_nlp_vs_score_other": 0.6489676645639562,
+          "pearson_nlp_vs_score_avg": 0.514911877487631,
+          "mae_nlp_vs_score_me": 1.375,
+          "mae_nlp_vs_score_other": 0.7916666666666666,
+          "mae_nlp_vs_score_avg": 0.8125,
+          "rmse_nlp_vs_score_me": 1.713913650100261,
+          "rmse_nlp_vs_score_other": 1.299038105676658,
+          "rmse_nlp_vs_score_avg": 1.0655593210453684,
+          "agree_score_me_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.25,
+            "1.0": 0.5416666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.7083333333333334
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.20833333333333334,
+            "0.5": 0.5833333333333334,
+            "1.0": 0.75
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.42728032201716415,
+        "desired_vs_llm_max_jaccard": 0.48484848484848486,
+        "llm_answer_pairwise_avg_jaccard": 0.68502331002331,
+        "desired_len_tokens": 30,
+        "llm_len_tokens_avg": 30.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 57,
+      "question": "What is the height of a tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4,
+          "score_other": 4.75,
+          "score_avg": 4.375,
+          "nlp_score": 3.7083333333333335
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 4.25,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.559308376721747,
+          "pearson_nlp_vs_score_other": 0.41883542952925606,
+          "pearson_nlp_vs_score_avg": 0.5352788637145318,
+          "mae_nlp_vs_score_me": 0.9583333333333334,
+          "mae_nlp_vs_score_other": 1.0833333333333333,
+          "mae_nlp_vs_score_avg": 0.9583333333333334,
+          "rmse_nlp_vs_score_me": 1.1902380714238083,
+          "rmse_nlp_vs_score_other": 1.567907310185565,
+          "rmse_nlp_vs_score_avg": 1.282900359861721,
+          "agree_score_me_within": {
+            "0.25": 0.25,
+            "0.5": 0.375,
+            "1.0": 0.625
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4166666666666667,
+            "0.5": 0.5,
+            "1.0": 0.5833333333333334
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.25,
+            "0.5": 0.5416666666666666,
+            "1.0": 0.6666666666666666
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.46691434468524257,
+        "desired_vs_llm_max_jaccard": 0.6470588235294118,
+        "llm_answer_pairwise_avg_jaccard": 0.5722936972059779,
+        "desired_len_tokens": 14,
+        "llm_len_tokens_avg": 24,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 58,
+      "question": "What is a leaf?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.333333333333333,
+          "score_other": 4.916666666666667,
+          "score_avg": 4.625,
+          "nlp_score": 4.041666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.42110582725390794,
+          "pearson_nlp_vs_score_other": 0.12351857550254171,
+          "pearson_nlp_vs_score_avg": 0.3781896082260592,
+          "mae_nlp_vs_score_me": 0.7083333333333334,
+          "mae_nlp_vs_score_other": 0.9583333333333334,
+          "mae_nlp_vs_score_avg": 0.8333333333333334,
+          "rmse_nlp_vs_score_me": 1.4142135623730951,
+          "rmse_nlp_vs_score_other": 1.5811388300841898,
+          "rmse_nlp_vs_score_avg": 1.3768926368215255,
+          "agree_score_me_within": {
+            "0.25": 0.625,
+            "0.5": 0.7083333333333334,
+            "1.0": 0.7916666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5833333333333334,
+            "0.5": 0.625,
+            "1.0": 0.6666666666666666
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5833333333333334,
+            "0.5": 0.625,
+            "1.0": 0.6666666666666666
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.21388888888888888,
+        "desired_vs_llm_max_jaccard": 0.26666666666666666,
+        "llm_answer_pairwise_avg_jaccard": 0.5566694514062934,
+        "desired_len_tokens": 6,
+        "llm_len_tokens_avg": 15.666666666666666,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 59,
+      "question": "What is a binary tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.583333333333333,
+          "score_other": 4.916666666666667,
+          "score_avg": 4.75,
+          "nlp_score": 4.583333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 3.3000000000000003,
+          "0.25": 4.875,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6161760277682518,
+          "pearson_nlp_vs_score_other": 0.6338421355848868,
+          "pearson_nlp_vs_score_avg": 0.6405126152203485,
+          "mae_nlp_vs_score_me": 0.4166666666666667,
+          "mae_nlp_vs_score_other": 0.3333333333333333,
+          "mae_nlp_vs_score_avg": 0.3333333333333333,
+          "rmse_nlp_vs_score_me": 0.75,
+          "rmse_nlp_vs_score_other": 0.75,
+          "rmse_nlp_vs_score_avg": 0.67700320038633,
+          "agree_score_me_within": {
+            "0.25": 0.625,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.9583333333333334
+          },
+          "agree_score_other_within": {
+            "0.25": 0.75,
+            "0.5": 0.7916666666666666,
+            "1.0": 0.9166666666666666
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.625,
+            "0.5": 0.875,
+            "1.0": 0.9166666666666666
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.2708041140719963,
+        "desired_vs_llm_max_jaccard": 0.30434782608695654,
+        "llm_answer_pairwise_avg_jaccard": 0.6253561253561254,
+        "desired_len_tokens": 13,
+        "llm_len_tokens_avg": 23.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 60,
+      "question": "What is a binary search tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.125,
+          "score_other": 4.5,
+          "score_avg": 4.3125,
+          "nlp_score": 4.770833333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 4.5,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.2540077802683354,
+          "pearson_nlp_vs_score_other": 0.3319178987723074,
+          "pearson_nlp_vs_score_avg": 0.3070814675595066,
+          "mae_nlp_vs_score_me": 0.8125,
+          "mae_nlp_vs_score_other": 0.4791666666666667,
+          "mae_nlp_vs_score_avg": 0.625,
+          "rmse_nlp_vs_score_me": 1.461306493062515,
+          "rmse_nlp_vs_score_other": 0.7971302695712079,
+          "rmse_nlp_vs_score_avg": 1.0408329997330663,
+          "agree_score_me_within": {
+            "0.25": 0.5,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.7916666666666666
+          },
+          "agree_score_other_within": {
+            "0.25": 0.5416666666666666,
+            "0.5": 0.7083333333333334,
+            "1.0": 0.875
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.5,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.8333333333333334
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.47634310134310137,
+        "desired_vs_llm_max_jaccard": 0.5416666666666666,
+        "llm_answer_pairwise_avg_jaccard": 0.6979405034324943,
+        "desired_len_tokens": 28,
+        "llm_len_tokens_avg": 28.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 61,
+      "question": "What is the inorder traversal of a binary tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.625,
+          "score_other": 4.458333333333333,
+          "score_avg": 4.041666666666667,
+          "nlp_score": 3.6458333333333335
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 4.25,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.18226615021758397,
+          "pearson_nlp_vs_score_other": 0.2248974906362058,
+          "pearson_nlp_vs_score_avg": 0.1998337109870793,
+          "mae_nlp_vs_score_me": 1.4791666666666667,
+          "mae_nlp_vs_score_other": 1.1458333333333333,
+          "mae_nlp_vs_score_avg": 1.2291666666666667,
+          "rmse_nlp_vs_score_me": 2.023301757029831,
+          "rmse_nlp_vs_score_other": 1.5844294451526286,
+          "rmse_nlp_vs_score_avg": 1.6677080080157918,
+          "agree_score_me_within": {
+            "0.25": 0.2916666666666667,
+            "0.5": 0.375,
+            "1.0": 0.5833333333333334
+          },
+          "agree_score_other_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.4166666666666667,
+            "1.0": 0.625
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2916666666666667,
+            "0.5": 0.4166666666666667,
+            "1.0": 0.5833333333333334
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.31398544266191325,
+        "desired_vs_llm_max_jaccard": 0.4375,
+        "llm_answer_pairwise_avg_jaccard": 0.4317738791423002,
+        "desired_len_tokens": 11,
+        "llm_len_tokens_avg": 24.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 62,
+      "question": "How many comparisons does it take to find an element in a binary search tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 24,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.375,
+          "score_other": 4.458333333333333,
+          "score_avg": 3.9166666666666665,
+          "nlp_score": 2.7083333333333335
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2,
+          "0.75": 2.75,
+          "0.9": 4.85
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.03804515871541334,
+          "pearson_nlp_vs_score_other": 0.03133285251446384,
+          "pearson_nlp_vs_score_avg": 0.03780878435953419,
+          "mae_nlp_vs_score_me": 2.0833333333333335,
+          "mae_nlp_vs_score_other": 1.9166666666666667,
+          "mae_nlp_vs_score_avg": 1.7916666666666667,
+          "rmse_nlp_vs_score_me": 2.4537386440559095,
+          "rmse_nlp_vs_score_other": 2.222048604328897,
+          "rmse_nlp_vs_score_avg": 2.140872096444188,
+          "agree_score_me_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.20833333333333334,
+            "1.0": 0.2916666666666667
+          },
+          "agree_score_other_within": {
+            "0.25": 0.125,
+            "0.5": 0.25,
+            "1.0": 0.3333333333333333
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.125,
+            "0.5": 0.25,
+            "1.0": 0.4166666666666667
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.40066833751044273,
+        "desired_vs_llm_max_jaccard": 0.42105263157894735,
+        "llm_answer_pairwise_avg_jaccard": 0.6549187527448397,
+        "desired_len_tokens": 15,
+        "llm_len_tokens_avg": 27,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 63,
+      "question": "What are the elements typically included in a class definition?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.9166666666666665,
+          "score_other": 3.683333333333333,
+          "score_avg": 3.8,
+          "nlp_score": 3.6
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.5,
+          "0.5": 3.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.48487474375713313,
+          "pearson_nlp_vs_score_other": 0.7101230942944199,
+          "pearson_nlp_vs_score_avg": 0.687126291315128,
+          "mae_nlp_vs_score_me": 0.9833333333333333,
+          "mae_nlp_vs_score_other": 0.6166666666666667,
+          "mae_nlp_vs_score_avg": 0.6833333333333333,
+          "rmse_nlp_vs_score_me": 1.399404635312222,
+          "rmse_nlp_vs_score_other": 0.9196919774214263,
+          "rmse_nlp_vs_score_avg": 0.9644730858522353,
+          "agree_score_me_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.5333333333333333,
+            "1.0": 0.7
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.8333333333333334
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.4,
+            "0.5": 0.5666666666666667,
+            "1.0": 0.7
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.36923076923076925,
+        "desired_vs_llm_max_jaccard": 0.4,
+        "llm_answer_pairwise_avg_jaccard": 0.5817307692307693,
+        "desired_len_tokens": 5,
+        "llm_len_tokens_avg": 14.666666666666666,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 64,
+      "question": "What are the access-specifiers that can be used in a C++ class definition?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.5,
+          "score_other": 4.591666666666667,
+          "score_avg": 4.545833333333333,
+          "nlp_score": 3.8666666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 3,
+          "0.25": 3.5,
+          "0.5": 3.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.25792814553750976,
+          "pearson_nlp_vs_score_other": 0.30001924302213157,
+          "pearson_nlp_vs_score_avg": 0.27685179000757454,
+          "mae_nlp_vs_score_me": 1.2,
+          "mae_nlp_vs_score_other": 1.0583333333333333,
+          "mae_nlp_vs_score_avg": 1.1125,
+          "rmse_nlp_vs_score_me": 1.5545631755148024,
+          "rmse_nlp_vs_score_other": 1.328376201734032,
+          "rmse_nlp_vs_score_avg": 1.4294156731569256,
+          "agree_score_me_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.26666666666666666,
+            "1.0": 0.5
+          },
+          "agree_score_other_within": {
+            "0.25": 0.26666666666666666,
+            "0.5": 0.3,
+            "1.0": 0.5
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.26666666666666666,
+            "0.5": 0.3,
+            "1.0": 0.4666666666666667
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.23674242424242423,
+        "desired_vs_llm_max_jaccard": 0.2727272727272727,
+        "llm_answer_pairwise_avg_jaccard": 0.6376738729679906,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 13.333333333333334,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 65,
+      "question": "How are objects initialized when they are created?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.2333333333333334,
+          "score_other": 3.3833333333333333,
+          "score_avg": 2.808333333333333,
+          "nlp_score": 3.6666666666666665
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2.125,
+          "0.5": 4.25,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.3411873517876583,
+          "pearson_nlp_vs_score_other": 0.4916292470937316,
+          "pearson_nlp_vs_score_avg": 0.4479050337485787,
+          "mae_nlp_vs_score_me": 1.8333333333333333,
+          "mae_nlp_vs_score_other": 1.1,
+          "mae_nlp_vs_score_avg": 1.2666666666666666,
+          "rmse_nlp_vs_score_me": 2.3130067012440754,
+          "rmse_nlp_vs_score_other": 1.4317821063276353,
+          "rmse_nlp_vs_score_avg": 1.704772712123232,
+          "agree_score_me_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.26666666666666666,
+            "1.0": 0.4
+          },
+          "agree_score_other_within": {
+            "0.25": 0.2,
+            "0.5": 0.43333333333333335,
+            "1.0": 0.5
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3,
+            "0.5": 0.4,
+            "1.0": 0.5333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.0855119825708061,
+        "desired_vs_llm_max_jaccard": 0.11764705882352941,
+        "llm_answer_pairwise_avg_jaccard": 0.42751322751322746,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 14,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 66,
+      "question": "What is a function signature?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.15,
+          "score_other": 4.708333333333333,
+          "score_avg": 4.429166666666666,
+          "nlp_score": 3.9833333333333334
+        },
+        "nlp_quantiles": {
+          "0.1": 2.45,
+          "0.25": 2.625,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.40427535193321285,
+          "pearson_nlp_vs_score_other": 0.351421317264491,
+          "pearson_nlp_vs_score_avg": 0.4199957443046707,
+          "mae_nlp_vs_score_me": 1.1,
+          "mae_nlp_vs_score_other": 0.8916666666666667,
+          "mae_nlp_vs_score_avg": 0.8541666666666666,
+          "rmse_nlp_vs_score_me": 1.4605934866804429,
+          "rmse_nlp_vs_score_other": 1.3299436078270386,
+          "rmse_nlp_vs_score_avg": 1.2435248958773069,
+          "agree_score_me_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.5333333333333333,
+            "1.0": 0.6
+          },
+          "agree_score_other_within": {
+            "0.25": 0.36666666666666664,
+            "0.5": 0.6333333333333333,
+            "1.0": 0.7
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.43333333333333335,
+            "0.5": 0.6,
+            "1.0": 0.6333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5675213675213676,
+        "desired_vs_llm_max_jaccard": 0.7692307692307693,
+        "llm_answer_pairwise_avg_jaccard": 0.6078042328042328,
+        "desired_len_tokens": 13,
+        "llm_len_tokens_avg": 18,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 67,
+      "question": "What is a recursive function?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.633333333333334,
+          "score_other": 4.8,
+          "score_avg": 4.716666666666667,
+          "nlp_score": 4.083333333333333
+        },
+        "nlp_quantiles": {
+          "0.1": 2.5,
+          "0.25": 3.125,
+          "0.5": 4.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.487438847660359,
+          "pearson_nlp_vs_score_other": 0.39592246617675586,
+          "pearson_nlp_vs_score_avg": 0.4719863815714359,
+          "mae_nlp_vs_score_me": 0.7833333333333333,
+          "mae_nlp_vs_score_other": 0.8833333333333333,
+          "mae_nlp_vs_score_avg": 0.7833333333333333,
+          "rmse_nlp_vs_score_me": 1.2349089035228469,
+          "rmse_nlp_vs_score_other": 1.3322912594474228,
+          "rmse_nlp_vs_score_avg": 1.2365947867699696,
+          "agree_score_me_within": {
+            "0.25": 0.43333333333333335,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.7
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4,
+            "0.5": 0.6,
+            "1.0": 0.7
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.43333333333333335,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.7333333333333333
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.22839506172839505,
+        "desired_vs_llm_max_jaccard": 0.3333333333333333,
+        "llm_answer_pairwise_avg_jaccard": 0.377938808373591,
+        "desired_len_tokens": 5,
+        "llm_len_tokens_avg": 21.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 68,
+      "question": "What is the alternative way to solve a problem that could be solved through recursive functions?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.916666666666667,
+          "score_other": 4.766666666666667,
+          "score_avg": 4.841666666666667,
+          "nlp_score": 3.5
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.22617634892029104,
+          "pearson_nlp_vs_score_other": -0.11534765090652936,
+          "pearson_nlp_vs_score_avg": 0.01958153905808476,
+          "mae_nlp_vs_score_me": 1.4166666666666667,
+          "mae_nlp_vs_score_other": 1.5666666666666667,
+          "mae_nlp_vs_score_avg": 1.4916666666666667,
+          "rmse_nlp_vs_score_me": 1.8641351882307249,
+          "rmse_nlp_vs_score_other": 1.9536291016123473,
+          "rmse_nlp_vs_score_avg": 1.8869066396265255,
+          "agree_score_me_within": {
+            "0.25": 0.3,
+            "0.5": 0.4,
+            "1.0": 0.4666666666666667
+          },
+          "agree_score_other_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.4
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.43333333333333335
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.04305555555555555,
+        "desired_vs_llm_max_jaccard": 0.06666666666666667,
+        "llm_answer_pairwise_avg_jaccard": 0.45262145262145265,
+        "desired_len_tokens": 2,
+        "llm_len_tokens_avg": 15,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 69,
+      "question": "What is the difference between an array that is declared as static and one that is not?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.8666666666666667,
+          "score_other": 3.783333333333333,
+          "score_avg": 3.325,
+          "nlp_score": 4.916666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 5,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 3.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.21350319966883471,
+          "pearson_nlp_vs_score_other": 0.011643147813809346,
+          "pearson_nlp_vs_score_avg": 0.1918774177178873,
+          "mae_nlp_vs_score_me": 2.05,
+          "mae_nlp_vs_score_other": 1.15,
+          "mae_nlp_vs_score_avg": 1.5916666666666666,
+          "rmse_nlp_vs_score_me": 2.7003086243366083,
+          "rmse_nlp_vs_score_other": 1.3934369977385654,
+          "rmse_nlp_vs_score_avg": 1.885802216564611,
+          "agree_score_me_within": {
+            "0.25": 0.3333333333333333,
+            "0.5": 0.3333333333333333,
+            "1.0": 0.36666666666666664
+          },
+          "agree_score_other_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.26666666666666666,
+            "1.0": 0.43333333333333335
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.13333333333333333,
+            "0.5": 0.2,
+            "1.0": 0.4
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5773420479302832,
+        "desired_vs_llm_max_jaccard": 0.5882352941176471,
+        "llm_answer_pairwise_avg_jaccard": 0.7504873294346979,
+        "desired_len_tokens": 12,
+        "llm_len_tokens_avg": 23.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 70,
+      "question": "What is the main difference between a string of characters that is read into a variable of type string versus a variable of type char[]?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.55,
+          "score_other": 4.35,
+          "score_avg": 3.45,
+          "nlp_score": 4.766666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 4.5,
+          "0.25": 4.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.1380707621397737,
+          "pearson_nlp_vs_score_other": -0.06405301883060811,
+          "pearson_nlp_vs_score_avg": 0.09567722494534567,
+          "mae_nlp_vs_score_me": 2.25,
+          "mae_nlp_vs_score_other": 0.6833333333333333,
+          "mae_nlp_vs_score_avg": 1.45,
+          "rmse_nlp_vs_score_me": 3.142451272494134,
+          "rmse_nlp_vs_score_other": 0.983192080250175,
+          "rmse_nlp_vs_score_avg": 1.937029512767767,
+          "agree_score_me_within": {
+            "0.25": 0.43333333333333335,
+            "0.5": 0.4666666666666667,
+            "1.0": 0.4666666666666667
+          },
+          "agree_score_other_within": {
+            "0.25": 0.4,
+            "0.5": 0.5,
+            "1.0": 0.7333333333333333
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.36666666666666664,
+            "0.5": 0.4,
+            "1.0": 0.4
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5044903926482874,
+        "desired_vs_llm_max_jaccard": 0.5789473684210527,
+        "llm_answer_pairwise_avg_jaccard": 0.7041062801932366,
+        "desired_len_tokens": 15,
+        "llm_len_tokens_avg": 25.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 71,
+      "question": "Briefly describe the divide-and-conquer paradigm.",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.7666666666666666,
+          "score_other": 4.558333333333334,
+          "score_avg": 4.1625,
+          "nlp_score": 4.166666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 3.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.7899135865612598,
+          "pearson_nlp_vs_score_other": 0.23906076229501652,
+          "pearson_nlp_vs_score_avg": 0.7836223208698754,
+          "mae_nlp_vs_score_me": 0.7,
+          "mae_nlp_vs_score_other": 0.8416666666666667,
+          "mae_nlp_vs_score_avg": 0.6375,
+          "rmse_nlp_vs_score_me": 0.8266397845091497,
+          "rmse_nlp_vs_score_other": 1.1734919400376524,
+          "rmse_nlp_vs_score_avg": 0.7600027412231266,
+          "agree_score_me_within": {
+            "0.25": 0.23333333333333334,
+            "0.5": 0.4,
+            "1.0": 0.9666666666666667
+          },
+          "agree_score_other_within": {
+            "0.25": 0.16666666666666666,
+            "0.5": 0.6666666666666666,
+            "1.0": 0.8
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.3,
+            "0.5": 0.36666666666666664,
+            "1.0": 0.9
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.41282051282051285,
+        "desired_vs_llm_max_jaccard": 0.5384615384615384,
+        "llm_answer_pairwise_avg_jaccard": 0.4992337164750958,
+        "desired_len_tokens": 21,
+        "llm_len_tokens_avg": 26.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 72,
+      "question": "Briefly describe in one sentence how does merge sort work?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 30,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.7,
+          "score_other": 5,
+          "score_avg": 4.85,
+          "nlp_score": 4.766666666666667
+        },
+        "nlp_quantiles": {
+          "0.1": 4,
+          "0.25": 5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.511688048149107,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0.511688048149107,
+          "mae_nlp_vs_score_me": 0.3333333333333333,
+          "mae_nlp_vs_score_other": 0.23333333333333334,
+          "mae_nlp_vs_score_avg": 0.26666666666666666,
+          "rmse_nlp_vs_score_me": 0.7958224257542215,
+          "rmse_nlp_vs_score_other": 0.6454972243679028,
+          "rmse_nlp_vs_score_avg": 0.5439056290693574,
+          "agree_score_me_within": {
+            "0.25": 0.7333333333333333,
+            "0.5": 0.8333333333333334,
+            "1.0": 0.9333333333333333
+          },
+          "agree_score_other_within": {
+            "0.25": 0.8,
+            "0.5": 0.8666666666666667,
+            "1.0": 0.9666666666666667
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.7333333333333333,
+            "0.5": 0.8,
+            "1.0": 0.9
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.626984126984127,
+        "desired_vs_llm_max_jaccard": 0.8333333333333334,
+        "llm_answer_pairwise_avg_jaccard": 0.7666666666666666,
+        "desired_len_tokens": 19,
+        "llm_len_tokens_avg": 18,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 73,
+      "question": "What is a pointer?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.642857142857143,
+          "score_other": 4.973214285714286,
+          "score_avg": 4.808035714285714,
+          "nlp_score": 4.517857142857143
+        },
+        "nlp_quantiles": {
+          "0.1": 2.85,
+          "0.25": 4.875,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5576985562318463,
+          "pearson_nlp_vs_score_other": -0.10295973345818686,
+          "pearson_nlp_vs_score_avg": 0.522163769160637,
+          "mae_nlp_vs_score_me": 0.48214285714285715,
+          "mae_nlp_vs_score_other": 0.5089285714285714,
+          "mae_nlp_vs_score_avg": 0.40625,
+          "rmse_nlp_vs_score_me": 0.9013878188659973,
+          "rmse_nlp_vs_score_other": 1.0318585866566905,
+          "rmse_nlp_vs_score_avg": 0.8227376990442162,
+          "agree_score_me_within": {
+            "0.25": 0.6428571428571429,
+            "0.5": 0.75,
+            "1.0": 0.7857142857142857
+          },
+          "agree_score_other_within": {
+            "0.25": 0.7142857142857143,
+            "0.5": 0.75,
+            "1.0": 0.7857142857142857
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.7142857142857143,
+            "0.5": 0.7857142857142857,
+            "1.0": 0.8214285714285714
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.3111111111111111,
+        "desired_vs_llm_max_jaccard": 0.35,
+        "llm_answer_pairwise_avg_jaccard": 0.6013823857302119,
+        "desired_len_tokens": 7,
+        "llm_len_tokens_avg": 25.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 74,
+      "question": "What is the experimental approach for measuring the running time of an algorithm?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.517857142857143,
+          "score_other": 3.6339285714285716,
+          "score_avg": 3.575892857142857,
+          "nlp_score": 3.267857142857143
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3,
+          "0.75": 4.625,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.5108699560473059,
+          "pearson_nlp_vs_score_other": 0.6124121484633875,
+          "pearson_nlp_vs_score_avg": 0.5949753300108518,
+          "mae_nlp_vs_score_me": 1.1071428571428572,
+          "mae_nlp_vs_score_other": 0.9910714285714286,
+          "mae_nlp_vs_score_avg": 0.9419642857142857,
+          "rmse_nlp_vs_score_me": 1.558387444947959,
+          "rmse_nlp_vs_score_other": 1.181138978153835,
+          "rmse_nlp_vs_score_avg": 1.2475422265971028,
+          "agree_score_me_within": {
+            "0.25": 0.2857142857142857,
+            "0.5": 0.5357142857142857,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_other_within": {
+            "0.25": 0.25,
+            "0.5": 0.2857142857142857,
+            "1.0": 0.5714285714285714
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.32142857142857145,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.6428571428571429
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.40261164274322164,
+        "desired_vs_llm_max_jaccard": 0.45454545454545453,
+        "llm_answer_pairwise_avg_jaccard": 0.4092092977541894,
+        "desired_len_tokens": 9,
+        "llm_len_tokens_avg": 16.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 75,
+      "question": "Briefly, how does selection sort work?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.607142857142857,
+          "score_other": 4.169642857142857,
+          "score_avg": 3.888392857142857,
+          "nlp_score": 4.5
+        },
+        "nlp_quantiles": {
+          "0.1": 3,
+          "0.25": 4.5,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.27002121678629676,
+          "pearson_nlp_vs_score_other": 0.15477260256630898,
+          "pearson_nlp_vs_score_avg": 0.29274180488304397,
+          "mae_nlp_vs_score_me": 1.3214285714285714,
+          "mae_nlp_vs_score_other": 0.7767857142857143,
+          "mae_nlp_vs_score_avg": 0.9419642857142857,
+          "rmse_nlp_vs_score_me": 2.1297216451250818,
+          "rmse_nlp_vs_score_other": 1.090748432433961,
+          "rmse_nlp_vs_score_avg": 1.3406837940820668,
+          "agree_score_me_within": {
+            "0.25": 0.5,
+            "0.5": 0.5357142857142857,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_other_within": {
+            "0.25": 0.39285714285714285,
+            "0.5": 0.4642857142857143,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.2857142857142857,
+            "0.5": 0.42857142857142855,
+            "1.0": 0.75
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.29976851851851855,
+        "desired_vs_llm_max_jaccard": 0.34375,
+        "llm_answer_pairwise_avg_jaccard": 0.7441980286738351,
+        "desired_len_tokens": 35,
+        "llm_len_tokens_avg": 40,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 76,
+      "question": "What is the advantage of linked lists over arrays?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.946428571428571,
+          "score_other": 5,
+          "score_avg": 4.973214285714286,
+          "nlp_score": 4.375
+        },
+        "nlp_quantiles": {
+          "0.1": 2.35,
+          "0.25": 4,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.09774775252249553,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0.09774775252249553,
+          "mae_nlp_vs_score_me": 0.6071428571428571,
+          "mae_nlp_vs_score_other": 0.625,
+          "mae_nlp_vs_score_avg": 0.6160714285714286,
+          "rmse_nlp_vs_score_me": 1.1572751247156894,
+          "rmse_nlp_vs_score_other": 1.1839703181607697,
+          "rmse_nlp_vs_score_avg": 1.165922381636102,
+          "agree_score_me_within": {
+            "0.25": 0.5714285714285714,
+            "0.5": 0.75,
+            "1.0": 0.8571428571428571
+          },
+          "agree_score_other_within": {
+            "0.25": 0.6071428571428571,
+            "0.5": 0.7142857142857143,
+            "1.0": 0.8214285714285714
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.6071428571428571,
+            "0.5": 0.7142857142857143,
+            "1.0": 0.8571428571428571
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.48412698412698413,
+        "desired_vs_llm_max_jaccard": 0.6190476190476191,
+        "llm_answer_pairwise_avg_jaccard": 0.586543724474759,
+        "desired_len_tokens": 16,
+        "llm_len_tokens_avg": 22.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 77,
+      "question": "What is a queue?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.482142857142857,
+          "score_other": 4.821428571428571,
+          "score_avg": 4.651785714285714,
+          "nlp_score": 4.428571428571429
+        },
+        "nlp_quantiles": {
+          "0.1": 2.85,
+          "0.25": 4.375,
+          "0.5": 5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.7431750762990659,
+          "pearson_nlp_vs_score_other": 0.2679985157046388,
+          "pearson_nlp_vs_score_avg": 0.6920809501623748,
+          "mae_nlp_vs_score_me": 0.48214285714285715,
+          "mae_nlp_vs_score_other": 0.5714285714285714,
+          "mae_nlp_vs_score_avg": 0.36607142857142855,
+          "rmse_nlp_vs_score_me": 0.9496239857363094,
+          "rmse_nlp_vs_score_other": 1.0773645092141684,
+          "rmse_nlp_vs_score_avg": 0.7603453162872774,
+          "agree_score_me_within": {
+            "0.25": 0.6785714285714286,
+            "0.5": 0.75,
+            "1.0": 0.8214285714285714
+          },
+          "agree_score_other_within": {
+            "0.25": 0.6428571428571429,
+            "0.5": 0.75,
+            "1.0": 0.7857142857142857
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.7142857142857143,
+            "0.5": 0.7857142857142857,
+            "1.0": 0.8571428571428571
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.5333333333333333,
+        "desired_vs_llm_max_jaccard": 0.625,
+        "llm_answer_pairwise_avg_jaccard": 0.6860725481415137,
+        "desired_len_tokens": 23,
+        "llm_len_tokens_avg": 28,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 78,
+      "question": "What are the main operations associated with a stack?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 4.928571428571429,
+          "score_other": 5,
+          "score_avg": 4.964285714285714,
+          "nlp_score": 3.7142857142857144
+        },
+        "nlp_quantiles": {
+          "0.1": 2.85,
+          "0.25": 3,
+          "0.5": 3,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 2.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.1887965775183424,
+          "pearson_nlp_vs_score_other": 0,
+          "pearson_nlp_vs_score_avg": 0.1887965775183424,
+          "mae_nlp_vs_score_me": 1.25,
+          "mae_nlp_vs_score_other": 1.2857142857142858,
+          "mae_nlp_vs_score_avg": 1.2678571428571428,
+          "rmse_nlp_vs_score_me": 1.5698043554168508,
+          "rmse_nlp_vs_score_other": 1.6366341767699428,
+          "rmse_nlp_vs_score_avg": 1.5993860429195055,
+          "agree_score_me_within": {
+            "0.25": 0.32142857142857145,
+            "0.5": 0.39285714285714285,
+            "1.0": 0.39285714285714285
+          },
+          "agree_score_other_within": {
+            "0.25": 0.35714285714285715,
+            "0.5": 0.39285714285714285,
+            "1.0": 0.39285714285714285
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.35714285714285715,
+            "0.5": 0.39285714285714285,
+            "1.0": 0.39285714285714285
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.1858076563958917,
+        "desired_vs_llm_max_jaccard": 0.21428571428571427,
+        "llm_answer_pairwise_avg_jaccard": 0.4770531400966183,
+        "desired_len_tokens": 3,
+        "llm_len_tokens_avg": 19.666666666666668,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 79,
+      "question": "What is the Euler tour traversal of a tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.107142857142857,
+          "score_other": 3.7767857142857144,
+          "score_avg": 3.4419642857142856,
+          "nlp_score": 3.3214285714285716
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 2.5,
+          "0.75": 5,
+          "0.9": 5
+        },
+        "nlp_min": 1.5,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.45868000913996626,
+          "pearson_nlp_vs_score_other": 0.32864762364566946,
+          "pearson_nlp_vs_score_avg": 0.46444120871591854,
+          "mae_nlp_vs_score_me": 1.3928571428571428,
+          "mae_nlp_vs_score_other": 1.2767857142857142,
+          "mae_nlp_vs_score_avg": 1.1026785714285714,
+          "rmse_nlp_vs_score_me": 1.6903085094570331,
+          "rmse_nlp_vs_score_other": 1.4992557677537404,
+          "rmse_nlp_vs_score_avg": 1.3691026127671053,
+          "agree_score_me_within": {
+            "0.25": 0.17857142857142858,
+            "0.5": 0.2857142857142857,
+            "1.0": 0.42857142857142855
+          },
+          "agree_score_other_within": {
+            "0.25": 0.14285714285714285,
+            "0.5": 0.21428571428571427,
+            "1.0": 0.42857142857142855
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.2857142857142857,
+            "1.0": 0.4642857142857143
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.4455347211187033,
+        "desired_vs_llm_max_jaccard": 0.5357142857142857,
+        "llm_answer_pairwise_avg_jaccard": 0.7081128747795414,
+        "desired_len_tokens": 24,
+        "llm_len_tokens_avg": 32,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 80,
+      "question": "How do you delete a node from a binary search tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 2.857142857142857,
+          "score_other": 3.875,
+          "score_avg": 3.3660714285714284,
+          "nlp_score": 3.3214285714285716
+        },
+        "nlp_quantiles": {
+          "0.1": 2.35,
+          "0.25": 2.5,
+          "0.5": 2.75,
+          "0.75": 4.5,
+          "0.9": 5
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.6981070835458951,
+          "pearson_nlp_vs_score_other": 0.6246784026671558,
+          "pearson_nlp_vs_score_avg": 0.7221456412814132,
+          "mae_nlp_vs_score_me": 1.0714285714285714,
+          "mae_nlp_vs_score_other": 0.8392857142857143,
+          "mae_nlp_vs_score_avg": 0.7410714285714286,
+          "rmse_nlp_vs_score_me": 1.42051298581081,
+          "rmse_nlp_vs_score_other": 1.0752906583803283,
+          "rmse_nlp_vs_score_avg": 0.9360107218555627,
+          "agree_score_me_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.5,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_other_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.42857142857142855,
+            "1.0": 0.6428571428571429
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.21428571428571427,
+            "0.5": 0.42857142857142855,
+            "1.0": 0.7857142857142857
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.7873093681917211,
+        "desired_vs_llm_max_jaccard": 0.875,
+        "llm_answer_pairwise_avg_jaccard": 0.742933723196881,
+        "desired_len_tokens": 22,
+        "llm_len_tokens_avg": 22.333333333333332,
+        "llm_count": 3
+      }
+    },
+    {
+      "question_id": 81,
+      "question": "How many steps does it take to search a node in a binary search tree?",
+      "max_point": 5,
+      "counts": {
+        "answers_n": 28,
+        "dropped_failures": 0
+      },
+      "scores": {
+        "means": {
+          "score_me": 3.0535714285714284,
+          "score_other": 4.491071428571429,
+          "score_avg": 3.7723214285714284,
+          "nlp_score": 3.25
+        },
+        "nlp_quantiles": {
+          "0.1": 2,
+          "0.25": 2,
+          "0.5": 3.25,
+          "0.75": 4.125,
+          "0.9": 4.65
+        },
+        "nlp_min": 2,
+        "nlp_max": 5,
+        "agreement_and_errors": {
+          "pearson_nlp_vs_score_me": 0.22890845915112354,
+          "pearson_nlp_vs_score_other": 0.11159209513837844,
+          "pearson_nlp_vs_score_avg": 0.20373858870761988,
+          "mae_nlp_vs_score_me": 1.875,
+          "mae_nlp_vs_score_other": 1.4196428571428572,
+          "mae_nlp_vs_score_avg": 1.4330357142857142,
+          "rmse_nlp_vs_score_me": 2.2180267936034626,
+          "rmse_nlp_vs_score_other": 1.7797220890593324,
+          "rmse_nlp_vs_score_avg": 1.7065721176842024,
+          "agree_score_me_within": {
+            "0.25": 0.10714285714285714,
+            "0.5": 0.25,
+            "1.0": 0.35714285714285715
+          },
+          "agree_score_other_within": {
+            "0.25": 0.10714285714285714,
+            "0.5": 0.35714285714285715,
+            "1.0": 0.6071428571428571
+          },
+          "agree_score_avg_within": {
+            "0.25": 0.07142857142857142,
+            "0.5": 0.32142857142857145,
+            "1.0": 0.42857142857142855
+          }
+        }
+      },
+      "reference_similarity": {
+        "desired_vs_llm_avg_jaccard": 0.2526455026455026,
+        "desired_vs_llm_max_jaccard": 0.2857142857142857,
+        "llm_answer_pairwise_avg_jaccard": 0.7205104263927793,
+        "desired_len_tokens": 5,
+        "llm_len_tokens_avg": 26.666666666666668,
+        "llm_count": 3
+      }
+    }
+  ]
+}

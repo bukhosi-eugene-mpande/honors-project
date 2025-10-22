@@ -35,21 +35,34 @@ interface PerQuestionEntry {
       score_me: number | null;
       score_other: number | null;
       score_avg: number | null;
-      llm_score: number | null;
+      llm_score?: number | null;
+      nlp_score?: number | null;
     };
-    llm_quantiles: Record<string, number>;
-    llm_min: number | null;
-    llm_max: number | null;
+    llm_quantiles?: Record<string, number>;
+    nlp_quantiles?: Record<string, number>;
+    llm_min?: number | null;
+    llm_max?: number | null;
+    nlp_min?: number | null;
+    nlp_max?: number | null;
     agreement_and_errors: {
-      pearson_llm_vs_score_me: number | null;
-      pearson_llm_vs_score_other: number | null;
-      pearson_llm_vs_score_avg: number | null;
-      mae_llm_vs_score_me: number | null;
-      mae_llm_vs_score_other: number | null;
-      mae_llm_vs_score_avg: number | null;
-      rmse_llm_vs_score_me: number | null;
-      rmse_llm_vs_score_other: number | null;
-      rmse_llm_vs_score_avg: number | null;
+      pearson_llm_vs_score_me?: number | null;
+      pearson_llm_vs_score_other?: number | null;
+      pearson_llm_vs_score_avg?: number | null;
+      mae_llm_vs_score_me?: number | null;
+      mae_llm_vs_score_other?: number | null;
+      mae_llm_vs_score_avg?: number | null;
+      rmse_llm_vs_score_me?: number | null;
+      rmse_llm_vs_score_other?: number | null;
+      rmse_llm_vs_score_avg?: number | null;
+      pearson_nlp_vs_score_me?: number | null;
+      pearson_nlp_vs_score_other?: number | null;
+      pearson_nlp_vs_score_avg?: number | null;
+      mae_nlp_vs_score_me?: number | null;
+      mae_nlp_vs_score_other?: number | null;
+      mae_nlp_vs_score_avg?: number | null;
+      rmse_nlp_vs_score_me?: number | null;
+      rmse_nlp_vs_score_other?: number | null;
+      rmse_nlp_vs_score_avg?: number | null;
       agree_score_me_within: AgreementMap;
       agree_score_other_within: AgreementMap;
       agree_score_avg_within: AgreementMap;
@@ -76,17 +89,27 @@ interface StatsData {
       score_me: number | null;
       score_other: number | null;
       score_avg: number | null;
-      llm_score: number | null;
+      llm_score?: number | null;
+      nlp_score?: number | null;
     };
-    pearson_llm_vs_score_me: number | null;
-    mae_llm_vs_score_me: number | null;
-    rmse_llm_vs_score_me: number | null;
-    pearson_llm_vs_score_other: number | null;
-    mae_llm_vs_score_other: number | null;
-    rmse_llm_vs_score_other: number | null;
-    pearson_llm_vs_score_avg: number | null;
-    mae_llm_vs_score_avg: number | null;
-    rmse_llm_vs_score_avg: number | null;
+    pearson_llm_vs_score_me?: number | null;
+    mae_llm_vs_score_me?: number | null;
+    rmse_llm_vs_score_me?: number | null;
+    pearson_llm_vs_score_other?: number | null;
+    mae_llm_vs_score_other?: number | null;
+    rmse_llm_vs_score_other?: number | null;
+    pearson_llm_vs_score_avg?: number | null;
+    mae_llm_vs_score_avg?: number | null;
+    rmse_llm_vs_score_avg?: number | null;
+    pearson_nlp_vs_score_me?: number | null;
+    mae_nlp_vs_score_me?: number | null;
+    rmse_nlp_vs_score_me?: number | null;
+    pearson_nlp_vs_score_other?: number | null;
+    mae_nlp_vs_score_other?: number | null;
+    rmse_nlp_vs_score_other?: number | null;
+    pearson_nlp_vs_score_avg?: number | null;
+    mae_nlp_vs_score_avg?: number | null;
+    rmse_nlp_vs_score_avg?: number | null;
     reference_similarity?: {
       desired_vs_llm_avg_jaccard_mean?: number | null;
       desired_vs_llm_max_jaccard_mean?: number | null;
@@ -101,78 +124,6 @@ interface StatsData {
 
 // ------------------ Sample (replace or override via props) ------------------
 
-const SAMPLE_DATA: StatsData = {
-  overall: {
-    counts: {
-      total_answers: 1889,
-      total_questions: 81,
-      dropped_failures_total: 384,
-    },
-    means: {
-      score_me: 3.9174166225516145,
-      score_other: 4.4016675489677075,
-      score_avg: 4.159542085759661,
-      llm_score: 2.3080995235574377,
-    },
-    pearson_llm_vs_score_me: 0.4713754247963934,
-    mae_llm_vs_score_me: 1.8046585494970884,
-    rmse_llm_vs_score_me: 2.152595783636342,
-    pearson_llm_vs_score_other: 0.3625746268985321,
-    mae_llm_vs_score_other: 2.1345950238221283,
-    rmse_llm_vs_score_other: 2.4306078838468634,
-    pearson_llm_vs_score_avg: 0.47740125897368535,
-    mae_llm_vs_score_avg: 1.8967046056114347,
-    rmse_llm_vs_score_avg: 2.19962090373987,
-    reference_similarity: {
-      desired_vs_llm_avg_jaccard_mean: 0.1294866613355469,
-      desired_vs_llm_max_jaccard_mean: 0.13974429181645573,
-      llm_answer_pairwise_avg_jaccard_mean: 0.6943865601401152,
-      desired_len_tokens_mean: 15.530864197530864,
-      llm_len_tokens_avg_mean: 73.5925925925926,
-    },
-  },
-  per_question: [
-    {
-      question_id: 1,
-      question: "What is the role of a prototype program in problem solving?",
-      max_point: 5.0,
-      counts: { answers_n: 22, dropped_failures: 7 },
-      scores: {
-        means: {
-          score_me: 3.6363636363636362,
-          score_other: 3.409090909090909,
-          score_avg: 3.522727272727273,
-          llm_score: 2.1818181818181817,
-        },
-        llm_quantiles: { "0.1": 1.1, "0.25": 2.0, "0.5": 2.0, "0.75": 3.0, "0.9": 3.0 },
-        llm_min: 1.0,
-        llm_max: 3.0,
-        agreement_and_errors: {
-          pearson_llm_vs_score_me: 0.444067137305859,
-          pearson_llm_vs_score_other: 0.17184412710591615,
-          pearson_llm_vs_score_avg: 0.320151404900689,
-          mae_llm_vs_score_me: 1.4545454545454546,
-          mae_llm_vs_score_other: 1.5,
-          mae_llm_vs_score_avg: 1.4318181818181819,
-          rmse_llm_vs_score_me: 1.8829377433825436,
-          rmse_llm_vs_score_other: 1.8708286933869707,
-          rmse_llm_vs_score_avg: 1.8309212782838937,
-          agree_score_me_within: { "0.25": 0.3181818181818182, "0.5": 0.3181818181818182, "1.0": 0.5 },
-          agree_score_other_within: { "0.25": 0.22727272727272727, "0.5": 0.22727272727272727, "1.0": 0.5454545454545454 },
-          agree_score_avg_within: { "0.25": 0.22727272727272727, "0.5": 0.4090909090909091, "1.0": 0.45454545454545453 },
-        },
-      },
-      reference_similarity: {
-        desired_vs_llm_avg_jaccard: 0.06557377049180328,
-        desired_vs_llm_max_jaccard: 0.06557377049180328,
-        llm_answer_pairwise_avg_jaccard: 1.0,
-        desired_len_tokens: 11,
-        llm_len_tokens_avg: 65.0,
-        llm_count: 3,
-      },
-    },
-  ],
-};
 
 // ------------------ Small helpers ------------------
 
@@ -202,7 +153,7 @@ function StatCard({ label, value, hint }: { label: string; value: string; hint?:
 
 // ------------------ Main component ------------------
 
-export default function GradingDashboard({ data, dataUrl, title = "LLM Grading Dashboard" }: { data?: StatsData; dataUrl?: string; title?: string }) {
+export default function GradingDashboard({ data, dataUrl, title = "Grading Approach Comparison Dashboard" }: { data?: StatsData; dataUrl?: string; title?: string }) {
   const [json, setJson] = useState<StatsData | null>(data || null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -210,20 +161,71 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
   const [sortKey, setSortKey] = useState<string>("question_id");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [selectedApproach, setSelectedApproach] = useState<string>("llm_direct");
+  const [allApproachesData, setAllApproachesData] = useState<Record<string, StatsData>>({});
 
+  // Define available approaches
+  const approaches = {
+    "llm_direct": {
+      name: "LLM Direct Grading",
+      description: "LLM grades student answers directly",
+      dataUrl: "/graded_stats.json",
+      color: "#3b82f6"
+    },
+    "llm_with_nlp": {
+      name: "LLM + NLP Grading", 
+      description: "LLM generates model answer, then NLP grades against it",
+      dataUrl: "/graded_stats/stats_results_llm_with_nlp.json",
+      color: "#10b981"
+    },
+    "model_answer": {
+      name: "Model Answer Approach",
+      description: "LLM generates model answer, then grades against dataset answer",
+      dataUrl: "/graded_stats/stats_results_model_answer.json",
+      color: "#f59e0b"
+    }
+  };
+
+  // Load all approaches data for comparison
   useEffect(() => {
-    if (!data && dataUrl) {
+    const loadAllApproaches = async () => {
       setLoading(true);
-      fetch(dataUrl)
-        .then(r => {
-          if (!r.ok) throw new Error(`HTTP ${r.status}`);
-          return r.json();
-        })
-        .then(setJson)
-        .catch(e => setError(e.message))
-        .finally(() => setLoading(false));
+      const dataPromises = Object.entries(approaches).map(async ([key, approach]) => {
+        try {
+          const response = await fetch(approach.dataUrl);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const data = await response.json();
+          return [key, data];
+        } catch (error) {
+          console.error(`Error loading ${approach.name}:`, error);
+          return [key, null];
+        }
+      });
+
+      const results = await Promise.all(dataPromises);
+      const approachesData: Record<string, StatsData> = {};
+      
+      results.forEach(([key, data]) => {
+        if (data) {
+          approachesData[key] = data;
+        }
+      });
+
+      setAllApproachesData(approachesData);
+      setLoading(false);
+    };
+
+    if (!data) {
+      loadAllApproaches();
     }
   }, [data, dataUrl]);
+
+  // Set current approach data
+  useEffect(() => {
+    if (allApproachesData[selectedApproach]) {
+      setJson(allApproachesData[selectedApproach]);
+    }
+  }, [selectedApproach, allApproachesData]);
 
   useEffect(() => {
     // Check for saved theme preference or default to system preference
@@ -252,36 +254,138 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
     }
   };
 
-  const model: StatsData = json || SAMPLE_DATA;
+  const model: StatsData = json || {
+    overall: {
+      counts: { total_answers: 0, total_questions: 0 },
+      means: { score_me: 0, score_other: 0, score_avg: 0, llm_score: 0 }
+    },
+    per_question: []
+  };
+
+  // Get the appropriate AI score based on approach
+  const getAIScore = () => {
+    if (model.overall.means.llm_score !== undefined) return model.overall.means.llm_score;
+    if (model.overall.means.nlp_score !== undefined) return model.overall.means.nlp_score;
+    return 0;
+  };
+
+  const getAIScoreName = () => {
+    if (model.overall.means.llm_score !== undefined) return "LLM Score";
+    if (model.overall.means.nlp_score !== undefined) return "NLP Score";
+    return "AI Score";
+  };
 
   // Derived data for charts
   const meanScoreBars = useMemo(() => (
     [
-      { name: "Score (Me)", value: model.overall.means.score_me },
-      { name: "Score (Other)", value: model.overall.means.score_other },
-      { name: "Score (Human Avg)", value: model.overall.means.score_avg },
-      { name: "Score (LLM)", value: model.overall.means.llm_score },
+      { name: "Data Scientist", value: model.overall.means.score_me },
+      { name: "Researcher", value: model.overall.means.score_other },
+      { name: "Human Average", value: model.overall.means.score_avg },
+      { name: getAIScoreName(), value: getAIScore() },
     ]
   ), [model]);
 
-  const corrLines = useMemo(() => (
-    [
-      { name: "LLM vs Me", value: model.overall.pearson_llm_vs_score_me },
-      { name: "LLM vs Other", value: model.overall.pearson_llm_vs_score_other },
-      { name: "LLM vs Human Avg", value: model.overall.pearson_llm_vs_score_avg },
-    ]
-  ), [model]);
+  // Get correlation values based on approach
+  const getCorrelationData = () => {
+    const aiName = getAIScoreName();
+    if (model.overall.pearson_llm_vs_score_me !== undefined) {
+      return [
+        { name: `${aiName} vs Data Scientist`, value: model.overall.pearson_llm_vs_score_me },
+        { name: `${aiName} vs Researcher`, value: model.overall.pearson_llm_vs_score_other },
+        { name: `${aiName} vs Human Average`, value: model.overall.pearson_llm_vs_score_avg },
+      ];
+    }
+    if (model.overall.pearson_nlp_vs_score_me !== undefined) {
+      return [
+        { name: `${aiName} vs Data Scientist`, value: model.overall.pearson_nlp_vs_score_me },
+        { name: `${aiName} vs Researcher`, value: model.overall.pearson_nlp_vs_score_other },
+        { name: `${aiName} vs Human Average`, value: model.overall.pearson_nlp_vs_score_avg },
+      ];
+    }
+    return [];
+  };
 
-  const errorBars = useMemo(() => (
-    [
-      { metric: "MAE vs Me", value: model.overall.mae_llm_vs_score_me },
-      { metric: "RMSE vs Me", value: model.overall.rmse_llm_vs_score_me },
-      { metric: "MAE vs Other", value: model.overall.mae_llm_vs_score_other },
-      { metric: "RMSE vs Other", value: model.overall.rmse_llm_vs_score_other },
-      { metric: "MAE vs Avg", value: model.overall.mae_llm_vs_score_avg },
-      { metric: "RMSE vs Avg", value: model.overall.rmse_llm_vs_score_avg },
-    ]
-  ), [model]);
+  const corrLines = useMemo(() => getCorrelationData(), [model]);
+
+  // Get error values based on approach
+  const getErrorData = () => {
+    const aiName = getAIScoreName();
+    if (model.overall.mae_llm_vs_score_me !== undefined) {
+      return [
+        { metric: `MAE vs Data Scientist`, value: model.overall.mae_llm_vs_score_me },
+        { metric: `RMSE vs Data Scientist`, value: model.overall.rmse_llm_vs_score_me },
+        { metric: `MAE vs Researcher`, value: model.overall.mae_llm_vs_score_other },
+        { metric: `RMSE vs Researcher`, value: model.overall.rmse_llm_vs_score_other },
+        { metric: `MAE vs Human Avg`, value: model.overall.mae_llm_vs_score_avg },
+        { metric: `RMSE vs Human Avg`, value: model.overall.rmse_llm_vs_score_avg },
+      ];
+    }
+    if (model.overall.mae_nlp_vs_score_me !== undefined) {
+      return [
+        { metric: `MAE vs Data Scientist`, value: model.overall.mae_nlp_vs_score_me },
+        { metric: `RMSE vs Data Scientist`, value: model.overall.rmse_nlp_vs_score_me },
+        { metric: `MAE vs Researcher`, value: model.overall.mae_nlp_vs_score_other },
+        { metric: `RMSE vs Researcher`, value: model.overall.rmse_nlp_vs_score_other },
+        { metric: `MAE vs Human Avg`, value: model.overall.mae_nlp_vs_score_avg },
+        { metric: `RMSE vs Human Avg`, value: model.overall.rmse_nlp_vs_score_avg },
+      ];
+    }
+    return [];
+  };
+
+  const errorBars = useMemo(() => getErrorData(), [model]);
+
+  // Comparison data across all approaches
+  const comparisonData = useMemo(() => {
+    const data: Array<{
+      approach: string;
+      color: string;
+      humanAvg: number;
+      aiScore: number;
+      aiName: string;
+      pearson: number;
+      mae: number;
+      rmse: number;
+      bias: number;
+    }> = [];
+    
+    Object.entries(allApproachesData).forEach(([key, approachData]) => {
+      if (approachData) {
+        const aiScore = approachData.overall.means.llm_score ?? approachData.overall.means.nlp_score ?? 0;
+        const aiName = approachData.overall.means.llm_score !== undefined ? "LLM" : "NLP";
+        const humanAvg = approachData.overall.means.score_avg ?? 0;
+        
+        data.push({
+          approach: approaches[key as keyof typeof approaches]?.name || key,
+          color: approaches[key as keyof typeof approaches]?.color || "#6b7280",
+          humanAvg: humanAvg,
+          aiScore: aiScore,
+          aiName: aiName,
+          pearson: approachData.overall.pearson_llm_vs_score_avg ?? approachData.overall.pearson_nlp_vs_score_avg ?? 0,
+          mae: approachData.overall.mae_llm_vs_score_avg ?? approachData.overall.mae_nlp_vs_score_avg ?? 0,
+          rmse: approachData.overall.rmse_llm_vs_score_avg ?? approachData.overall.rmse_nlp_vs_score_avg ?? 0,
+          bias: (aiScore - humanAvg) // Score bias vs human avg
+        });
+      }
+    });
+    
+    return data;
+  }, [allApproachesData]);
+
+  // Average scores comparison
+  const averageScoresData = useMemo(() => {
+    const humanAvg = comparisonData.length > 0 ? comparisonData[0].humanAvg : 0;
+    const aiScores = comparisonData.map(d => ({
+      name: d.approach,
+      value: d.aiScore,
+      color: d.color
+    }));
+    
+    return {
+      human: humanAvg,
+      ai: aiScores
+    };
+  }, [comparisonData]);
 
   const filteredQuestions = useMemo(() => {
     const q = (qFilter || "").toLowerCase();
@@ -338,13 +442,31 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
     <div className="min-h-screen bg-gray-100 dark:bg-gray-950 transition-colors">
       <header className="px-6 py-4 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 transition-colors">
         <div className="flex justify-between items-start">
-          <div>
+          <div className="flex-1">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{title}</h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Visualizing LLM vs Human grading statistics</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Comparing different AI grading approaches against human evaluators</p>
+            
+            {/* Approach Selector */}
+            <div className="mt-3 flex flex-wrap gap-2">
+              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Grading Approach:</label>
+              <select
+                value={selectedApproach}
+                onChange={(e) => setSelectedApproach(e.target.value)}
+                className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-1 text-sm focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-colors"
+              >
+                {Object.entries(approaches).map(([key, approach]) => (
+                  <option key={key} value={key}>{approach.name}</option>
+                ))}
+              </select>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                {approaches[selectedApproach as keyof typeof approaches]?.description}
+              </div>
+            </div>
           </div>
+          
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ml-4"
             aria-label="Toggle dark mode"
           >
             {isDarkMode ? (
@@ -365,56 +487,105 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
         <div className="grid md:grid-cols-4 gap-4">
           <StatCard label="Total Answers" value={`${model.overall.counts.total_answers}`} hint={`Dropped failures: ${model.overall.counts.dropped_failures_total ?? 0}`} />
           <StatCard label="Questions" value={`${model.overall.counts.total_questions}`} />
-          <StatCard label="Human Avg" value={fmt(model.overall.means.score_avg)} hint={`Me: ${fmt(model.overall.means.score_me)} · Other: ${fmt(model.overall.means.score_other)}`} />
-          <StatCard label="LLM Avg" value={fmt(model.overall.means.llm_score)} />
+          <StatCard label="Human Average" value={fmt(model.overall.means.score_avg)} hint={`Data Scientist: ${fmt(model.overall.means.score_me)} · Researcher: ${fmt(model.overall.means.score_other)}`} />
+          <StatCard label={getAIScoreName()} value={fmt(getAIScore())} hint={`Current approach: ${approaches[selectedApproach as keyof typeof approaches]?.name}`} />
         </div>
 
         {/* Charts */}
-        <div className="grid lg:grid-cols-3 gap-6">
-          <Section title="Mean Scores (Overall)">
+        <div className="space-y-6">
+          {/* Average Scores Comparison */}
+          <Section title="Average Scores Comparison">
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={meanScoreBars}>
+                <BarChart data={averageScoresData.ai}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
                   <YAxis domain={[0, 5]} />
-                  <Tooltip />
-                  <Bar dataKey="value" />
+                  <Tooltip formatter={(value) => [fmt(Number(value)), 'Score']} />
+                  <Bar dataKey="value" fill="#3b82f6" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
-          </Section>
-
-          <Section title="Correlation (LLM vs Humans)">
-            <div className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={corrLines}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis domain={[0, 1]} />
-                  <Tooltip />
-                  <Bar dataKey="value" />
-                </BarChart>
-              </ResponsiveContainer>
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+              <strong>Explanation:</strong> Compares average AI scores across different grading approaches. Human average: {fmt(averageScoresData.human)}. Higher scores indicate more lenient grading.
             </div>
           </Section>
 
-          <Section title="Errors (Lower is Better)">
-            <div className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={errorBars}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="metric" hide />
-                  <YAxis domain={[0, 5]} />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="value" name="Error" />
-                </BarChart>
-              </ResponsiveContainer>
-              <div className="text-xs text-gray-500 mt-2">Includes MAE and RMSE vs each human score.
+          {/* Line Charts for Metrics Comparison */}
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Pearson Correlation */}
+            <Section title="Pearson Correlation Comparison">
+              <div className="h-64">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={comparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="approach" />
+                    <YAxis domain={[0, 1]} />
+                    <Tooltip formatter={(value) => [fmt(Number(value)), 'Correlation']} />
+                    <Line type="monotone" dataKey="pearson" stroke="#10b981" strokeWidth={3} dot={{ fill: '#10b981', strokeWidth: 2, r: 6 }} />
+                  </LineChart>
+                </ResponsiveContainer>
               </div>
-            </div>
-          </Section>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                <strong>Explanation:</strong> Pearson correlation (0-1) measures linear relationship between AI and human scores. <strong>Higher values (closer to 1) are better</strong> - they indicate AI scores align well with human judgment patterns.
+              </div>
+            </Section>
+
+            {/* MAE Comparison */}
+            <Section title="Mean Absolute Error (MAE) Comparison">
+              <div className="h-64">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={comparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="approach" />
+                    <YAxis domain={[0, 2]} />
+                    <Tooltip formatter={(value) => [fmt(Number(value)), 'MAE']} />
+                    <Line type="monotone" dataKey="mae" stroke="#ef4444" strokeWidth={3} dot={{ fill: '#ef4444', strokeWidth: 2, r: 6 }} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                <strong>Explanation:</strong> MAE measures average absolute difference between AI and human scores. <strong>Lower values are better</strong> - they indicate AI predictions are closer to human scores on average.
+              </div>
+            </Section>
+
+            {/* RMSE Comparison */}
+            <Section title="Root Mean Square Error (RMSE) Comparison">
+              <div className="h-64">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={comparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="approach" />
+                    <YAxis domain={[0, 2]} />
+                    <Tooltip formatter={(value) => [fmt(Number(value)), 'RMSE']} />
+                    <Line type="monotone" dataKey="rmse" stroke="#8b5cf6" strokeWidth={3} dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 6 }} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                <strong>Explanation:</strong> RMSE penalizes larger errors more heavily than MAE. <strong>Lower values are better</strong> - they indicate AI predictions have fewer large deviations from human scores.
+              </div>
+            </Section>
+
+            {/* Score Bias Comparison */}
+            <Section title="Score Bias vs Human Average">
+              <div className="h-64">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={comparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="approach" />
+                    <YAxis domain={[-1, 1]} />
+                    <Tooltip formatter={(value) => [fmt(Number(value)), 'Bias']} />
+                    <Line type="monotone" dataKey="bias" stroke="#f59e0b" strokeWidth={3} dot={{ fill: '#f59e0b', strokeWidth: 2, r: 6 }} />
+                    <Line type="monotone" dataKey="zero" stroke="#6b7280" strokeDasharray="5 5" strokeWidth={1} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                <strong>Explanation:</strong> Score bias shows how much AI scores differ from human average. <strong>Values closer to 0 are better</strong> - positive values indicate AI is more lenient, negative values indicate AI is harsher than humans.
+              </div>
+            </Section>
+          </div>
         </div>
 
         {/* Reference Similarity */}
@@ -447,9 +618,9 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
               >
                 <option value="question_id">Question ID</option>
                 <option value="answers_n">Answers N</option>
-                <option value="llm_score">Mean LLM Score</option>
+                <option value="llm_score">Mean AI Score</option>
                 <option value="score_avg">Mean Human Avg</option>
-                <option value="pearson_llm_vs_score_avg">Correlation (LLM vs Human Avg)</option>
+                <option value="pearson_llm_vs_score_avg">Correlation (AI vs Human Avg)</option>
               </select>
               <button
                 onClick={() => setSortDir(d => (d === "asc" ? "desc" : "asc"))}
@@ -467,29 +638,36 @@ export default function GradingDashboard({ data, dataUrl, title = "LLM Grading D
                   <th className="py-2 pr-4">N</th>
                   <th className="py-2 pr-4">Dropped</th>
                   <th className="py-2 pr-4">Human Avg</th>
-                  <th className="py-2 pr-4">LLM Avg</th>
-                  <th className="py-2 pr-4">Corr (LLM vs Human Avg)</th>
+                  <th className="py-2 pr-4">AI Avg</th>
+                  <th className="py-2 pr-4">Corr (AI vs Human Avg)</th>
                   <th className="py-2 pr-4">MAE (vs Human Avg)</th>
-                  <th className="py-2 pr-4">LLM Min–Max</th>
+                  <th className="py-2 pr-4">AI Min–Max</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredQuestions.map((q) => {
                   const ag = q.scores.agreement_and_errors;
+                  const aiScore = q.scores.means.llm_score ?? q.scores.means.nlp_score ?? 0;
+                  const aiMin = q.scores.llm_min ?? q.scores.nlp_min ?? 0;
+                  const aiMax = q.scores.llm_max ?? q.scores.nlp_max ?? 0;
+                  const correlation = ag.pearson_llm_vs_score_avg ?? ag.pearson_nlp_vs_score_avg ?? 0;
+                  const mae = ag.mae_llm_vs_score_avg ?? ag.mae_nlp_vs_score_avg ?? 0;
+                  const quantiles = q.scores.llm_quantiles || q.scores.nlp_quantiles || {};
+                  
                   return (
                     <tr key={q.question_id} className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                       <td className="py-2 pr-4 font-mono text-gray-900 dark:text-gray-100">{q.question_id}</td>
                       <td className="py-2 pr-4 max-w-3xl">
                         <div className="font-medium text-gray-900 dark:text-gray-100">{q.question}</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">Max {q.max_point ?? "–"} · Quantiles: {Object.entries(q.scores.llm_quantiles).map(([k,v]) => `${k}:${fmt(v,1)}`).join(" · ")}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Max {q.max_point ?? "–"} · Quantiles: {Object.entries(quantiles).map(([k,v]) => `${k}:${fmt(v,1)}`).join(" · ")}</div>
                       </td>
                       <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{q.counts.answers_n}</td>
                       <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{q.counts.dropped_failures ?? 0}</td>
                       <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(q.scores.means.score_avg)}</td>
-                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(q.scores.means.llm_score)}</td>
-                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(ag.pearson_llm_vs_score_avg)}</td>
-                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(ag.mae_llm_vs_score_avg)}</td>
-                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(q.scores.llm_min)}–{fmt(q.scores.llm_max)}</td>
+                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(aiScore)}</td>
+                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(correlation)}</td>
+                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(mae)}</td>
+                      <td className="py-2 pr-4 text-gray-900 dark:text-gray-100">{fmt(aiMin)}–{fmt(aiMax)}</td>
                     </tr>
                   );
                 })}
