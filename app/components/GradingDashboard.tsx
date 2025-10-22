@@ -215,10 +215,9 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
       setLoading(false);
     };
 
-    if (!data) {
-      loadAllApproaches();
-    }
-  }, [data, dataUrl]);
+    // Always load all approaches for comparison
+    loadAllApproaches();
+  }, [dataUrl]);
 
   // Set current approach data
   useEffect(() => {
@@ -515,11 +514,18 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Pearson Correlation */}
             <Section title="Pearson Correlation Comparison">
-              <div className="h-64">
+              <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={comparisonData}>
+                  <LineChart data={comparisonData} margin={{ top: 5, right: 30, left: 20, bottom: 60 }}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="approach" />
+                    <XAxis 
+                      dataKey="approach" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={80}
+                      interval={0}
+                      fontSize={12}
+                    />
                     <YAxis domain={[0, 1]} />
                     <Tooltip formatter={(value) => [fmt(Number(value)), 'Correlation']} />
                     <Line type="monotone" dataKey="pearson" stroke="#10b981" strokeWidth={3} dot={{ fill: '#10b981', strokeWidth: 2, r: 6 }} />
@@ -533,11 +539,18 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
 
             {/* MAE Comparison */}
             <Section title="Mean Absolute Error (MAE) Comparison">
-              <div className="h-64">
+              <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={comparisonData}>
+                  <LineChart data={comparisonData} margin={{ top: 5, right: 30, left: 20, bottom: 60 }}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="approach" />
+                    <XAxis 
+                      dataKey="approach" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={80}
+                      interval={0}
+                      fontSize={12}
+                    />
                     <YAxis domain={[0, 2]} />
                     <Tooltip formatter={(value) => [fmt(Number(value)), 'MAE']} />
                     <Line type="monotone" dataKey="mae" stroke="#ef4444" strokeWidth={3} dot={{ fill: '#ef4444', strokeWidth: 2, r: 6 }} />
@@ -551,11 +564,18 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
 
             {/* RMSE Comparison */}
             <Section title="Root Mean Square Error (RMSE) Comparison">
-              <div className="h-64">
+              <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={comparisonData}>
+                  <LineChart data={comparisonData} margin={{ top: 5, right: 30, left: 20, bottom: 60 }}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="approach" />
+                    <XAxis 
+                      dataKey="approach" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={80}
+                      interval={0}
+                      fontSize={12}
+                    />
                     <YAxis domain={[0, 2]} />
                     <Tooltip formatter={(value) => [fmt(Number(value)), 'RMSE']} />
                     <Line type="monotone" dataKey="rmse" stroke="#8b5cf6" strokeWidth={3} dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 6 }} />
@@ -569,11 +589,18 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
 
             {/* Score Bias Comparison */}
             <Section title="Score Bias vs Human Average">
-              <div className="h-64">
+              <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={comparisonData}>
+                  <LineChart data={comparisonData} margin={{ top: 5, right: 30, left: 20, bottom: 60 }}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="approach" />
+                    <XAxis 
+                      dataKey="approach" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={80}
+                      interval={0}
+                      fontSize={12}
+                    />
                     <YAxis domain={[-1, 1]} />
                     <Tooltip formatter={(value) => [fmt(Number(value)), 'Bias']} />
                     <Line type="monotone" dataKey="bias" stroke="#f59e0b" strokeWidth={3} dot={{ fill: '#f59e0b', strokeWidth: 2, r: 6 }} />
@@ -591,11 +618,40 @@ export default function GradingDashboard({ data, dataUrl, title = "Grading Appro
         {/* Reference Similarity */}
         <Section title="Reference Similarity (Desired Answer vs LLM References)">
           <div className="grid md:grid-cols-5 gap-4">
-            <StatCard label="Avg Jaccard" value={fmt(model.overall.reference_similarity?.desired_vs_llm_avg_jaccard_mean)} />
-            <StatCard label="Max Jaccard" value={fmt(model.overall.reference_similarity?.desired_vs_llm_max_jaccard_mean)} />
-            <StatCard label="LLM Ref Diversity" value={fmt(model.overall.reference_similarity?.llm_answer_pairwise_avg_jaccard_mean)} hint="Higher = more overlap between refs" />
-            <StatCard label="Desired Len (tokens)" value={fmt(model.overall.reference_similarity?.desired_len_tokens_mean, 1)} />
-            <StatCard label="LLM Ref Len (tokens)" value={fmt(model.overall.reference_similarity?.llm_len_tokens_avg_mean, 1)} />
+            <StatCard 
+              label="Avg Jaccard" 
+              value={fmt(model.overall.reference_similarity?.desired_vs_llm_avg_jaccard_mean)} 
+              hint="Average similarity between desired and LLM answers"
+            />
+            <StatCard 
+              label="Max Jaccard" 
+              value={fmt(model.overall.reference_similarity?.desired_vs_llm_max_jaccard_mean)} 
+              hint="Highest similarity between desired and any LLM answer"
+            />
+            <StatCard 
+              label="LLM Ref Diversity" 
+              value={fmt(model.overall.reference_similarity?.llm_answer_pairwise_avg_jaccard_mean)} 
+              hint="How similar LLM answers are to each other"
+            />
+            <StatCard 
+              label="Desired Len (tokens)" 
+              value={fmt(model.overall.reference_similarity?.desired_len_tokens_mean, 1)} 
+              hint="Average length of desired answers"
+            />
+            <StatCard 
+              label="LLM Ref Len (tokens)" 
+              value={fmt(model.overall.reference_similarity?.llm_len_tokens_avg_mean, 1)} 
+              hint="Average length of LLM-generated answers"
+            />
+          </div>
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+            <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Jaccard Similarity Explained:</h4>
+            <div className="text-sm text-blue-700 dark:text-blue-300 space-y-2">
+              <p><strong>Jaccard Similarity (0-1):</strong> Measures how similar two text answers are by comparing the overlap of their words/tokens.</p>
+              <p><strong>Avg Jaccard:</strong> Average similarity between the desired answer and all LLM-generated answers. <strong>Higher values (closer to 1) are better</strong> - they indicate LLM answers are more similar to the expected answer.</p>
+              <p><strong>Max Jaccard:</strong> The highest similarity found between the desired answer and any single LLM answer. Shows the best-case scenario for answer quality.</p>
+              <p><strong>LLM Ref Diversity:</strong> How similar the LLM-generated answers are to each other. <strong>Lower values indicate more diversity</strong> - LLM is generating varied answers rather than repetitive ones.</p>
+            </div>
           </div>
         </Section>
 
